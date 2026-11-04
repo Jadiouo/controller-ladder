@@ -1,0 +1,10 @@
+./spike04/run_rl4.py:86: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /__w/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:820.)
+  print(f"  [{a.cond}/{a.base} s{seed}] it {it}/{iters} steps {(it+1)*N*H} meanR {R_.mean():.4f} std {float(logstd.exp().mean()):.3f} t {time.time()-t0:.0f}s (sim {tsim:.0f}s)", flush=True)
+  [N1/C0 s0] it 0/4 steps 12800 meanR -5.1351 std 0.222 t 7s (sim 1s)
+  [N1/C0 s0] it 3/4 steps 51200 meanR -34.1394 std 0.223 t 36s (sim 4s)
+N1/C0 rl seed=0 rmse=0.1758 dist=0.1756 train 36s eval 16s
+
+real	20m49.728s
+user	0m41.248s
+sys	0m0.396s

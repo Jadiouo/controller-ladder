@@ -1,0 +1,44 @@
+{
+ "nom|abc": {
+  "SUBF": 2,
+  "n": 50,
+  "diverged": 0.0,
+  "unstable_episodes": 0.0,
+  "succ": 0.52
+ },
+ "adapt|abc": {
+  "SUBF": 2,
+  "n": 50,
+  "diverged": 0.0,
+  "unstable_episodes": 0.0,
+  "succ": 0.58
+ },
+ "oracle|abc": {
+  "SUBF": 2,
+  "n": 50,
+  "diverged": 0.0,
+  "unstable_episodes": 0.0,
+  "succ": 0.88
+ },
+ "nom|none": {
+  "SUBF": 2,
+  "n": 50,
+  "diverged": 0.0,
+  "unstable_episodes": 0.0,
+  "succ": 0.64
+ },
+ "adapt|none": {
+  "SUBF": 2,
+  "n": 50,
+  "diverged": 0.0,
+  "unstable_episodes": 0.0,
+  "succ": 0.94
+ },
+ "oracle|x2": {
+  "SUBF": 2,
+  "n": 50,
+  "diverged": 0.0,
+  "unstable_episodes": 0.0,
+  "succ": 0.86
+ }
+}

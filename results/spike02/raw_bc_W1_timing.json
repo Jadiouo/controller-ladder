@@ -1,0 +1,1 @@
+{"timing": {"collect": 131.89870190620422, "train": 261.4252471923828, "eval": 75.03808569908142, "total": 468.65060353279114}, "args": {"w": "W1", "seeds": 10, "ntrain": 200, "epochs": 20, "dart_sigma": 3.0, "dagger_rounds": 5, "dagger_epochs": 10, "methods": "dart,dagger", "out": null}, "weak": {"cap": 32.0, "delay": 0, "fc": 0.0, "fv": 0.0}}

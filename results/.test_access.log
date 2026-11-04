@@ -1,0 +1,111 @@
+2026-10-25T04:00:38	mjx_eval_arena.py	scenario=tracking/friction(fc=1.5,fv=0.3) controller=ctc_lqr n_seeds=50 seeds=0-49
+2026-10-25T04:00:48	mjx_eval_arena.py	scenario=tracking/friction(fc=1.5,fv=0.3)+pulses(n=3,4-8Nm) controller=ctc_lqr n_seeds=50 seeds=0-49
+2026-10-25T04:00:56	mjx_eval_arena.py	scenario=tracking/friction(fc=1.5,fv=0.3) controller=b2m_W3_s0 n_seeds=50 seeds=0-49
+2026-10-25T04:01:04	mjx_eval_arena.py	scenario=tracking/friction(fc=1.5,fv=0.3)+pulses(n=3,4-8Nm) controller=b2m_W3_s0 n_seeds=50 seeds=0-49
+2026-10-25T04:01:14	mjx_eval_arena.py	scenario=tracking/friction(fc=1.5,fv=0.3) controller=b2m_W3_s1 n_seeds=50 seeds=0-49
+2026-10-25T04:01:22	mjx_eval_arena.py	scenario=tracking/friction(fc=1.5,fv=0.3)+pulses(n=3,4-8Nm) controller=b2m_W3_s1 n_seeds=50 seeds=0-49
+2026-10-25T04:01:31	mjx_eval_arena.py	scenario=tracking/friction(fc=1.5,fv=0.3) controller=b2m_W3_s2 n_seeds=50 seeds=0-49
+2026-10-25T04:01:39	mjx_eval_arena.py	scenario=tracking/friction(fc=1.5,fv=0.3)+pulses(n=3,4-8Nm) controller=b2m_W3_s2 n_seeds=50 seeds=0-49
+2026-10-25T04:01:48	mjx_eval_arena.py	scenario=tracking/friction(fc=1.5,fv=0.3) controller=b2m_W3_s3 n_seeds=50 seeds=0-49
+2026-10-25T04:01:58	mjx_eval_arena.py	scenario=tracking/friction(fc=1.5,fv=0.3)+pulses(n=3,4-8Nm) controller=b2m_W3_s3 n_seeds=50 seeds=0-49
+2026-10-25T04:02:06	mjx_eval_arena.py	scenario=tracking/friction(fc=1.5,fv=0.3) controller=b2m_W3_s4 n_seeds=50 seeds=0-49
+2026-10-25T04:02:16	mjx_eval_arena.py	scenario=tracking/friction(fc=1.5,fv=0.3)+pulses(n=3,4-8Nm) controller=b2m_W3_s4 n_seeds=50 seeds=0-49
+2026-10-25T04:11:28	mjx_eval_arena.py	scenario=tracking/clean controller=ctc_lqr n_seeds=50 seeds=0-49
+2026-10-25T04:11:36	mjx_eval_arena.py	scenario=tracking/pulses(n=3,4-8Nm) controller=ctc_lqr n_seeds=50 seeds=0-49
+2026-10-25T04:11:45	mjx_eval_arena.py	scenario=tracking/clean controller=b2m_W0_s0 n_seeds=50 seeds=0-49
+2026-10-25T04:11:55	mjx_eval_arena.py	scenario=tracking/pulses(n=3,4-8Nm) controller=b2m_W0_s0 n_seeds=50 seeds=0-49
+2026-10-25T04:12:06	mjx_eval_arena.py	scenario=tracking/clean controller=b2m_W0_s1 n_seeds=50 seeds=0-49
+2026-10-25T04:12:15	mjx_eval_arena.py	scenario=tracking/pulses(n=3,4-8Nm) controller=b2m_W0_s1 n_seeds=50 seeds=0-49
+2026-10-25T04:12:23	mjx_eval_arena.py	scenario=tracking/clean controller=b2m_W0_s2 n_seeds=50 seeds=0-49
+2026-10-25T04:12:31	mjx_eval_arena.py	scenario=tracking/pulses(n=3,4-8Nm) controller=b2m_W0_s2 n_seeds=50 seeds=0-49
+2026-10-25T04:12:41	mjx_eval_arena.py	scenario=tracking/clean controller=b2m_W0_s3 n_seeds=50 seeds=0-49
+2026-10-25T04:12:50	mjx_eval_arena.py	scenario=tracking/pulses(n=3,4-8Nm) controller=b2m_W0_s3 n_seeds=50 seeds=0-49
+2026-10-25T04:13:01	mjx_eval_arena.py	scenario=tracking/clean controller=b2m_W0_s4 n_seeds=50 seeds=0-49
+2026-10-25T04:13:12	mjx_eval_arena.py	scenario=tracking/pulses(n=3,4-8Nm) controller=b2m_W0_s4 n_seeds=50 seeds=0-49
+2026-10-25T05:41:57	mjx_eval_arena.py	scenario=tracking/friction(fc=1.5,fv=0.3) controller=ctc_lqr n_seeds=50 seeds=0-49
+2026-10-25T05:42:05	mjx_eval_arena.py	scenario=tracking/friction(fc=1.5,fv=0.3)+pulses(n=3,4-8Nm) controller=ctc_lqr n_seeds=50 seeds=0-49
+2026-10-25T05:42:13	mjx_eval_arena.py	scenario=tracking/friction(fc=1.5,fv=0.3) controller=b20m_W3_s0 n_seeds=50 seeds=0-49
+2026-10-25T05:42:20	mjx_eval_arena.py	scenario=tracking/friction(fc=1.5,fv=0.3)+pulses(n=3,4-8Nm) controller=b20m_W3_s0 n_seeds=50 seeds=0-49
+2026-10-25T05:42:30	mjx_eval_arena.py	scenario=tracking/friction(fc=1.5,fv=0.3) controller=b20m_W3_s1 n_seeds=50 seeds=0-49
+2026-10-25T05:42:39	mjx_eval_arena.py	scenario=tracking/friction(fc=1.5,fv=0.3)+pulses(n=3,4-8Nm) controller=b20m_W3_s1 n_seeds=50 seeds=0-49
+2026-10-25T05:42:49	mjx_eval_arena.py	scenario=tracking/friction(fc=1.5,fv=0.3) controller=b20m_W3_s2 n_seeds=50 seeds=0-49
+2026-10-25T05:42:57	mjx_eval_arena.py	scenario=tracking/friction(fc=1.5,fv=0.3)+pulses(n=3,4-8Nm) controller=b20m_W3_s2 n_seeds=50 seeds=0-49
+2026-10-25T05:52:52	mjx_eval_arena.py	scenario=tracking/clean controller=ctc_lqr n_seeds=50 seeds=0-49
+2026-10-25T05:52:58	mjx_eval_arena.py	scenario=tracking/pulses(n=3,4-8Nm) controller=ctc_lqr n_seeds=50 seeds=0-49
+2026-10-25T05:53:04	mjx_eval_arena.py	scenario=tracking/clean controller=b20m_W0_s0 n_seeds=50 seeds=0-49
+2026-10-25T05:53:11	mjx_eval_arena.py	scenario=tracking/pulses(n=3,4-8Nm) controller=b20m_W0_s0 n_seeds=50 seeds=0-49
+2026-10-25T05:53:18	mjx_eval_arena.py	scenario=tracking/clean controller=b20m_W0_s1 n_seeds=50 seeds=0-49
+2026-10-25T05:53:25	mjx_eval_arena.py	scenario=tracking/pulses(n=3,4-8Nm) controller=b20m_W0_s1 n_seeds=50 seeds=0-49
+2026-10-25T05:53:34	mjx_eval_arena.py	scenario=tracking/clean controller=b20m_W0_s2 n_seeds=50 seeds=0-49
+2026-10-25T05:53:41	mjx_eval_arena.py	scenario=tracking/pulses(n=3,4-8Nm) controller=b20m_W0_s2 n_seeds=50 seeds=0-49
+2026-10-25T06:04:50	mjx_eval_arena.py	scenario=tracking/friction(fc=1.5,fv=0.3) controller=ctc_lqr n_seeds=50 seeds=0-49
+2026-10-25T06:04:58	mjx_eval_arena.py	scenario=tracking/friction(fc=1.5,fv=0.3)+pulses(n=3,4-8Nm) controller=ctc_lqr n_seeds=50 seeds=0-49
+2026-10-25T06:05:06	mjx_eval_arena.py	scenario=tracking/friction(fc=1.5,fv=0.3) controller=b2m_fresh_W3_s0 n_seeds=50 seeds=0-49
+2026-10-25T06:05:14	mjx_eval_arena.py	scenario=tracking/friction(fc=1.5,fv=0.3)+pulses(n=3,4-8Nm) controller=b2m_fresh_W3_s0 n_seeds=50 seeds=0-49
+2026-10-25T06:05:23	mjx_eval_arena.py	scenario=tracking/friction(fc=1.5,fv=0.3) controller=b2m_fresh_W3_s1 n_seeds=50 seeds=0-49
+2026-10-25T06:05:31	mjx_eval_arena.py	scenario=tracking/friction(fc=1.5,fv=0.3)+pulses(n=3,4-8Nm) controller=b2m_fresh_W3_s1 n_seeds=50 seeds=0-49
+2026-10-25T06:05:40	mjx_eval_arena.py	scenario=tracking/friction(fc=1.5,fv=0.3) controller=b2m_fresh_W3_s2 n_seeds=50 seeds=0-49
+2026-10-25T06:05:50	mjx_eval_arena.py	scenario=tracking/friction(fc=1.5,fv=0.3)+pulses(n=3,4-8Nm) controller=b2m_fresh_W3_s2 n_seeds=50 seeds=0-49
+2026-10-25T06:16:08	mjx_eval_arena.py	scenario=tracking/clean controller=ctc_lqr n_seeds=50 seeds=0-49
+2026-10-25T06:16:15	mjx_eval_arena.py	scenario=tracking/pulses(n=3,4-8Nm) controller=ctc_lqr n_seeds=50 seeds=0-49
+2026-10-25T06:16:25	mjx_eval_arena.py	scenario=tracking/clean controller=b2m_fresh_W0_s0 n_seeds=50 seeds=0-49
+2026-10-25T06:16:32	mjx_eval_arena.py	scenario=tracking/pulses(n=3,4-8Nm) controller=b2m_fresh_W0_s0 n_seeds=50 seeds=0-49
+2026-10-25T06:16:40	mjx_eval_arena.py	scenario=tracking/clean controller=b2m_fresh_W0_s1 n_seeds=50 seeds=0-49
+2026-10-25T06:16:47	mjx_eval_arena.py	scenario=tracking/pulses(n=3,4-8Nm) controller=b2m_fresh_W0_s1 n_seeds=50 seeds=0-49
+2026-10-25T06:16:58	mjx_eval_arena.py	scenario=tracking/clean controller=b2m_fresh_W0_s2 n_seeds=50 seeds=0-49
+2026-10-25T06:17:07	mjx_eval_arena.py	scenario=tracking/pulses(n=3,4-8Nm) controller=b2m_fresh_W0_s2 n_seeds=50 seeds=0-49
+2026-10-25T07:21:07	demo_students.py	scenario=tracking/clean controller=teacher n_seeds=50 seeds=0-49
+2026-10-25T07:21:18	demo_students.py	scenario=tracking/clean controller=bc_s0 n_seeds=50 seeds=0-49
+2026-10-25T07:21:32	demo_students.py	scenario=tracking/clean controller=bc_s1 n_seeds=50 seeds=0-49
+2026-10-25T07:21:44	demo_students.py	scenario=tracking/clean controller=bc_s2 n_seeds=50 seeds=0-49
+2026-10-25T07:21:59	demo_students.py	scenario=tracking/clean controller=mip_s0 n_seeds=50 seeds=0-49
+2026-10-25T07:22:14	demo_students.py	scenario=tracking/clean controller=mip_s1 n_seeds=50 seeds=0-49
+2026-10-25T07:22:29	demo_students.py	scenario=tracking/clean controller=mip_s2 n_seeds=50 seeds=0-49
+2026-10-25T07:22:44	demo_students.py	scenario=tracking/clean controller=diffusion (DDIM-10)_s0 n_seeds=50 seeds=0-49
+2026-10-25T07:23:13	demo_students.py	scenario=tracking/clean controller=diffusion (DDIM-10)_s1 n_seeds=50 seeds=0-49
+2026-10-25T07:23:41	demo_students.py	scenario=tracking/clean controller=diffusion (DDIM-10)_s2 n_seeds=50 seeds=0-49
+2026-10-25T07:24:08	demo_students.py	scenario=tracking/clean controller=flow (10 steps)_s0 n_seeds=50 seeds=0-49
+2026-10-25T07:24:31	demo_students.py	scenario=tracking/clean controller=flow (10 steps)_s1 n_seeds=50 seeds=0-49
+2026-10-25T07:24:55	demo_students.py	scenario=tracking/clean controller=flow (10 steps)_s2 n_seeds=50 seeds=0-49
+2026-10-25T07:25:18	demo_students.py	scenario=tracking/clean controller=flow (1 step)_s0 n_seeds=50 seeds=0-49
+2026-10-25T07:25:29	demo_students.py	scenario=tracking/clean controller=flow (1 step)_s1 n_seeds=50 seeds=0-49
+2026-10-25T07:25:40	demo_students.py	scenario=tracking/clean controller=flow (1 step)_s2 n_seeds=50 seeds=0-49
+2026-10-25T08:19:01	demo_students.py	scenario=tracking/clean controller=teacher n_seeds=50 seeds=0-49
+2026-10-25T08:19:10	demo_students.py	scenario=tracking/clean controller=bc_s0 n_seeds=50 seeds=0-49
+2026-10-25T08:19:20	demo_students.py	scenario=tracking/clean controller=bc_s1 n_seeds=50 seeds=0-49
+2026-10-25T08:19:31	demo_students.py	scenario=tracking/clean controller=bc_s2 n_seeds=50 seeds=0-49
+2026-10-25T08:19:41	demo_students.py	scenario=tracking/clean controller=mip_s0 n_seeds=50 seeds=0-49
+2026-10-25T08:19:53	demo_students.py	scenario=tracking/clean controller=mip_s1 n_seeds=50 seeds=0-49
+2026-10-25T08:20:05	demo_students.py	scenario=tracking/clean controller=mip_s2 n_seeds=50 seeds=0-49
+2026-10-25T08:20:17	demo_students.py	scenario=tracking/clean controller=diffusion (DDIM-10)_s0 n_seeds=50 seeds=0-49
+2026-10-25T08:20:43	demo_students.py	scenario=tracking/clean controller=diffusion (DDIM-10)_s1 n_seeds=50 seeds=0-49
+2026-10-25T08:21:09	demo_students.py	scenario=tracking/clean controller=diffusion (DDIM-10)_s2 n_seeds=50 seeds=0-49
+2026-10-25T08:21:35	demo_students.py	scenario=tracking/clean controller=flow (10 steps)_s0 n_seeds=50 seeds=0-49
+2026-10-25T08:21:58	demo_students.py	scenario=tracking/clean controller=flow (10 steps)_s1 n_seeds=50 seeds=0-49
+2026-10-25T08:22:20	demo_students.py	scenario=tracking/clean controller=flow (10 steps)_s2 n_seeds=50 seeds=0-49
+2026-10-25T08:22:43	demo_students.py	scenario=tracking/clean controller=flow (1 step)_s0 n_seeds=50 seeds=0-49
+2026-10-25T08:22:53	demo_students.py	scenario=tracking/clean controller=flow (1 step)_s1 n_seeds=50 seeds=0-49
+2026-10-25T08:23:04	demo_students.py	scenario=tracking/clean controller=flow (1 step)_s2 n_seeds=50 seeds=0-49
+2026-10-25T08:24:42	demo_students.py	scenario=tracking/clean controller=bc_s0 n_seeds=50 seeds=0-49
+2026-10-25T08:24:53	demo_students.py	scenario=tracking/clean controller=bc_s1 n_seeds=50 seeds=0-49
+2026-10-25T08:25:03	demo_students.py	scenario=tracking/clean controller=bc_s2 n_seeds=50 seeds=0-49
+2026-10-25T08:25:13	demo_students.py	scenario=tracking/clean controller=mip_s0 n_seeds=50 seeds=0-49
+2026-10-25T08:25:25	demo_students.py	scenario=tracking/clean controller=mip_s1 n_seeds=50 seeds=0-49
+2026-10-25T08:25:37	demo_students.py	scenario=tracking/clean controller=mip_s2 n_seeds=50 seeds=0-49
+2026-10-25T08:25:49	demo_students.py	scenario=tracking/clean controller=diffusion (DDIM-10)_s0 n_seeds=50 seeds=0-49
+2026-10-25T08:26:15	demo_students.py	scenario=tracking/clean controller=diffusion (DDIM-10)_s1 n_seeds=50 seeds=0-49
+2026-10-25T08:26:41	demo_students.py	scenario=tracking/clean controller=diffusion (DDIM-10)_s2 n_seeds=50 seeds=0-49
+2026-10-25T08:27:06	demo_students.py	scenario=tracking/clean controller=flow (10 steps)_s0 n_seeds=50 seeds=0-49
+2026-10-25T08:27:29	demo_students.py	scenario=tracking/clean controller=flow (10 steps)_s1 n_seeds=50 seeds=0-49
+2026-10-25T08:27:51	demo_students.py	scenario=tracking/clean controller=flow (10 steps)_s2 n_seeds=50 seeds=0-49
+2026-10-25T08:28:14	demo_students.py	scenario=tracking/clean controller=flow (1 step)_s0 n_seeds=50 seeds=0-49
+2026-10-25T08:28:24	demo_students.py	scenario=tracking/clean controller=flow (1 step)_s1 n_seeds=50 seeds=0-49
+2026-10-25T08:28:35	demo_students.py	scenario=tracking/clean controller=flow (1 step)_s2 n_seeds=50 seeds=0-49
+2026-10-30T14:27:03	spike06/eval6.py	(retroactive entry, logged by commander 2026-10-30) H8b single locked TEST run, all methods, seeds=0-49
+2026-10-25T00:00:00	spike05/*	(retroactive entry, logged by commander 2026-10-30; exact time unknown) H8 TEST run, seeds=0-49; spike05/06 scripts bypass arena test logging
+2026-10-30T20:17:02	spike07/eval7.py	H9/H10 single locked TEST run, all methods, seeds=0-49
+2026-10-31T00:24:21	spike09b/eval9b.py	H9w/H10w single locked TEST run, all methods, seeds=0-49
+2026-10-31T15:21:43	spike10b/eval10b.py	H11/H12 single locked TESTB run, all methods, seeds=20000-20499
+2026-10-31T17:04:01	spike10b/eval10b.py	H11/H12 single locked TEST run, all methods, seeds=0-49
+2026-11-02T13:04:07	spike15a/eval15a.py	v8 single locked TEST-C run, seeds=30000-30499
+2026-11-02T21:54:34	spike15e/eval15e.py	v9 single locked TEST-D run, seeds=40000-40499

@@ -1,0 +1,2 @@
+{'name': 'A', 'dist': {'e': [0.32, 0.85], 'mb': [1.0, 8.0], 'delay': [0.0, 200.0]}, 'method': 'T-robust(spike05 params)', 'frac_cap': 0.88, 'mean': 271.3, 'median': 300.0, 'steps': 1635307, 'wall': 50.419777154922485}
+{'name': 'A', 'dist': {'e': [0.32, 0.85], 'mb': [1.0, 8.0], 'delay': [0.0, 200.0]}, 'method': 'T-adapt(spike05 params)', 'frac_cap': 1.0, 'mean': 300.0, 'median': 300.0, 'steps': 1900338, 'wall': 55.92117524147034}

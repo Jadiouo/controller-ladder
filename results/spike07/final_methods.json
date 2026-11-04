@@ -1,0 +1,5 @@
+{
+ "R-ppo": "results/spike07/final_ppo.pkl",
+ "R-oracle": "results/spike07/final_oracle.pkl",
+ "R-sac": "results/spike07/final_sac.pkl"
+}

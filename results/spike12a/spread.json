@@ -1,0 +1,34 @@
+{
+ "mip_multi": {
+  "rms_between_noise_draws_rad": 0.0,
+  "n_scen": 40
+ },
+ "diffusion_multi": {
+  "rms_between_noise_draws_rad": 2.1465053899304563,
+  "n_scen": 40
+ },
+ "flow_multi": {
+  "rms_between_noise_draws_rad": 0.9976125019062541,
+  "n_scen": 40
+ },
+ "flow1_multi": {
+  "rms_between_noise_draws_rad": 1.8749622210366594,
+  "n_scen": 40
+ },
+ "mip_canon": {
+  "rms_between_noise_draws_rad": 0.0,
+  "n_scen": 40
+ },
+ "diffusion_canon": {
+  "rms_between_noise_draws_rad": 0.2979697348397645,
+  "n_scen": 40
+ },
+ "flow_canon": {
+  "rms_between_noise_draws_rad": 0.2490055050946572,
+  "n_scen": 40
+ },
+ "flow1_canon": {
+  "rms_between_noise_draws_rad": 0.4009196413108181,
+  "n_scen": 40
+ }
+}

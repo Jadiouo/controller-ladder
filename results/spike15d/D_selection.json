@@ -1,0 +1,146 @@
+{
+ "rule": "highest CAL (n=200) success among the 20 ensemble variants (2 families x {c8,c11} x M3c x 5 aggregators); ties -> listed order; 2 c11/center/mean controls are descriptive",
+ "n_variants": 22,
+ "selected": "LAP/c11/M3c/hit06",
+ "selected_family": "LAP",
+ "selected_cal": 0.81,
+ "selected_changed_frac": 0.8,
+ "cal_base_R0_candidate": {
+  "MS": 0.72,
+  "LAP": 0.72
+ },
+ "all": [
+  [
+   "MS/c8/M3c/mean",
+   0.74,
+   0.065
+  ],
+  [
+   "MS/c8/M3c/cmean",
+   0.735,
+   0.065
+  ],
+  [
+   "MS/c8/M3c/hit04",
+   0.725,
+   0.065
+  ],
+  [
+   "MS/c8/M3c/hit06",
+   0.735,
+   0.065
+  ],
+  [
+   "MS/c8/M3c/max",
+   0.735,
+   0.055
+  ],
+  [
+   "MS/c11/M3c/mean",
+   0.74,
+   0.075
+  ],
+  [
+   "MS/c11/M3c/cmean",
+   0.74,
+   0.075
+  ],
+  [
+   "MS/c11/M3c/hit04",
+   0.74,
+   0.08
+  ],
+  [
+   "MS/c11/M3c/hit06",
+   0.74,
+   0.08
+  ],
+  [
+   "MS/c11/M3c/max",
+   0.745,
+   0.075
+  ],
+  [
+   "LAP/c8/M3c/mean",
+   0.725,
+   0.585
+  ],
+  [
+   "LAP/c8/M3c/cmean",
+   0.73,
+   0.575
+  ],
+  [
+   "LAP/c8/M3c/hit04",
+   0.72,
+   0.61
+  ],
+  [
+   "LAP/c8/M3c/hit06",
+   0.745,
+   0.585
+  ],
+  [
+   "LAP/c8/M3c/max",
+   0.71,
+   0.67
+  ],
+  [
+   "LAP/c11/M3c/mean",
+   0.79,
+   0.78
+  ],
+  [
+   "LAP/c11/M3c/cmean",
+   0.8,
+   0.785
+  ],
+  [
+   "LAP/c11/M3c/hit04",
+   0.785,
+   0.785
+  ],
+  [
+   "LAP/c11/M3c/hit06",
+   0.81,
+   0.8
+  ],
+  [
+   "LAP/c11/M3c/max",
+   0.79,
+   0.8
+  ],
+  [
+   "MS/c11/center/mean",
+   0.73,
+   0.05
+  ],
+  [
+   "LAP/c11/center/mean",
+   0.765,
+   0.365
+  ]
+ ],
+ "top5": [
+  [
+   "LAP/c11/M3c/hit06",
+   0.81
+  ],
+  [
+   "LAP/c11/M3c/cmean",
+   0.8
+  ],
+  [
+   "LAP/c11/M3c/mean",
+   0.79
+  ],
+  [
+   "LAP/c11/M3c/max",
+   0.79
+  ],
+  [
+   "LAP/c11/M3c/hit04",
+   0.785
+  ]
+ ]
+}

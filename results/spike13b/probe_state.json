@@ -1,0 +1,26 @@
+{
+ "chain_state|lam0.001|val": 0.13625493023379487,
+ "chain_state|lam0.01|val": 0.16679779719902332,
+ "chain_state|lam0.1|val": 0.16171200793505458,
+ "chain_state|lam1.0|val": 0.12151174731880554,
+ "chain_state|ridge_probe_features": {
+  "lam": 0.01,
+  "r2": 0.12218865870646445
+ },
+ "chain_state|r2_qpos_only": 0.2734299562464352,
+ "chain_state|r2_qvel_only": 0.12162619398385288,
+ "chain_state|ridge_probe_features+true_theta": 0.14513577983774573,
+ "chain_state|ridge_true_theta_only": 0.10695171423242389,
+ "chain_state|var_total_qpos": 17.73511144732521,
+ "chain_state|var_total_qvel": 4768.799107712126,
+ "theta|lam0.001|val": 0.8107118899628956,
+ "theta|lam0.01|val": 0.8139840184021002,
+ "theta|lam0.1|val": 0.8058346619050943,
+ "theta|lam1.0|val": 0.776635637842491,
+ "theta|ridge_probe_features": {
+  "lam": 0.01,
+  "r2": 0.8217349776026912
+ },
+ "N_train": 3000,
+ "N_test": 200
+}

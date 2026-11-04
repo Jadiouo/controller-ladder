@@ -1,0 +1,52 @@
+  gen 0 best 0.01126 sigma 0.473
+  gen 1 best 0.01126 sigma 0.465
+  gen 2 best 0.00930 sigma 0.610
+  gen 3 best 0.00912 sigma 0.809
+  gen 4 best 0.00912 sigma 0.976
+  gen 5 best 0.00911 sigma 0.939
+  gen 6 best 0.00905 sigma 0.799
+  gen 7 best 0.00905 sigma 0.680
+  gen 8 best 0.00902 sigma 0.677
+  gen 9 best 0.00902 sigma 0.777
+W0 C1 {'params': [2.2238629903217544, 1.4889190261806822], 'sp': 9.242967483544724, 'sd': 4.432301726362777, 'calib_obj': 0.009024312776296273, 'evals': 80, 'sim_steps': 6400000, 'wall': 206.31358098983765, 'dof': 2} C0 obj 0.01342000941847634
+  gen 0 best 0.00909 sigma 0.390
+  gen 1 best 0.00909 sigma 0.417
+  gen 2 best 0.00908 sigma 0.351
+  gen 3 best 0.00908 sigma 0.331
+  gen 4 best 0.00908 sigma 0.343
+  gen 5 best 0.00905 sigma 0.360
+  gen 6 best 0.00905 sigma 0.371
+  gen 7 best 0.00905 sigma 0.368
+  gen 8 best 0.00905 sigma 0.293
+  gen 9 best 0.00902 sigma 0.332
+  gen 10 best 0.00900 sigma 0.357
+  gen 11 best 0.00900 sigma 0.458
+  gen 12 best 0.00900 sigma 0.415
+  gen 13 best 0.00900 sigma 0.334
+W0 C2 {'params': [3.0577923539116147, 2.3048448132928767, 7.345228575628771], 'sp': 21.28052539773014, 'sd': 10.02262275390981, 'ki': 1548.7889402235712, 'calib_obj': 0.009002156126166973, 'evals': 112, 'sim_steps': 8960000, 'wall': 313.30232405662537, 'dof': 3}
+  gen 0 best 0.01794 sigma 0.479
+  gen 1 best 0.01260 sigma 0.614
+  gen 2 best 0.01084 sigma 0.782
+  gen 3 best 0.01032 sigma 1.054
+  gen 4 best 0.01006 sigma 1.133
+  gen 5 best 0.00954 sigma 1.041
+  gen 6 best 0.00954 sigma 0.976
+  gen 7 best 0.00942 sigma 0.862
+  gen 8 best 0.00921 sigma 0.900
+  gen 9 best 0.00921 sigma 0.866
+W3 C1 {'params': [2.8538427473689545, 1.920828625381714], 'sp': 17.35434222421365, 'sd': 6.826612830956284, 'calib_obj': 0.009208761935216494, 'evals': 80, 'sim_steps': 6400000, 'wall': 202.01406359672546, 'dof': 2} C0 obj 0.024487763120697732
+  gen 0 best 0.00918 sigma 0.411
+  gen 1 best 0.00918 sigma 0.375
+  gen 2 best 0.00913 sigma 0.385
+  gen 3 best 0.00913 sigma 0.341
+  gen 4 best 0.00913 sigma 0.273
+  gen 5 best 0.00912 sigma 0.253
+  gen 6 best 0.00912 sigma 0.225
+  gen 7 best 0.00907 sigma 0.237
+  gen 8 best 0.00907 sigma 0.221
+  gen 9 best 0.00907 sigma 0.215
+  gen 10 best 0.00907 sigma 0.208
+  gen 11 best 0.00907 sigma 0.204
+  gen 12 best 0.00907 sigma 0.193
+  gen 13 best 0.00907 sigma 0.180
+W3 C2 {'params': [3.1448918650511537, 2.3087002899129234, 7.612388460690252], 'sp': 23.2171647506157, 'sd': 10.061339329075057, 'ki': 2023.1044370817133, 'calib_obj': 0.009067033461461822, 'evals': 112, 'sim_steps': 8960000, 'wall': 317.935879945755, 'dof': 3}

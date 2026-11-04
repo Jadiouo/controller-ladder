@@ -1,0 +1,82 @@
+{
+ "frozen": "2026-10-31T00:11:34",
+ "best_classical": "adapt",
+ "md5": {
+  "lest_s0.pkl": "16c414d76e81c4bddee2487162fca3d5",
+  "lest_s1.pkl": "4b9a2d974df644d71139cf1117af3a8c",
+  "lest_s2.pkl": "34a56d1f83ed1493bbd7110b9a3c1993",
+  "ppo_hist.pkl": "e248be7927a92bbd854836383bc858b7",
+  "ppo_oracle.pkl": "d4d8d7c9240ae6c945aa31c7a32f083a",
+  "spike09b/c9b.py": "b036486653d6fbc9b81c2fa062c1402c",
+  "spike09b/train9.py": "cdfc3a79cbb664cedf06c8d03580a806",
+  "spike09b/eval9b.py": "6939ca62f993b52145d1491233457bfd",
+  "spike09b/step3_lest.py": "aec1efe3e16c31ea053db2e56dc01a9a",
+  "spike09b/step1b_holdout.py": "cb838021c5dbfcf9091c7709544e83b0"
+ },
+ "selected": {
+  "R-PPO-hist": {
+   "0": {
+    "succ": 0.86,
+    "min_dist": 0.07004203297977281,
+    "res_mean": 0.4718080110499951,
+    "res_max": 2.285970864259403,
+    "episodes": 50,
+    "it": 209,
+    "train_steps": 1712128,
+    "train_episodes": 5683
+   },
+   "1": {
+    "succ": 0.9,
+    "min_dist": 0.0738250797946249,
+    "res_mean": 0.6493691412403635,
+    "res_max": 1.8182416791487515,
+    "episodes": 50,
+    "it": 209,
+    "train_steps": 1712128,
+    "train_episodes": 5695
+   },
+   "2": {
+    "succ": 0.88,
+    "min_dist": 0.07126568306569359,
+    "res_mean": 0.294379560876555,
+    "res_max": 1.1148068420385107,
+    "episodes": 50,
+    "it": 52,
+    "train_steps": 425984,
+    "train_episodes": 1400
+   }
+  },
+  "R-oracle": {
+   "0": {
+    "succ": 0.94,
+    "min_dist": 0.06321584776942603,
+    "res_mean": 0.5023104113183017,
+    "res_max": 2.521796152762684,
+    "episodes": 50,
+    "it": 209,
+    "train_steps": 1712128,
+    "train_episodes": 5716
+   },
+   "1": {
+    "succ": 0.86,
+    "min_dist": 0.07969829692617011,
+    "res_mean": 0.34075603961122425,
+    "res_max": 0.9541685435947623,
+    "episodes": 50,
+    "it": 52,
+    "train_steps": 425984,
+    "train_episodes": 1415
+   },
+   "2": {
+    "succ": 0.84,
+    "min_dist": 0.07694683713067511,
+    "res_mean": 0.4426334929214659,
+    "res_max": 1.1505005358195453,
+    "episodes": 50,
+    "it": 105,
+    "train_steps": 860160,
+    "train_episodes": 2836
+   }
+  }
+ }
+}

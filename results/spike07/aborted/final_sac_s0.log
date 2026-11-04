@@ -1,0 +1,13 @@
+./spike07/rl7.py:160: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /__w/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:820.)
+  if it % 2000 == 0 or it == nit - 1: trainlog(it, nit, f'upd {upd} alpha {float(log_alpha.exp()):.4f}')
+  [sac hist s0] it 0/37500 steps 32 train-frac_cap(last60) nan meanhits nan (n=0) upd 0 alpha 0.0010 rss 0.40GB t 1s
+  [sac hist s0] it 2000/37500 steps 64032 train-frac_cap(last60) 0.00 meanhits 5.9 (n=9) upd 1756 alpha 0.0010 rss 0.51GB t 15s
+  [sac hist s0] it 4000/37500 steps 128032 train-frac_cap(last60) 0.00 meanhits 4.6 (n=14) upd 9756 alpha 0.0010 rss 0.62GB t 63s
+  ckpt {'frac_cap': 0.04, 'mean': 27.48, 'median': 10.5, 'steps': 78636, 'res_mean': 0.7778200625972295, 'res_max': 3.064950942993164, 'it': 5357, 'train_steps': 171424, 'updates': 15180, 'alpha': 0.0009999999310821295}
+  [sac hist s0] it 6000/37500 steps 192032 train-frac_cap(last60) 0.00 meanhits 34.0 (n=40) upd 17756 alpha 0.0010 rss 0.80GB t 150s
+  [sac hist s0] it 8000/37500 steps 256032 train-frac_cap(last60) 0.00 meanhits 31.3 (n=86) upd 25756 alpha 0.0010 rss 0.81GB t 219s
+  [sac hist s0] it 10000/37500 steps 320032 train-frac_cap(last60) 0.00 meanhits 32.7 (n=135) upd 33756 alpha 0.0010 rss 0.81GB t 290s
+  ckpt {'frac_cap': 0.18, 'mean': 81.12, 'median': 17.0, 'steps': 268780, 'res_mean': 0.5481470881109867, 'res_max': 2.098217487335205, 'it': 10714, 'train_steps': 342848, 'updates': 36608, 'alpha': 0.0009999999310821295}
+  [sac hist s0] it 12000/37500 steps 384032 train-frac_cap(last60) 0.00 meanhits 20.0 (n=176) upd 41756 alpha 0.0010 rss 0.83GB t 381s
+  [sac hist s0] it 14000/37500 steps 448032 train-frac_cap(last60) 0.00 meanhits 18.9 (n=201) upd 49756 alpha 0.0010 rss 0.83GB t 450s

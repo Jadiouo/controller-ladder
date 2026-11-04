@@ -1,0 +1,19 @@
+{
+ "dart_s5.0_r0.9": {
+  "succ": 0.3,
+  "ci": [
+   0.18,
+   0.42
+  ],
+  "min_dist": 0.33117874969417327,
+  "diverged": 0.0,
+  "unstable": 0.0,
+  "n": 50,
+  "teacher_noisy_succ": 0.5675,
+  "sigma": 5.0,
+  "rho": 0.9,
+  "episodes": 800,
+  "samples": 251528,
+  "val_mse_z": 0.1258755326271057
+ }
+}

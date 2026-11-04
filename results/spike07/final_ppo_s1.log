@@ -1,0 +1,18 @@
+  [ppo hist s1] it 0/76 steps 32768 train-frac_cap(last60) 0.00 meanhits 1.5 (n=19) kl 0.0140 clipfrac 0.18 std 0.030 rss 0.69GB t 4s
+  ckpt {'frac_cap': 0.76, 'mean': 229.04, 'median': 300.0, 'steps': 763576, 'res_mean': 0.14034097935257445, 'res_max': 0.5190532207489014, 'it': 11, 'train_steps': 360448, 'kl': 0.006363328960519125, 'clipfrac': 0.0780244307084517}
+  [ppo hist s1] it 10/76 steps 360448 train-frac_cap(last60) 0.00 meanhits 3.9 (n=41) kl 0.0056 clipfrac 0.07 std 0.030 rss 0.85GB t 88s
+  [ppo hist s1] it 20/76 steps 688128 train-frac_cap(last60) 0.00 meanhits 5.1 (n=42) kl 0.0065 clipfrac 0.08 std 0.030 rss 0.91GB t 120s
+  ckpt {'frac_cap': 0.74, 'mean': 222.66, 'median': 300.0, 'steps': 745360, 'res_mean': 0.17246282189255593, 'res_max': 0.6824297904968262, 'it': 22, 'train_steps': 720896, 'kl': 0.006020537943641102, 'clipfrac': 0.07555885314941406}
+  [ppo hist s1] it 30/76 steps 1015808 train-frac_cap(last60) 0.00 meanhits 5.1 (n=42) kl 0.0062 clipfrac 0.08 std 0.030 rss 0.92GB t 194s
+  ckpt {'frac_cap': 0.74, 'mean': 224.18, 'median': 300.0, 'steps': 746357, 'res_mean': 0.20238165276130332, 'res_max': 0.7344561815261841, 'it': 33, 'train_steps': 1081344, 'kl': 0.006165847270949598, 'clipfrac': 0.07841911315917968}
+  [ppo hist s1] it 40/76 steps 1343488 train-frac_cap(last60) 0.00 meanhits 7.6 (n=43) kl 0.0056 clipfrac 0.07 std 0.030 rss 1.06GB t 274s
+  ckpt {'frac_cap': 0.72, 'mean': 218.2, 'median': 300.0, 'steps': 715989, 'res_mean': 0.23967693343424612, 'res_max': 0.8363480567932129, 'it': 43, 'train_steps': 1409024, 'kl': 0.006011487294290419, 'clipfrac': 0.07567138671875}
+  [ppo hist s1] it 50/76 steps 1671168 train-frac_cap(last60) 0.02 meanhits 14.2 (n=44) kl 0.0065 clipfrac 0.08 std 0.029 rss 0.95GB t 353s
+  ckpt {'frac_cap': 0.74, 'mean': 224.84, 'median': 300.0, 'steps': 755592, 'res_mean': 0.2997901607486838, 'res_max': 1.0355446338653564, 'it': 54, 'train_steps': 1769472, 'kl': 0.006022481089712528, 'clipfrac': 0.07494430541992188}
+  [ppo hist s1] it 60/76 steps 1998848 train-frac_cap(last60) 0.28 meanhits 94.1 (n=62) kl 0.0059 clipfrac 0.07 std 0.029 rss 1.23GB t 432s
+  ckpt {'frac_cap': 0.74, 'mean': 222.62, 'median': 300.0, 'steps': 750400, 'res_mean': 0.3011371920442582, 'res_max': 1.1141782999038696, 'it': 65, 'train_steps': 2129920, 'kl': 0.005845480545667669, 'clipfrac': 0.07224578857421875}
+  [ppo hist s1] it 70/76 steps 2326528 train-frac_cap(last60) 0.68 meanhits 213.2 (n=92) kl 0.0061 clipfrac 0.08 std 0.029 rss 1.50GB t 512s
+  ckpt {'frac_cap': 0.72, 'mean': 216.86, 'median': 300.0, 'steps': 724707, 'res_mean': 0.3087905948835858, 'res_max': 1.231852650642395, 'it': 76, 'train_steps': 2490368, 'kl': 0.006122791184225207, 'clipfrac': 0.07748870849609375}
+  [ppo hist s1] it 75/76 steps 2490368 train-frac_cap(last60) 0.85 meanhits 256.0 (n=112) kl 0.0063 clipfrac 0.08 std 0.029 rss 1.62GB t 561s
+CAL selected ckpt (mean action): {'frac_cap': 0.76, 'mean': 229.04, 'median': 300.0, 'steps': 763576, 'res_mean': 0.14034097935257445, 'res_max': 0.5190532207489014, 'it': 11, 'train_steps': 360448, 'kl': 0.006363328960519125, 'clipfrac': 0.0780244307084517}
+ppo hist seed 1 done in 561s

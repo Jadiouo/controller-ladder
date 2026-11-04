@@ -1,0 +1,192 @@
+{
+ "bc_multi": {
+  "ckpt": "20k",
+  "cal": 0.31,
+  "params": 621039,
+  "path": ".scratch/s12/ckpt/bc_multi_s0_20000.pt",
+  "steps_arg": null
+ },
+ "mip_multi": {
+  "ckpt": "20k",
+  "cal": 0.3,
+  "params": 622480,
+  "path": ".scratch/s12/ckpt/mip_multi_s0_20000.pt",
+  "steps_arg": null
+ },
+ "diffusion_multi": {
+  "ckpt": "10k",
+  "cal": 0.31,
+  "params": 622480,
+  "path": ".scratch/s12/ckpt/diffusion_multi_s0_10000.pt",
+  "steps_arg": null
+ },
+ "flow_multi": {
+  "ckpt": "10k",
+  "cal": 0.26,
+  "params": 622480,
+  "path": ".scratch/s12/ckpt/flow_multi_s0_10000.pt",
+  "steps_arg": null
+ },
+ "flow1_multi": {
+  "ckpt": "10k",
+  "cal": 0.29,
+  "params": 622480,
+  "path": ".scratch/s12/ckpt/flow_multi_s0_10000.pt",
+  "steps_arg": 1
+ },
+ "bc_canon": {
+  "ckpt": "40k",
+  "cal": 0.59,
+  "params": 621039,
+  "path": ".scratch/s12/ckpt/bc_canon_s0_40000.pt",
+  "steps_arg": null
+ },
+ "mip_canon": {
+  "ckpt": "20k",
+  "cal": 0.57,
+  "params": 622480,
+  "path": ".scratch/s12/ckpt/mip_canon_s0_20000.pt",
+  "steps_arg": null
+ },
+ "diffusion_canon": {
+  "ckpt": "40k",
+  "cal": 0.55,
+  "params": 622480,
+  "path": ".scratch/s12/ckpt/diffusion_canon_s0_40000.pt",
+  "steps_arg": null
+ },
+ "flow_canon": {
+  "ckpt": "20k",
+  "cal": 0.56,
+  "params": 622480,
+  "path": ".scratch/s12/ckpt/flow_canon_s0_20000.pt",
+  "steps_arg": null
+ },
+ "flow1_canon": {
+  "ckpt": "10k",
+  "cal": 0.47,
+  "params": 622480,
+  "path": ".scratch/s12/ckpt/flow_canon_s0_10000.pt",
+  "steps_arg": 1
+ },
+ "bc_multi_s1": {
+  "ckpt": "10k",
+  "cal": 0.36,
+  "params": 621039,
+  "path": ".scratch/s12/ckpt/bc_multi_s1_10000.pt"
+ },
+ "mip_multi_s1": {
+  "ckpt": "20k",
+  "cal": 0.27,
+  "params": 622480,
+  "path": ".scratch/s12/ckpt/mip_multi_s1_20000.pt"
+ },
+ "diffusion_multi_s1": {
+  "ckpt": "40k",
+  "cal": 0.23,
+  "params": 622480,
+  "path": ".scratch/s12/ckpt/diffusion_multi_s1_40000.pt"
+ },
+ "flow_multi_s1": {
+  "ckpt": "10k",
+  "cal": 0.28,
+  "params": 622480,
+  "path": ".scratch/s12/ckpt/flow_multi_s1_10000.pt"
+ },
+ "flow1_multi_s1": {
+  "ckpt": "10k",
+  "cal": 0.32,
+  "params": 622480,
+  "path": ".scratch/s12/ckpt/flow_multi_s1_10000.pt"
+ },
+ "bc_canon_s1": {
+  "ckpt": "20k",
+  "cal": 0.68,
+  "params": 621039,
+  "path": ".scratch/s12/ckpt/bc_canon_s1_20000.pt"
+ },
+ "mip_canon_s1": {
+  "ckpt": "40k",
+  "cal": 0.58,
+  "params": 622480,
+  "path": ".scratch/s12/ckpt/mip_canon_s1_40000.pt"
+ },
+ "diffusion_canon_s1": {
+  "ckpt": "40k",
+  "cal": 0.43,
+  "params": 622480,
+  "path": ".scratch/s12/ckpt/diffusion_canon_s1_40000.pt"
+ },
+ "flow_canon_s1": {
+  "ckpt": "40k",
+  "cal": 0.55,
+  "params": 622480,
+  "path": ".scratch/s12/ckpt/flow_canon_s1_40000.pt"
+ },
+ "flow1_canon_s1": {
+  "ckpt": "10k",
+  "cal": 0.47,
+  "params": 622480,
+  "path": ".scratch/s12/ckpt/flow_canon_s1_10000.pt"
+ },
+ "bc_multi_s2": {
+  "ckpt": "20k",
+  "cal": 0.28,
+  "params": 621039,
+  "path": ".scratch/s12/ckpt/bc_multi_s2_20000.pt"
+ },
+ "mip_multi_s2": {
+  "ckpt": "20k",
+  "cal": 0.24,
+  "params": 622480,
+  "path": ".scratch/s12/ckpt/mip_multi_s2_20000.pt"
+ },
+ "diffusion_multi_s2": {
+  "ckpt": "40k",
+  "cal": 0.31,
+  "params": 622480,
+  "path": ".scratch/s12/ckpt/diffusion_multi_s2_40000.pt"
+ },
+ "flow_multi_s2": {
+  "ckpt": "20k",
+  "cal": 0.32,
+  "params": 622480,
+  "path": ".scratch/s12/ckpt/flow_multi_s2_20000.pt"
+ },
+ "flow1_multi_s2": {
+  "ckpt": "10k",
+  "cal": 0.31,
+  "params": 622480,
+  "path": ".scratch/s12/ckpt/flow_multi_s2_10000.pt"
+ },
+ "bc_canon_s2": {
+  "ckpt": "10k",
+  "cal": 0.56,
+  "params": 621039,
+  "path": ".scratch/s12/ckpt/bc_canon_s2_10000.pt"
+ },
+ "mip_canon_s2": {
+  "ckpt": "10k",
+  "cal": 0.56,
+  "params": 622480,
+  "path": ".scratch/s12/ckpt/mip_canon_s2_10000.pt"
+ },
+ "diffusion_canon_s2": {
+  "ckpt": "40k",
+  "cal": 0.45,
+  "params": 622480,
+  "path": ".scratch/s12/ckpt/diffusion_canon_s2_40000.pt"
+ },
+ "flow_canon_s2": {
+  "ckpt": "10k",
+  "cal": 0.51,
+  "params": 622480,
+  "path": ".scratch/s12/ckpt/flow_canon_s2_10000.pt"
+ },
+ "flow1_canon_s2": {
+  "ckpt": "20k",
+  "cal": 0.45,
+  "params": 622480,
+  "path": ".scratch/s12/ckpt/flow_canon_s2_20000.pt"
+ }
+}

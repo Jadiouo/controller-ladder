@@ -1,0 +1,32 @@
+./spike07/rl7.py:160: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /__w/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:820.)
+  if it % 2000 == 0 or it == nit - 1: trainlog(it, nit, f'upd {upd} alpha {float(log_alpha.exp()):.4f}')
+  [sac hist s2] it 0/37500 steps 32 train-frac_cap(last60) nan meanhits nan (n=0) upd 0 alpha 0.0010 rss 0.40GB t 1s
+  [sac hist s2] it 2000/37500 steps 64032 train-frac_cap(last60) 0.00 meanhits 2.0 (n=7) upd 1756 alpha 0.0010 rss 0.52GB t 16s
+  [sac hist s2] it 4000/37500 steps 128032 train-frac_cap(last60) 0.00 meanhits 2.0 (n=7) upd 9756 alpha 0.0010 rss 0.62GB t 71s
+  ckpt {'frac_cap': 0.56, 'mean': 176.76, 'median': 300.0, 'steps': 601293, 'res_mean': 0.9045727207373595, 'res_max': 3.499689817428589, 'it': 5357, 'train_steps': 171424, 'updates': 15180, 'alpha': 0.0009999999310821295}
+  [sac hist s2] it 6000/37500 steps 192032 train-frac_cap(last60) 0.00 meanhits 33.8 (n=25) upd 17756 alpha 0.0010 rss 0.80GB t 200s
+  [sac hist s2] it 8000/37500 steps 256032 train-frac_cap(last60) 0.00 meanhits 36.1 (n=86) upd 25756 alpha 0.0010 rss 0.81GB t 305s
+  [sac hist s2] it 10000/37500 steps 320032 train-frac_cap(last60) 0.00 meanhits 19.9 (n=118) upd 33756 alpha 0.0010 rss 0.81GB t 413s
+  ckpt {'frac_cap': 0.36, 'mean': 121.66, 'median': 23.5, 'steps': 414370, 'res_mean': 0.796045339031312, 'res_max': 2.5700294971466064, 'it': 10714, 'train_steps': 342848, 'updates': 36608, 'alpha': 0.0009999999310821295}
+  [sac hist s2] it 12000/37500 steps 384032 train-frac_cap(last60) 0.00 meanhits 22.0 (n=139) upd 41756 alpha 0.0010 rss 0.81GB t 552s
+  [sac hist s2] it 14000/37500 steps 448032 train-frac_cap(last60) 0.00 meanhits 25.6 (n=158) upd 49756 alpha 0.0010 rss 0.81GB t 658s
+  [sac hist s2] it 16000/37500 steps 512032 train-frac_cap(last60) 0.00 meanhits 38.8 (n=194) upd 57756 alpha 0.0010 rss 0.81GB t 761s
+  ckpt {'frac_cap': 0.1, 'mean': 43.4, 'median': 11.0, 'steps': 153681, 'res_mean': 0.6218190969900605, 'res_max': 3.3369338512420654, 'it': 16071, 'train_steps': 514272, 'updates': 58036, 'alpha': 0.0009999999310821295}
+  [sac hist s2] it 18000/37500 steps 576032 train-frac_cap(last60) 0.00 meanhits 22.9 (n=244) upd 65756 alpha 0.0010 rss 0.81GB t 890s
+  [sac hist s2] it 20000/37500 steps 640032 train-frac_cap(last60) 0.00 meanhits 19.5 (n=282) upd 73756 alpha 0.0010 rss 0.81GB t 995s
+  ckpt {'frac_cap': 0.06, 'mean': 33.68, 'median': 7.0, 'steps': 99755, 'res_mean': 0.7137352468888335, 'res_max': 3.8265907764434814, 'it': 21429, 'train_steps': 685728, 'updates': 79468, 'alpha': 0.0009999999310821295}
+  [sac hist s2] it 22000/37500 steps 704032 train-frac_cap(last60) 0.00 meanhits 30.1 (n=339) upd 81756 alpha 0.0010 rss 0.81GB t 1111s
+  [sac hist s2] it 24000/37500 steps 768032 train-frac_cap(last60) 0.00 meanhits 20.5 (n=383) upd 89756 alpha 0.0010 rss 0.81GB t 1213s
+  [sac hist s2] it 26000/37500 steps 832032 train-frac_cap(last60) 0.00 meanhits 15.3 (n=433) upd 97756 alpha 0.0010 rss 0.81GB t 1317s
+  ckpt {'frac_cap': 0.16, 'mean': 83.62, 'median': 22.5, 'steps': 262200, 'res_mean': 0.7103605918290021, 'res_max': 4.052695274353027, 'it': 26786, 'train_steps': 857152, 'updates': 100896, 'alpha': 0.0009999999310821295}
+  [sac hist s2] it 28000/37500 steps 896032 train-frac_cap(last60) 0.00 meanhits 16.8 (n=464) upd 105756 alpha 0.0010 rss 0.81GB t 1445s
+  [sac hist s2] it 30000/37500 steps 960032 train-frac_cap(last60) 0.00 meanhits 28.1 (n=494) upd 113756 alpha 0.0010 rss 0.81GB t 1549s
+  [sac hist s2] it 32000/37500 steps 1024032 train-frac_cap(last60) 0.00 meanhits 28.9 (n=526) upd 121756 alpha 0.0010 rss 0.81GB t 1653s
+  ckpt {'frac_cap': 0.02, 'mean': 20.76, 'median': 9.0, 'steps': 81744, 'res_mean': 0.8289382077201568, 'res_max': 5.30355978012085, 'it': 32143, 'train_steps': 1028576, 'updates': 122324, 'alpha': 0.0009999999310821295}
+  [sac hist s2] it 34000/37500 steps 1088032 train-frac_cap(last60) 0.00 meanhits 30.8 (n=566) upd 129756 alpha 0.0010 rss 0.81GB t 1779s
+  [sac hist s2] it 36000/37500 steps 1152032 train-frac_cap(last60) 0.00 meanhits 26.7 (n=601) upd 137756 alpha 0.0010 rss 0.81GB t 1879s
+  ckpt {'frac_cap': 0.02, 'mean': 29.28, 'median': 13.0, 'steps': 98398, 'res_mean': 0.7580998968290603, 'res_max': 5.40316104888916, 'it': 37500, 'train_steps': 1200000, 'updates': 143752, 'alpha': 0.0009999999310821295}
+  [sac hist s2] it 37499/37500 steps 1200000 train-frac_cap(last60) 0.00 meanhits 22.6 (n=620) upd 143752 alpha 0.0010 rss 0.81GB t 1975s
+CAL selected ckpt (mean action): {'frac_cap': 0.56, 'mean': 176.76, 'median': 300.0, 'steps': 601293, 'res_mean': 0.9045727207373595, 'res_max': 3.499689817428589, 'it': 5357, 'train_steps': 171424, 'updates': 15180, 'alpha': 0.0009999999310821295}
+sac hist seed 2 done in 1975s

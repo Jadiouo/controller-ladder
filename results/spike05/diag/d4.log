@@ -1,0 +1,3 @@
+fix-hist (logstd0=-3.5, 1M) mean         median   3.0 mean    4.3 hits [1, 1, 2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 6, 7, 8, 11, 12]
+  mean|res| Nm 0.40891394
+fix-hist sample std.03                   median   3.0 mean    4.3 hits [1, 1, 1, 2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 5, 5, 6, 7, 8, 10, 14]

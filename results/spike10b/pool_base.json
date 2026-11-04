@@ -1,0 +1,1 @@
+{"base": "('adapt3', {'pm': 'full', 'T': 0.6, 'amp': 0.6, 'loss': 'linear', 'f_scale': 1.0", "M": 300, "succ": 0.66, "mean_steps": 364.6533333333333, "unstable": 0.0, "wall": 926.7437777519226}

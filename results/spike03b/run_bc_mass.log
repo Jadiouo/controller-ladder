@@ -1,0 +1,14 @@
+mass Cond(mass x5.0: e=0.8, m x5.0, sigma=0.2mm, delay=0ms) teacher median 2.5
+./spike03b/run_bc.py:23: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /__w/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:820.)
+  print(f'{a.cond} BC+DART seed {s}: n={n} loss {float(loss):.4f} median hits {np.median(r["hits"])} (teacher {np.median(res["teacher"]["hits"])}) {time.time()-t1:.0f}s', flush=True)
+mass BC+DART seed 0: n=22543 loss 0.0006 median hits 2.0 (teacher 2.5) 27s
+mass BC+DART seed 1: n=19374 loss 0.0013 median hits 3.0 (teacher 2.5) 25s
+mass BC+DART seed 2: n=21052 loss 0.0011 median hits 2.0 (teacher 2.5) 29s
+mass BC+DART seed 3: n=20595 loss 0.0013 median hits 5.5 (teacher 2.5) 59s
+mass BC+DART seed 4: n=20016 loss 0.0011 median hits 11.0 (teacher 2.5) 35s
+mass BC+DART seed 5: n=22737 loss 0.0011 median hits 2.5 (teacher 2.5) 51s
+mass BC+DART seed 6: n=19497 loss 0.0011 median hits 2.0 (teacher 2.5) 45s
+mass BC+DART seed 7: n=18386 loss 0.0013 median hits 2.0 (teacher 2.5) 32s
+mass BC+DART seed 8: n=19653 loss 0.0012 median hits 2.0 (teacher 2.5) 25s
+mass BC+DART seed 9: n=18218 loss 0.0012 median hits 2.0 (teacher 2.5) 22s

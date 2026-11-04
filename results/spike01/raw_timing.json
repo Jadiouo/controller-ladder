@@ -1,0 +1,1 @@
+{"timing": {"teacher_eval": 12.43765640258789, "collect": 505.609662771225, "train": 1877.943502664566, "eval": 576.6465837955475, "total_this_invocation": 2973.59109210968}, "args": {"seeds": 10, "ntrain": 200, "epochs": 20, "dart_sigma": 3.0, "errs": "-0.3,0,0.1,0.3,1.0", "out": "results/spike01/raw.pkl"}}

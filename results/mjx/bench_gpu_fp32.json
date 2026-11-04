@@ -1,0 +1,36 @@
+{
+ "kind": "mjx",
+ "device": "cuda:0",
+ "x64": 0,
+ "runs": {
+  "64": {
+   "first_call_s": 20.222806215286255,
+   "wall_per_800steps": 0.451091210047404,
+   "control_steps_per_s": 113502.54418528688,
+   "physics_steps_per_s": 227005.08837057377,
+   "cpu_util": 0.7951583442048745
+  },
+  "1024": {
+   "first_call_s": 20.418330669403076,
+   "wall_per_800steps": 0.5484792391459147,
+   "control_steps_per_s": 1493584.3356179688,
+   "physics_steps_per_s": 2987168.6712359376,
+   "cpu_util": 0.931354590185503
+  },
+  "4096": {
+   "first_call_s": 21.725849390029907,
+   "wall_per_800steps": 0.6939914226531982,
+   "control_steps_per_s": 4721672.189365782,
+   "physics_steps_per_s": 9443344.378731564,
+   "cpu_util": 0.8729945700920037
+  },
+  "16384": {
+   "first_call_s": 27.094746828079224,
+   "wall_per_800steps": 1.389021396636963,
+   "control_steps_per_s": 9436283.725891173,
+   "physics_steps_per_s": 18872567.451782346,
+   "cpu_util": 0.8433447978815896
+  }
+ },
+ "peak_bytes_in_use": 703333120
+}

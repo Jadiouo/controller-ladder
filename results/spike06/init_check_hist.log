@@ -1,0 +1,3 @@
+init hist mean {'frac_cap': 0.74, 'mean': 222.94, 'median': 300.0, 'steps': 742747}
+init hist sample {'frac_cap': 0.74, 'mean': 223.44, 'median': 300.0, 'steps': 739026}
+classical {'frac_cap': 0.76, 'mean': 229.38, 'median': 300.0, 'steps': 762835}

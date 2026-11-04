@@ -1,0 +1,7 @@
+nominal median 100.0
+restitution e=0.48 median 100.0 mean 100.0 {'cap': 50} (38s)
+restitution e=0.46 median 100.0 mean 100.0 {'cap': 50} (56s)
+restitution e=0.44 median 100.0 mean 100.0 {'cap': 50} (72s)
+restitution e=0.42 median 54.0 mean 54.9 {'dead': 50} (78s)
+restitution e=0.4 median 26.0 mean 25.9 {'dead': 50} (81s)
+CHOSEN restitution {'e': 0.4, 'name': 'e=0.4'}

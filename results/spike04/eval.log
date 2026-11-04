@@ -1,0 +1,3 @@
+max |(q_meas - q_true) - noise array| over 60 steps: 2.177077962350893e-16 ; noise std 0.000994822187584004
+N1 done {'C0': 1, 'C1old': 1, 'C1new': 1, 'C1F': 1, 'RL_C1STAR': 5}
+N2 done {'C0': 1, 'C1old': 1, 'C1new': 1, 'C1F': 1}

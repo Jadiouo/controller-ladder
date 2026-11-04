@@ -1,0 +1,22 @@
+{
+ "kind": "mjx",
+ "device": "cuda:0",
+ "x64": 1,
+ "runs": {
+  "1024": {
+   "first_call_s": 25.6012966632843,
+   "wall_per_800steps": 1.2486650149027507,
+   "control_steps_per_s": 656060.6649684996,
+   "physics_steps_per_s": 1312121.3299369991,
+   "cpu_util": 0.8364388920979017
+  },
+  "4096": {
+   "first_call_s": 24.099599599838257,
+   "wall_per_800steps": 1.417046070098877,
+   "control_steps_per_s": 2312415.996306567,
+   "physics_steps_per_s": 4624831.992613134,
+   "cpu_util": 0.7376480723220702
+  }
+ },
+ "peak_bytes_in_use": 356982016
+}

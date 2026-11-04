@@ -1,0 +1,95 @@
+{
+ "methods": {
+  "R0": {
+   "n": 100,
+   "model_plan_warn": 3250,
+   "model_other_warn": 276,
+   "plant_warn": 0,
+   "plant_reset": 0,
+   "plant_nonfinite": 0,
+   "episodes_with_plant_warn": 0,
+   "episodes_diverged": 0,
+   "diverged_pct": 0.0,
+   "dist_all_finite": true,
+   "success_pct": 69.0,
+   "success_pct_excl_bad": 69.0,
+   "success_pct_bad_as_fail": 69.0,
+   "pass_lt_0p5pct": true,
+   "n_succ_in_bad": 0
+  },
+  "L-ens": {
+   "n": 100,
+   "model_plan_warn": 6442,
+   "model_other_warn": 141,
+   "plant_warn": 0,
+   "plant_reset": 0,
+   "plant_nonfinite": 0,
+   "episodes_with_plant_warn": 0,
+   "episodes_diverged": 0,
+   "diverged_pct": 0.0,
+   "dist_all_finite": true,
+   "success_pct": 71.0,
+   "success_pct_excl_bad": 71.0,
+   "success_pct_bad_as_fail": 71.0,
+   "pass_lt_0p5pct": true,
+   "n_succ_in_bad": 0
+  },
+  "B": {
+   "n": 100,
+   "model_plan_warn": 6442,
+   "model_other_warn": 141,
+   "plant_warn": 0,
+   "plant_reset": 0,
+   "plant_nonfinite": 0,
+   "episodes_with_plant_warn": 0,
+   "episodes_diverged": 0,
+   "diverged_pct": 0.0,
+   "dist_all_finite": true,
+   "success_pct": 86.0,
+   "success_pct_excl_bad": 86.0,
+   "success_pct_bad_as_fail": 86.0,
+   "pass_lt_0p5pct": true,
+   "n_succ_in_bad": 0
+  },
+  "C-ens": {
+   "n": 100,
+   "model_plan_warn": 9924,
+   "model_other_warn": 181,
+   "plant_warn": 0,
+   "plant_reset": 0,
+   "plant_nonfinite": 0,
+   "episodes_with_plant_warn": 0,
+   "episodes_diverged": 0,
+   "diverged_pct": 0.0,
+   "dist_all_finite": true,
+   "success_pct": 79.0,
+   "success_pct_excl_bad": 79.0,
+   "success_pct_bad_as_fail": 79.0,
+   "pass_lt_0p5pct": true,
+   "n_succ_in_bad": 0
+  }
+ },
+ "offline_all_candidates": {
+  "B/L-ens pipeline": {
+   "executions": 1069,
+   "plant_warn": 1,
+   "exec_with_reset": 1,
+   "exec_nonfinite": 0,
+   "model_warn_total": 6583,
+   "model_plan": 6442,
+   "model_other": 141
+  },
+  "C-ens pipeline": {
+   "executions": 1087,
+   "plant_warn": 0,
+   "exec_with_reset": 0,
+   "exec_nonfinite": 0,
+   "model_warn_total": 10105,
+   "model_plan": 9924,
+   "model_other": 181
+  }
+ },
+ "other_nonnan_warn": {
+  "R0": 0
+ }
+}

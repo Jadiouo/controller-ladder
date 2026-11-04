@@ -1,0 +1,22 @@
+W3 {'cap': 80.0, 'delay': 0, 'fc': 1.5, 'fv': 0.3} teacher clean rmse 0.0219 dist 0.0237
+W3 dart   seed=0 loss=0.0155 rmse=0.0225 dist_rmse=0.0250 (teacher 0.0219/0.0237) elapsed=23s
+W3 dagger seed=0 loss=0.0275 rmse=0.0226 dist_rmse=0.0244 (teacher 0.0219/0.0237) elapsed=48s
+W3 dart   seed=1 loss=0.0209 rmse=0.0225 dist_rmse=0.0247 (teacher 0.0219/0.0237) elapsed=68s
+W3 dagger seed=1 loss=0.0215 rmse=0.0223 dist_rmse=0.0240 (teacher 0.0219/0.0237) elapsed=91s
+W3 dart   seed=2 loss=0.0157 rmse=0.0224 dist_rmse=0.0245 (teacher 0.0219/0.0237) elapsed=111s
+W3 dagger seed=2 loss=0.0170 rmse=0.0226 dist_rmse=0.0244 (teacher 0.0219/0.0237) elapsed=138s
+W3 dart   seed=3 loss=0.0123 rmse=0.0229 dist_rmse=0.0254 (teacher 0.0219/0.0237) elapsed=156s
+W3 dagger seed=3 loss=0.0346 rmse=0.0226 dist_rmse=0.0243 (teacher 0.0219/0.0237) elapsed=182s
+W3 dart   seed=4 loss=0.0156 rmse=0.0234 dist_rmse=0.0260 (teacher 0.0219/0.0237) elapsed=201s
+W3 dagger seed=4 loss=0.0336 rmse=0.0228 dist_rmse=0.0250 (teacher 0.0219/0.0237) elapsed=227s
+W3 dart   seed=5 loss=0.0256 rmse=0.0226 dist_rmse=0.0249 (teacher 0.0219/0.0237) elapsed=246s
+W3 dagger seed=5 loss=0.0375 rmse=0.0223 dist_rmse=0.0241 (teacher 0.0219/0.0237) elapsed=276s
+W3 dart   seed=6 loss=0.0131 rmse=0.0224 dist_rmse=0.0247 (teacher 0.0219/0.0237) elapsed=299s
+W3 dagger seed=6 loss=0.0332 rmse=0.0224 dist_rmse=0.0239 (teacher 0.0219/0.0237) elapsed=336s
+W3 dart   seed=7 loss=0.0422 rmse=0.0231 dist_rmse=0.0257 (teacher 0.0219/0.0237) elapsed=360s
+W3 dagger seed=7 loss=0.0354 rmse=0.0224 dist_rmse=0.0241 (teacher 0.0219/0.0237) elapsed=393s
+W3 dart   seed=8 loss=0.0194 rmse=0.0228 dist_rmse=0.0253 (teacher 0.0219/0.0237) elapsed=413s
+W3 dagger seed=8 loss=0.0454 rmse=0.0230 dist_rmse=0.0249 (teacher 0.0219/0.0237) elapsed=441s
+W3 dart   seed=9 loss=0.0497 rmse=0.0231 dist_rmse=0.0254 (teacher 0.0219/0.0237) elapsed=460s
+W3 dagger seed=9 loss=0.0314 rmse=0.0225 dist_rmse=0.0242 (teacher 0.0219/0.0237) elapsed=487s
+TIMING {"collect": 135.99937677383423, "train": 269.55424523353577, "eval": 81.5387487411499, "total": 487.36989736557007}

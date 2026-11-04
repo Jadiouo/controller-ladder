@@ -1,0 +1,25 @@
+  [ppo hist s100] it 0/305 steps 8192 train-frac_cap(last60) 0.00 meanhits 1.2 (n=5) kl 0.0243 clipfrac 0.29 std 0.030 t 16s
+  [ppo hist s100] it 10/305 steps 90112 train-frac_cap(last60) 0.00 meanhits 4.2 (n=13) kl 0.0080 clipfrac 0.11 std 0.030 t 107s
+  [ppo hist s100] it 20/305 steps 172032 train-frac_cap(last60) 0.00 meanhits 9.4 (n=14) kl 0.0086 clipfrac 0.11 std 0.030 t 162s
+  [ppo hist s100] it 30/305 steps 253952 train-frac_cap(last60) 0.00 meanhits 9.4 (n=14) kl 0.0090 clipfrac 0.12 std 0.030 t 242s
+  [ppo hist s100] it 40/305 steps 335872 train-frac_cap(last60) 0.00 meanhits 9.4 (n=14) kl 0.0095 clipfrac 0.13 std 0.030 t 318s
+  [ppo hist s100] it 50/305 steps 417792 train-frac_cap(last60) 0.12 meanhits 56.0 (n=17) kl 0.0097 clipfrac 0.13 std 0.030 t 392s
+  [ppo hist s100] it 60/305 steps 499712 train-frac_cap(last60) 0.29 meanhits 102.2 (n=24) kl 0.0093 clipfrac 0.13 std 0.030 t 484s
+  [ppo hist s100] it 70/305 steps 581632 train-frac_cap(last60) 0.39 meanhits 130.5 (n=28) kl 0.0093 clipfrac 0.12 std 0.029 t 551s
+  ckpt {'frac_cap': 0.72, 'mean': 218.14, 'median': 300.0, 'steps': 715384, 'res_mean': 0.34036722477239084, 'res_max': 1.1239432096481323, 'it': 76, 'train_steps': 622592, 'kl': 0.009348434692765296, 'clipfrac': 0.1252105712890625}
+  [ppo hist s100] it 80/305 steps 663552 train-frac_cap(last60) 0.47 meanhits 152.0 (n=36) kl 0.0096 clipfrac 0.13 std 0.029 t 1046s
+  [ppo hist s100] it 90/305 steps 745472 train-frac_cap(last60) 0.55 meanhits 172.2 (n=44) kl 0.0093 clipfrac 0.12 std 0.029 t 1176s
+  [ppo hist s100] it 100/305 steps 827392 train-frac_cap(last60) 0.53 meanhits 168.7 (n=47) kl 0.0093 clipfrac 0.12 std 0.029 t 1274s
+  [ppo hist s100] it 110/305 steps 909312 train-frac_cap(last60) 0.57 meanhits 178.0 (n=53) kl 0.0100 clipfrac 0.13 std 0.029 t 1394s
+  [ppo hist s100] it 120/305 steps 991232 train-frac_cap(last60) 0.55 meanhits 174.6 (n=56) kl 0.0095 clipfrac 0.13 std 0.029 t 1489s
+  [ppo hist s100] it 130/305 steps 1073152 train-frac_cap(last60) 0.58 meanhits 186.7 (n=62) kl 0.0093 clipfrac 0.13 std 0.029 t 1537s
+  [ppo hist s100] it 140/305 steps 1155072 train-frac_cap(last60) 0.65 meanhits 213.6 (n=73) kl 0.0096 clipfrac 0.13 std 0.029 t 1609s
+  [ppo hist s100] it 150/305 steps 1236992 train-frac_cap(last60) 0.58 meanhits 192.3 (n=86) kl 0.0103 clipfrac 0.14 std 0.029 t 1679s
+  ckpt {'frac_cap': 0.52, 'mean': 165.72, 'median': 300.0, 'steps': 553065, 'res_mean': 0.42088824922628987, 'res_max': 1.392809271812439, 'it': 152, 'train_steps': 1245184, 'kl': 0.0101337606175548, 'clipfrac': 0.137078857421875}
+  [ppo hist s100] it 160/305 steps 1318912 train-frac_cap(last60) 0.52 meanhits 173.3 (n=99) kl 0.0099 clipfrac 0.13 std 0.029 t 2081s
+  [ppo hist s100] it 170/305 steps 1400832 train-frac_cap(last60) 0.48 meanhits 165.8 (n=104) kl 0.0103 clipfrac 0.14 std 0.029 t 2119s
+  [ppo hist s100] it 180/305 steps 1482752 train-frac_cap(last60) 0.47 meanhits 166.4 (n=108) kl 0.0101 clipfrac 0.14 std 0.029 t 2148s
+  [ppo hist s100] it 190/305 steps 1564672 train-frac_cap(last60) 0.42 meanhits 155.5 (n=117) kl 0.0098 clipfrac 0.13 std 0.029 t 2170s
+  [ppo hist s100] it 200/305 steps 1646592 train-frac_cap(last60) 0.38 meanhits 159.7 (n=129) kl 0.0093 clipfrac 0.13 std 0.028 t 2189s
+  [ppo hist s100] it 210/305 steps 1728512 train-frac_cap(last60) 0.35 meanhits 146.1 (n=134) kl 0.0097 clipfrac 0.13 std 0.028 t 2209s
+  [ppo hist s100] it 220/305 steps 1810432 train-frac_cap(last60) 0.35 meanhits 147.8 (n=136) kl 0.0098 clipfrac 0.13 std 0.028 t 2228s

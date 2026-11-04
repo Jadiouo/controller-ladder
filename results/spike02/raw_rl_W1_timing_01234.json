@@ -1,0 +1,1 @@
+{"args": {"w": "W1", "seeds": "0,1,2,3,4", "steps": 2000000, "bound": 16.0, "nenv": 64, "horizon": 200, "lr": 0.0003, "epochs": 10, "mb": 2048, "tracking_w": 200.0, "res_pen": 0.0001, "out": null}, "weak": {"cap": 32.0, "delay": 0, "fc": 0.0, "fv": 0.0}, "total": 804.0861666202545}

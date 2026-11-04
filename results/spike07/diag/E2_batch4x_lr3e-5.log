@@ -1,0 +1,15 @@
+  [ppo hist s100] it 0/76 steps 32768 train-frac_cap(last60) 0.00 meanhits 1.1 (n=15) kl 0.0041 clipfrac 0.04 std 0.030 t 5s
+  [ppo hist s100] it 10/76 steps 360448 train-frac_cap(last60) 0.00 meanhits 5.4 (n=36) kl 0.0025 clipfrac 0.02 std 0.030 t 44s
+  ckpt {'frac_cap': 0.62, 'mean': 203.12, 'median': 300.0, 'steps': 629433, 'res_mean': 0.23408538427335457, 'res_max': 0.5883336067199707, 'it': 19, 'train_steps': 622592, 'kl': 0.0026943215719280773, 'clipfrac': 0.01993360017475329}
+  [ppo hist s100] it 20/76 steps 688128 train-frac_cap(last60) 0.00 meanhits 18.5 (n=54) kl 0.0028 clipfrac 0.02 std 0.030 t 140s
+  [ppo hist s100] it 30/76 steps 1015808 train-frac_cap(last60) 0.00 meanhits 50.1 (n=82) kl 0.0028 clipfrac 0.02 std 0.030 t 178s
+  ckpt {'frac_cap': 0.5, 'mean': 166.14, 'median': 255.5, 'steps': 513057, 'res_mean': 0.26692791333719984, 'res_max': 0.7329723834991455, 'it': 38, 'train_steps': 1245184, 'kl': 0.002751065222997795, 'clipfrac': 0.020751190185546876}
+  [ppo hist s100] it 40/76 steps 1343488 train-frac_cap(last60) 0.02 meanhits 65.1 (n=90) kl 0.0027 clipfrac 0.02 std 0.030 t 269s
+  [ppo hist s100] it 50/76 steps 1671168 train-frac_cap(last60) 0.15 meanhits 105.9 (n=106) kl 0.0028 clipfrac 0.02 std 0.030 t 310s
+  ckpt {'frac_cap': 0.42, 'mean': 148.04, 'median': 101.0, 'steps': 460549, 'res_mean': 0.26862535149560096, 'res_max': 0.8306884169578552, 'it': 57, 'train_steps': 1867776, 'kl': 0.0028906150366992734, 'clipfrac': 0.022821044921875}
+  [ppo hist s100] it 60/76 steps 1998848 train-frac_cap(last60) 0.33 meanhits 161.9 (n=145) kl 0.0031 clipfrac 0.03 std 0.030 t 398s
+  [ppo hist s100] it 70/76 steps 2326528 train-frac_cap(last60) 0.37 meanhits 168.4 (n=164) kl 0.0029 clipfrac 0.02 std 0.030 t 441s
+  ckpt {'frac_cap': 0.64, 'mean': 200.02, 'median': 300.0, 'steps': 617958, 'res_mean': 0.30294993439070145, 'res_max': 1.0334216356277466, 'it': 76, 'train_steps': 2490368, 'kl': 0.0028547027858508043, 'clipfrac': 0.0229400634765625}
+  [ppo hist s100] it 75/76 steps 2490368 train-frac_cap(last60) 0.42 meanhits 162.0 (n=184) kl 0.0027 clipfrac 0.02 std 0.030 t 511s
+CAL selected ckpt (mean action): {'frac_cap': 0.64, 'mean': 200.02, 'median': 300.0, 'steps': 617958, 'res_mean': 0.30294993439070145, 'res_max': 1.0334216356277466, 'it': 76, 'train_steps': 2490368, 'kl': 0.0028547027858508043, 'clipfrac': 0.0229400634765625}
+ppo hist seed 100 done in 511s

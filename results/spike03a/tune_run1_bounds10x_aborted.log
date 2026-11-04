@@ -1,0 +1,12 @@
+  gen 0 best 0.01126 sigma 0.473
+  gen 1 best 0.01126 sigma 0.465
+  gen 2 best 0.00930 sigma 0.610
+  gen 3 best 0.00912 sigma 0.809
+  gen 4 best 0.00912 sigma 1.060
+  gen 5 best 0.00907 sigma 1.028
+  gen 6 best 0.00907 sigma 0.875
+  gen 7 best 0.00907 sigma 0.751
+  gen 8 best 0.00907 sigma 0.684
+  gen 9 best 0.00907 sigma 0.582
+W0 C1 {'params': [2.302585092994046, 1.6938339655668109], 'sp': 10.000000000000002, 'sd': 5.440298689762001, 'calib_obj': 0.009071300624579101, 'evals': 80, 'sim_steps': 6400000, 'wall': 202.90085077285767, 'dof': 2} C0 obj 0.01342000941847634
+  gen 0 best 0.00915 sigma 0.419

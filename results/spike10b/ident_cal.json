@@ -1,0 +1,122 @@
+{
+ "grad": {
+  "cfg": {
+   "pm": "grad",
+   "T": 0.4,
+   "amp": 0.6,
+   "loss": "soft_l1",
+   "f_scale": 1.0,
+   "sq": 0.01,
+   "sv": 0.1,
+   "preg": 0.0,
+   "prefixes": [
+    0.5,
+    0.75,
+    1.0
+   ],
+   "ngrid": 7,
+   "nstart": 4,
+   "nfev": 30
+  },
+  "errors": {
+   "length_scale": {
+    "rmse": 0.05747087800775469,
+    "prior_sd": 0.10971272207386988,
+    "frac_var_explained": 0.7256015313786257,
+    "corr": 0.8843220645637455
+   },
+   "log_total_mass": {
+    "rmse": 0.017672234720866938,
+    "prior_sd": 0.5637211932439484,
+    "frac_var_explained": 0.9990172247353639,
+    "corr": 0.9997387893589254
+   },
+   "mass_log_slope": {
+    "rmse": 0.12194072837206531,
+    "prior_sd": 0.09312959866272125,
+    "frac_var_explained": -0.7144392738567367,
+    "corr": 0.5755258643490649
+   },
+   "log_damping": {
+    "rmse": 1.0173946441036812,
+    "prior_sd": 1.1011023481698987,
+    "frac_var_explained": 0.1462641543042783,
+    "corr": 0.6932747359636782
+   },
+   "friction_1e-3Nm": {
+    "rmse": 3.0973088458040396,
+    "prior_sd": 0.5359462425187602,
+    "frac_var_explained": -32.39846944419769,
+    "corr": 0.36146746924839995
+   },
+   "per_link_mass_deviation(log, mean-removed)": {
+    "rmse": 0.16985173977482004,
+    "prior_sd": 0.16225307063064137,
+    "frac_var_explained": -0.09585766643842497
+   }
+  },
+  "fit_wall_mean_s": 13.954586386680603,
+  "nfev_mean": 613.64,
+  "wall": 92.23371815681458
+ },
+ "full": {
+  "cfg": {
+   "pm": "full",
+   "T": 0.4,
+   "amp": 0.6,
+   "loss": "soft_l1",
+   "f_scale": 1.0,
+   "sq": 0.01,
+   "sv": 0.1,
+   "preg": 1.0,
+   "prefixes": [
+    0.5,
+    0.75,
+    1.0
+   ],
+   "ngrid": 7,
+   "nstart": 4,
+   "nfev": 30
+  },
+  "errors": {
+   "length_scale": {
+    "rmse": 0.03155719965455863,
+    "prior_sd": 0.10971272207386988,
+    "frac_var_explained": 0.9172662072345074,
+    "corr": 0.958951712282522
+   },
+   "log_total_mass": {
+    "rmse": 0.01224287985092669,
+    "prior_sd": 0.5637211932439484,
+    "frac_var_explained": 0.9995283297877328,
+    "corr": 0.9998859702365994
+   },
+   "mass_log_slope": {
+    "rmse": 0.05825561135444698,
+    "prior_sd": 0.09312959866272125,
+    "frac_var_explained": 0.6087088136510189,
+    "corr": 0.803815728724158
+   },
+   "log_damping": {
+    "rmse": 0.7553937777560162,
+    "prior_sd": 1.1011023481698987,
+    "frac_var_explained": 0.5293571895610725,
+    "corr": 0.8032538497273247
+   },
+   "friction_1e-3Nm": {
+    "rmse": 1.8537263298516373,
+    "prior_sd": 0.5359462425187602,
+    "frac_var_explained": -10.96323892147318,
+    "corr": 0.42444843965974405
+   },
+   "per_link_mass_deviation(log, mean-removed)": {
+    "rmse": 0.12560803736743612,
+    "prior_sd": 0.16225307063064137,
+    "frac_var_explained": 0.40069346901460234
+   }
+  },
+  "fit_wall_mean_s": 29.418060092926027,
+  "nfev_mean": 613.18,
+  "wall": 189.83386325836182
+ }
+}

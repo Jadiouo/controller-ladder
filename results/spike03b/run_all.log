@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "./spike03b/report.py", line 22, in <module>
+    med = np.array([np.median(H[:, ix]) for ix in idx])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "./spike03b/report.py", line 22, in <listcomp>
+    med = np.array([np.median(H[:, ix]) for ix in idx])
+                              ~^^^^^^^
+IndexError: too many indices for array: array is 1-dimensional, but 2 were indexed

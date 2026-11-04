@@ -1,0 +1,950 @@
+{
+ "cache": {
+  "ref T-adapt|\"adapt\"": {
+   "name": "ref T-adapt",
+   "spec": "adapt",
+   "succ": 0.58,
+   "min_dist": 0.10618490751397223,
+   "inst": 0.0,
+   "diverged": 0.0
+  },
+  "ref T-adapt2|[\"adapt2\", {\"T\": 0.4, \"amp\": 0.6, \"f_scale\": 1.0, \"loss\": \"soft_l1\", \"ngrid\": 9, \"nstart\": 6, \"prefixes\": [0.5, 0.75, 1.0], \"sq\": 0.01, \"sv\": 0.1}]": {
+   "name": "ref T-adapt2",
+   "spec": [
+    "adapt2",
+    {
+     "T": 0.4,
+     "amp": 0.6,
+     "loss": "soft_l1",
+     "f_scale": 1.0,
+     "sq": 0.01,
+     "sv": 0.1,
+     "prefixes": [
+      0.5,
+      0.75,
+      1.0
+     ],
+     "ngrid": 9,
+     "nstart": 6
+    }
+   ],
+   "succ": 0.6,
+   "min_dist": 0.11045247637593202,
+   "inst": 0.0,
+   "diverged": 0.0
+  },
+  "base|[\"adapt3\", {\"T\": 0.4, \"amp\": 0.6, \"f_scale\": 1.0, \"fr_sd\": 1.0, \"g_sd\": 0.15, \"loss\": \"soft_l1\", \"nfev\": 30, \"ngrid\": 7, \"nstart\": 4, \"pm\": \"grad\", \"prefixes\": [0.5, 0.75, 1.0], \"preg\": 0.0, \"sq\": 0.01, \"sv\": 0.1}]": {
+   "name": "base",
+   "spec": [
+    "adapt3",
+    {
+     "pm": "grad",
+     "T": 0.4,
+     "amp": 0.6,
+     "loss": "soft_l1",
+     "f_scale": 1.0,
+     "sq": 0.01,
+     "sv": 0.1,
+     "preg": 0.0,
+     "g_sd": 0.15,
+     "fr_sd": 1.0,
+     "prefixes": [
+      0.5,
+      0.75,
+      1.0
+     ],
+     "ngrid": 7,
+     "nstart": 4,
+     "nfev": 30
+    }
+   ],
+   "succ": 0.6,
+   "min_dist": 0.14398390523884705,
+   "inst": 0.0,
+   "diverged": 0.0
+  },
+  "A T=0.2 amp=0.6|[\"adapt3\", {\"T\": 0.2, \"amp\": 0.6, \"f_scale\": 1.0, \"fr_sd\": 1.0, \"g_sd\": 0.15, \"loss\": \"soft_l1\", \"nfev\": 30, \"ngrid\": 7, \"nstart\": 4, \"pm\": \"grad\", \"prefixes\": [0.5, 0.75, 1.0], \"preg\": 0.0, \"sq\": 0.01, \"sv\": 0.1}]": {
+   "name": "A T=0.2 amp=0.6",
+   "spec": [
+    "adapt3",
+    {
+     "pm": "grad",
+     "T": 0.2,
+     "amp": 0.6,
+     "loss": "soft_l1",
+     "f_scale": 1.0,
+     "sq": 0.01,
+     "sv": 0.1,
+     "preg": 0.0,
+     "g_sd": 0.15,
+     "fr_sd": 1.0,
+     "prefixes": [
+      0.5,
+      0.75,
+      1.0
+     ],
+     "ngrid": 7,
+     "nstart": 4,
+     "nfev": 30
+    }
+   ],
+   "succ": 0.66,
+   "min_dist": 0.11535191215893592,
+   "inst": 0.0,
+   "diverged": 0.0,
+   "cfg": {
+    "pm": "grad",
+    "T": 0.2,
+    "amp": 0.6,
+    "loss": "soft_l1",
+    "f_scale": 1.0,
+    "sq": 0.01,
+    "sv": 0.1,
+    "preg": 0.0,
+    "g_sd": 0.15,
+    "fr_sd": 1.0,
+    "prefixes": [
+     0.5,
+     0.75,
+     1.0
+    ],
+    "ngrid": 7,
+    "nstart": 4,
+    "nfev": 30
+   }
+  },
+  "A T=0.4 amp=1.0|[\"adapt3\", {\"T\": 0.4, \"amp\": 1.0, \"f_scale\": 1.0, \"fr_sd\": 1.0, \"g_sd\": 0.15, \"loss\": \"soft_l1\", \"nfev\": 30, \"ngrid\": 7, \"nstart\": 4, \"pm\": \"grad\", \"prefixes\": [0.5, 0.75, 1.0], \"preg\": 0.0, \"sq\": 0.01, \"sv\": 0.1}]": {
+   "name": "A T=0.4 amp=1.0",
+   "spec": [
+    "adapt3",
+    {
+     "pm": "grad",
+     "T": 0.4,
+     "amp": 1.0,
+     "loss": "soft_l1",
+     "f_scale": 1.0,
+     "sq": 0.01,
+     "sv": 0.1,
+     "preg": 0.0,
+     "g_sd": 0.15,
+     "fr_sd": 1.0,
+     "prefixes": [
+      0.5,
+      0.75,
+      1.0
+     ],
+     "ngrid": 7,
+     "nstart": 4,
+     "nfev": 30
+    }
+   ],
+   "succ": 0.52,
+   "min_dist": 0.11229369093119343,
+   "inst": 0.0,
+   "diverged": 0.0,
+   "cfg": {
+    "pm": "grad",
+    "T": 0.4,
+    "amp": 1.0,
+    "loss": "soft_l1",
+    "f_scale": 1.0,
+    "sq": 0.01,
+    "sv": 0.1,
+    "preg": 0.0,
+    "g_sd": 0.15,
+    "fr_sd": 1.0,
+    "prefixes": [
+     0.5,
+     0.75,
+     1.0
+    ],
+    "ngrid": 7,
+    "nstart": 4,
+    "nfev": 30
+   }
+  },
+  "A T=0.6 amp=0.6|[\"adapt3\", {\"T\": 0.6, \"amp\": 0.6, \"f_scale\": 1.0, \"fr_sd\": 1.0, \"g_sd\": 0.15, \"loss\": \"soft_l1\", \"nfev\": 30, \"ngrid\": 7, \"nstart\": 4, \"pm\": \"grad\", \"prefixes\": [0.5, 0.75, 1.0], \"preg\": 0.0, \"sq\": 0.01, \"sv\": 0.1}]": {
+   "name": "A T=0.6 amp=0.6",
+   "spec": [
+    "adapt3",
+    {
+     "pm": "grad",
+     "T": 0.6,
+     "amp": 0.6,
+     "loss": "soft_l1",
+     "f_scale": 1.0,
+     "sq": 0.01,
+     "sv": 0.1,
+     "preg": 0.0,
+     "g_sd": 0.15,
+     "fr_sd": 1.0,
+     "prefixes": [
+      0.5,
+      0.75,
+      1.0
+     ],
+     "ngrid": 7,
+     "nstart": 4,
+     "nfev": 30
+    }
+   ],
+   "succ": 0.56,
+   "min_dist": 0.10016835975414437,
+   "inst": 0.0,
+   "diverged": 0.0,
+   "cfg": {
+    "pm": "grad",
+    "T": 0.6,
+    "amp": 0.6,
+    "loss": "soft_l1",
+    "f_scale": 1.0,
+    "sq": 0.01,
+    "sv": 0.1,
+    "preg": 0.0,
+    "g_sd": 0.15,
+    "fr_sd": 1.0,
+    "prefixes": [
+     0.5,
+     0.75,
+     1.0
+    ],
+    "ngrid": 7,
+    "nstart": 4,
+    "nfev": 30
+   }
+  },
+  "A T=0.6 amp=1.0|[\"adapt3\", {\"T\": 0.6, \"amp\": 1.0, \"f_scale\": 1.0, \"fr_sd\": 1.0, \"g_sd\": 0.15, \"loss\": \"soft_l1\", \"nfev\": 30, \"ngrid\": 7, \"nstart\": 4, \"pm\": \"grad\", \"prefixes\": [0.5, 0.75, 1.0], \"preg\": 0.0, \"sq\": 0.01, \"sv\": 0.1}]": {
+   "name": "A T=0.6 amp=1.0",
+   "spec": [
+    "adapt3",
+    {
+     "pm": "grad",
+     "T": 0.6,
+     "amp": 1.0,
+     "loss": "soft_l1",
+     "f_scale": 1.0,
+     "sq": 0.01,
+     "sv": 0.1,
+     "preg": 0.0,
+     "g_sd": 0.15,
+     "fr_sd": 1.0,
+     "prefixes": [
+      0.5,
+      0.75,
+      1.0
+     ],
+     "ngrid": 7,
+     "nstart": 4,
+     "nfev": 30
+    }
+   ],
+   "succ": 0.66,
+   "min_dist": 0.11359611176026062,
+   "inst": 0.0,
+   "diverged": 0.0,
+   "cfg": {
+    "pm": "grad",
+    "T": 0.6,
+    "amp": 1.0,
+    "loss": "soft_l1",
+    "f_scale": 1.0,
+    "sq": 0.01,
+    "sv": 0.1,
+    "preg": 0.0,
+    "g_sd": 0.15,
+    "fr_sd": 1.0,
+    "prefixes": [
+     0.5,
+     0.75,
+     1.0
+    ],
+    "ngrid": 7,
+    "nstart": 4,
+    "nfev": 30
+   }
+  },
+  "B linear|[\"adapt3\", {\"T\": 0.6, \"amp\": 1.0, \"f_scale\": 1.0, \"fr_sd\": 1.0, \"g_sd\": 0.15, \"loss\": \"linear\", \"nfev\": 30, \"ngrid\": 7, \"nstart\": 4, \"pm\": \"grad\", \"prefixes\": [0.5, 0.75, 1.0], \"preg\": 0.0, \"sq\": 0.01, \"sv\": 0.1}]": {
+   "name": "B linear",
+   "spec": [
+    "adapt3",
+    {
+     "pm": "grad",
+     "T": 0.6,
+     "amp": 1.0,
+     "loss": "linear",
+     "f_scale": 1.0,
+     "sq": 0.01,
+     "sv": 0.1,
+     "preg": 0.0,
+     "g_sd": 0.15,
+     "fr_sd": 1.0,
+     "prefixes": [
+      0.5,
+      0.75,
+      1.0
+     ],
+     "ngrid": 7,
+     "nstart": 4,
+     "nfev": 30
+    }
+   ],
+   "succ": 0.54,
+   "min_dist": 0.1210131691203637,
+   "inst": 0.0,
+   "diverged": 0.0,
+   "cfg": {
+    "pm": "grad",
+    "T": 0.6,
+    "amp": 1.0,
+    "loss": "linear",
+    "f_scale": 1.0,
+    "sq": 0.01,
+    "sv": 0.1,
+    "preg": 0.0,
+    "g_sd": 0.15,
+    "fr_sd": 1.0,
+    "prefixes": [
+     0.5,
+     0.75,
+     1.0
+    ],
+    "ngrid": 7,
+    "nstart": 4,
+    "nfev": 30
+   }
+  },
+  "B soft_l1 fs=3|[\"adapt3\", {\"T\": 0.6, \"amp\": 1.0, \"f_scale\": 3.0, \"fr_sd\": 1.0, \"g_sd\": 0.15, \"loss\": \"soft_l1\", \"nfev\": 30, \"ngrid\": 7, \"nstart\": 4, \"pm\": \"grad\", \"prefixes\": [0.5, 0.75, 1.0], \"preg\": 0.0, \"sq\": 0.01, \"sv\": 0.1}]": {
+   "name": "B soft_l1 fs=3",
+   "spec": [
+    "adapt3",
+    {
+     "pm": "grad",
+     "T": 0.6,
+     "amp": 1.0,
+     "loss": "soft_l1",
+     "f_scale": 3.0,
+     "sq": 0.01,
+     "sv": 0.1,
+     "preg": 0.0,
+     "g_sd": 0.15,
+     "fr_sd": 1.0,
+     "prefixes": [
+      0.5,
+      0.75,
+      1.0
+     ],
+     "ngrid": 7,
+     "nstart": 4,
+     "nfev": 30
+    }
+   ],
+   "succ": 0.6,
+   "min_dist": 0.10143498065331259,
+   "inst": 0.0,
+   "diverged": 0.0,
+   "cfg": {
+    "pm": "grad",
+    "T": 0.6,
+    "amp": 1.0,
+    "loss": "soft_l1",
+    "f_scale": 3.0,
+    "sq": 0.01,
+    "sv": 0.1,
+    "preg": 0.0,
+    "g_sd": 0.15,
+    "fr_sd": 1.0,
+    "prefixes": [
+     0.5,
+     0.75,
+     1.0
+    ],
+    "ngrid": 7,
+    "nstart": 4,
+    "nfev": 30
+   }
+  },
+  "C sq=.003 sv=.03|[\"adapt3\", {\"T\": 0.6, \"amp\": 1.0, \"f_scale\": 1.0, \"fr_sd\": 1.0, \"g_sd\": 0.15, \"loss\": \"soft_l1\", \"nfev\": 30, \"ngrid\": 7, \"nstart\": 4, \"pm\": \"grad\", \"prefixes\": [0.5, 0.75, 1.0], \"preg\": 0.0, \"sq\": 0.003, \"sv\": 0.03}]": {
+   "name": "C sq=.003 sv=.03",
+   "spec": [
+    "adapt3",
+    {
+     "pm": "grad",
+     "T": 0.6,
+     "amp": 1.0,
+     "loss": "soft_l1",
+     "f_scale": 1.0,
+     "sq": 0.003,
+     "sv": 0.03,
+     "preg": 0.0,
+     "g_sd": 0.15,
+     "fr_sd": 1.0,
+     "prefixes": [
+      0.5,
+      0.75,
+      1.0
+     ],
+     "ngrid": 7,
+     "nstart": 4,
+     "nfev": 30
+    }
+   ],
+   "succ": 0.46,
+   "min_dist": 0.14779882133028033,
+   "inst": 0.0,
+   "diverged": 0.0,
+   "cfg": {
+    "pm": "grad",
+    "T": 0.6,
+    "amp": 1.0,
+    "loss": "soft_l1",
+    "f_scale": 1.0,
+    "sq": 0.003,
+    "sv": 0.03,
+    "preg": 0.0,
+    "g_sd": 0.15,
+    "fr_sd": 1.0,
+    "prefixes": [
+     0.5,
+     0.75,
+     1.0
+    ],
+    "ngrid": 7,
+    "nstart": 4,
+    "nfev": 30
+   }
+  },
+  "C sq=.03 sv=.3|[\"adapt3\", {\"T\": 0.6, \"amp\": 1.0, \"f_scale\": 1.0, \"fr_sd\": 1.0, \"g_sd\": 0.15, \"loss\": \"soft_l1\", \"nfev\": 30, \"ngrid\": 7, \"nstart\": 4, \"pm\": \"grad\", \"prefixes\": [0.5, 0.75, 1.0], \"preg\": 0.0, \"sq\": 0.03, \"sv\": 0.3}]": {
+   "name": "C sq=.03 sv=.3",
+   "spec": [
+    "adapt3",
+    {
+     "pm": "grad",
+     "T": 0.6,
+     "amp": 1.0,
+     "loss": "soft_l1",
+     "f_scale": 1.0,
+     "sq": 0.03,
+     "sv": 0.3,
+     "preg": 0.0,
+     "g_sd": 0.15,
+     "fr_sd": 1.0,
+     "prefixes": [
+      0.5,
+      0.75,
+      1.0
+     ],
+     "ngrid": 7,
+     "nstart": 4,
+     "nfev": 30
+    }
+   ],
+   "succ": 0.64,
+   "min_dist": 0.11562054990134615,
+   "inst": 0.0,
+   "diverged": 0.0,
+   "cfg": {
+    "pm": "grad",
+    "T": 0.6,
+    "amp": 1.0,
+    "loss": "soft_l1",
+    "f_scale": 1.0,
+    "sq": 0.03,
+    "sv": 0.3,
+    "preg": 0.0,
+    "g_sd": 0.15,
+    "fr_sd": 1.0,
+    "prefixes": [
+     0.5,
+     0.75,
+     1.0
+    ],
+    "ngrid": 7,
+    "nstart": 4,
+    "nfev": 30
+   }
+  },
+  "D g_sd=0.05|[\"adapt3\", {\"T\": 0.6, \"amp\": 1.0, \"f_scale\": 1.0, \"fr_sd\": 1.0, \"g_sd\": 0.05, \"loss\": \"soft_l1\", \"nfev\": 30, \"ngrid\": 7, \"nstart\": 4, \"pm\": \"grad\", \"prefixes\": [0.5, 0.75, 1.0], \"preg\": 0.0, \"sq\": 0.01, \"sv\": 0.1}]": {
+   "name": "D g_sd=0.05",
+   "spec": [
+    "adapt3",
+    {
+     "pm": "grad",
+     "T": 0.6,
+     "amp": 1.0,
+     "loss": "soft_l1",
+     "f_scale": 1.0,
+     "sq": 0.01,
+     "sv": 0.1,
+     "preg": 0.0,
+     "g_sd": 0.05,
+     "fr_sd": 1.0,
+     "prefixes": [
+      0.5,
+      0.75,
+      1.0
+     ],
+     "ngrid": 7,
+     "nstart": 4,
+     "nfev": 30
+    }
+   ],
+   "succ": 0.42,
+   "min_dist": 0.14810486329365355,
+   "inst": 0.0,
+   "diverged": 0.0,
+   "cfg": {
+    "pm": "grad",
+    "T": 0.6,
+    "amp": 1.0,
+    "loss": "soft_l1",
+    "f_scale": 1.0,
+    "sq": 0.01,
+    "sv": 0.1,
+    "preg": 0.0,
+    "g_sd": 0.05,
+    "fr_sd": 1.0,
+    "prefixes": [
+     0.5,
+     0.75,
+     1.0
+    ],
+    "ngrid": 7,
+    "nstart": 4,
+    "nfev": 30
+   }
+  },
+  "D g_sd=0 (free slope)|[\"adapt3\", {\"T\": 0.6, \"amp\": 1.0, \"f_scale\": 1.0, \"fr_sd\": 1.0, \"g_sd\": 0.0, \"loss\": \"soft_l1\", \"nfev\": 30, \"ngrid\": 7, \"nstart\": 4, \"pm\": \"grad\", \"prefixes\": [0.5, 0.75, 1.0], \"preg\": 0.0, \"sq\": 0.01, \"sv\": 0.1}]": {
+   "name": "D g_sd=0 (free slope)",
+   "spec": [
+    "adapt3",
+    {
+     "pm": "grad",
+     "T": 0.6,
+     "amp": 1.0,
+     "loss": "soft_l1",
+     "f_scale": 1.0,
+     "sq": 0.01,
+     "sv": 0.1,
+     "preg": 0.0,
+     "g_sd": 0.0,
+     "fr_sd": 1.0,
+     "prefixes": [
+      0.5,
+      0.75,
+      1.0
+     ],
+     "ngrid": 7,
+     "nstart": 4,
+     "nfev": 30
+    }
+   ],
+   "succ": 0.36,
+   "min_dist": 0.15235413359665312,
+   "inst": 0.0,
+   "diverged": 0.0,
+   "cfg": {
+    "pm": "grad",
+    "T": 0.6,
+    "amp": 1.0,
+    "loss": "soft_l1",
+    "f_scale": 1.0,
+    "sq": 0.01,
+    "sv": 0.1,
+    "preg": 0.0,
+    "g_sd": 0.0,
+    "fr_sd": 1.0,
+    "prefixes": [
+     0.5,
+     0.75,
+     1.0
+    ],
+    "ngrid": 7,
+    "nstart": 4,
+    "nfev": 30
+   }
+  },
+  "D fr_sd=0.5|[\"adapt3\", {\"T\": 0.6, \"amp\": 1.0, \"f_scale\": 1.0, \"fr_sd\": 0.5, \"g_sd\": 0.15, \"loss\": \"soft_l1\", \"nfev\": 30, \"ngrid\": 7, \"nstart\": 4, \"pm\": \"grad\", \"prefixes\": [0.5, 0.75, 1.0], \"preg\": 0.0, \"sq\": 0.01, \"sv\": 0.1}]": {
+   "name": "D fr_sd=0.5",
+   "spec": [
+    "adapt3",
+    {
+     "pm": "grad",
+     "T": 0.6,
+     "amp": 1.0,
+     "loss": "soft_l1",
+     "f_scale": 1.0,
+     "sq": 0.01,
+     "sv": 0.1,
+     "preg": 0.0,
+     "g_sd": 0.15,
+     "fr_sd": 0.5,
+     "prefixes": [
+      0.5,
+      0.75,
+      1.0
+     ],
+     "ngrid": 7,
+     "nstart": 4,
+     "nfev": 30
+    }
+   ],
+   "succ": 0.5,
+   "min_dist": 0.12660881525700934,
+   "inst": 0.0,
+   "diverged": 0.0,
+   "cfg": {
+    "pm": "grad",
+    "T": 0.6,
+    "amp": 1.0,
+    "loss": "soft_l1",
+    "f_scale": 1.0,
+    "sq": 0.01,
+    "sv": 0.1,
+    "preg": 0.0,
+    "g_sd": 0.15,
+    "fr_sd": 0.5,
+    "prefixes": [
+     0.5,
+     0.75,
+     1.0
+    ],
+    "ngrid": 7,
+    "nstart": 4,
+    "nfev": 30
+   }
+  },
+  "D fr_sd=0 (free friction)|[\"adapt3\", {\"T\": 0.6, \"amp\": 1.0, \"f_scale\": 1.0, \"fr_sd\": 0.0, \"g_sd\": 0.15, \"loss\": \"soft_l1\", \"nfev\": 30, \"ngrid\": 7, \"nstart\": 4, \"pm\": \"grad\", \"prefixes\": [0.5, 0.75, 1.0], \"preg\": 0.0, \"sq\": 0.01, \"sv\": 0.1}]": {
+   "name": "D fr_sd=0 (free friction)",
+   "spec": [
+    "adapt3",
+    {
+     "pm": "grad",
+     "T": 0.6,
+     "amp": 1.0,
+     "loss": "soft_l1",
+     "f_scale": 1.0,
+     "sq": 0.01,
+     "sv": 0.1,
+     "preg": 0.0,
+     "g_sd": 0.15,
+     "fr_sd": 0.0,
+     "prefixes": [
+      0.5,
+      0.75,
+      1.0
+     ],
+     "ngrid": 7,
+     "nstart": 4,
+     "nfev": 30
+    }
+   ],
+   "succ": 0.52,
+   "min_dist": 0.1284226812952286,
+   "inst": 0.0,
+   "diverged": 0.0,
+   "cfg": {
+    "pm": "grad",
+    "T": 0.6,
+    "amp": 1.0,
+    "loss": "soft_l1",
+    "f_scale": 1.0,
+    "sq": 0.01,
+    "sv": 0.1,
+    "preg": 0.0,
+    "g_sd": 0.15,
+    "fr_sd": 0.0,
+    "prefixes": [
+     0.5,
+     0.75,
+     1.0
+    ],
+    "ngrid": 7,
+    "nstart": 4,
+    "nfev": 30
+   }
+  },
+  "E ngrid=9 nstart=6 nfev=50|[\"adapt3\", {\"T\": 0.6, \"amp\": 1.0, \"f_scale\": 1.0, \"fr_sd\": 1.0, \"g_sd\": 0.15, \"loss\": \"soft_l1\", \"nfev\": 50, \"ngrid\": 9, \"nstart\": 6, \"pm\": \"grad\", \"prefixes\": [0.5, 0.75, 1.0], \"preg\": 0.0, \"sq\": 0.01, \"sv\": 0.1}]": {
+   "name": "E ngrid=9 nstart=6 nfev=50",
+   "spec": [
+    "adapt3",
+    {
+     "pm": "grad",
+     "T": 0.6,
+     "amp": 1.0,
+     "loss": "soft_l1",
+     "f_scale": 1.0,
+     "sq": 0.01,
+     "sv": 0.1,
+     "preg": 0.0,
+     "g_sd": 0.15,
+     "fr_sd": 1.0,
+     "prefixes": [
+      0.5,
+      0.75,
+      1.0
+     ],
+     "ngrid": 9,
+     "nstart": 6,
+     "nfev": 50
+    }
+   ],
+   "succ": 0.5,
+   "min_dist": 0.131653037476143,
+   "inst": 0.0,
+   "diverged": 0.0,
+   "cfg": {
+    "pm": "grad",
+    "T": 0.6,
+    "amp": 1.0,
+    "loss": "soft_l1",
+    "f_scale": 1.0,
+    "sq": 0.01,
+    "sv": 0.1,
+    "preg": 0.0,
+    "g_sd": 0.15,
+    "fr_sd": 1.0,
+    "prefixes": [
+     0.5,
+     0.75,
+     1.0
+    ],
+    "ngrid": 9,
+    "nstart": 6,
+    "nfev": 50
+   }
+  },
+  "F T/2|[\"adapt3\", {\"T\": 0.45, \"amp\": 1.0, \"f_scale\": 1.0, \"fr_sd\": 1.0, \"g_sd\": 0.15, \"loss\": \"soft_l1\", \"nfev\": 30, \"ngrid\": 7, \"nstart\": 4, \"pm\": \"grad\", \"prefixes\": [0.5, 0.75, 1.0], \"preg\": 0.0, \"sq\": 0.01, \"sv\": 0.1}]": {
+   "name": "F T/2",
+   "spec": [
+    "adapt3",
+    {
+     "pm": "grad",
+     "T": 0.45,
+     "amp": 1.0,
+     "loss": "soft_l1",
+     "f_scale": 1.0,
+     "sq": 0.01,
+     "sv": 0.1,
+     "preg": 0.0,
+     "g_sd": 0.15,
+     "fr_sd": 1.0,
+     "prefixes": [
+      0.5,
+      0.75,
+      1.0
+     ],
+     "ngrid": 7,
+     "nstart": 4,
+     "nfev": 30
+    }
+   ],
+   "succ": 0.56,
+   "min_dist": 0.1321904939621692,
+   "inst": 0.0,
+   "diverged": 0.0,
+   "cfg": {
+    "pm": "grad",
+    "T": 0.45,
+    "amp": 1.0,
+    "loss": "soft_l1",
+    "f_scale": 1.0,
+    "sq": 0.01,
+    "sv": 0.1,
+    "preg": 0.0,
+    "g_sd": 0.15,
+    "fr_sd": 1.0,
+    "prefixes": [
+     0.5,
+     0.75,
+     1.0
+    ],
+    "ngrid": 7,
+    "nstart": 4,
+    "nfev": 30
+   }
+  },
+  "F amp x1.5|[\"adapt3\", {\"T\": 0.6, \"amp\": 1.5, \"f_scale\": 1.0, \"fr_sd\": 1.0, \"g_sd\": 0.15, \"loss\": \"soft_l1\", \"nfev\": 30, \"ngrid\": 7, \"nstart\": 4, \"pm\": \"grad\", \"prefixes\": [0.5, 0.75, 1.0], \"preg\": 0.0, \"sq\": 0.01, \"sv\": 0.1}]": {
+   "name": "F amp x1.5",
+   "spec": [
+    "adapt3",
+    {
+     "pm": "grad",
+     "T": 0.6,
+     "amp": 1.5,
+     "loss": "soft_l1",
+     "f_scale": 1.0,
+     "sq": 0.01,
+     "sv": 0.1,
+     "preg": 0.0,
+     "g_sd": 0.15,
+     "fr_sd": 1.0,
+     "prefixes": [
+      0.5,
+      0.75,
+      1.0
+     ],
+     "ngrid": 7,
+     "nstart": 4,
+     "nfev": 30
+    }
+   ],
+   "succ": 0.54,
+   "min_dist": 0.12184942822413017,
+   "inst": 0.0,
+   "diverged": 0.0,
+   "cfg": {
+    "pm": "grad",
+    "T": 0.6,
+    "amp": 1.5,
+    "loss": "soft_l1",
+    "f_scale": 1.0,
+    "sq": 0.01,
+    "sv": 0.1,
+    "preg": 0.0,
+    "g_sd": 0.15,
+    "fr_sd": 1.0,
+    "prefixes": [
+     0.5,
+     0.75,
+     1.0
+    ],
+    "ngrid": 7,
+    "nstart": 4,
+    "nfev": 30
+   }
+  }
+ },
+ "log": [
+  {
+   "name": "ref T-adapt",
+   "succ": 0.58,
+   "min_dist": 0.10618490751397223,
+   "episodes_so_far": 50
+  },
+  {
+   "name": "ref T-adapt2",
+   "succ": 0.6,
+   "min_dist": 0.11045247637593202,
+   "episodes_so_far": 100
+  },
+  {
+   "name": "base",
+   "succ": 0.6,
+   "min_dist": 0.14398390523884705,
+   "episodes_so_far": 150
+  },
+  {
+   "name": "A T=0.2 amp=0.6",
+   "succ": 0.66,
+   "min_dist": 0.11535191215893592,
+   "episodes_so_far": 200
+  },
+  {
+   "name": "A T=0.4 amp=1.0",
+   "succ": 0.52,
+   "min_dist": 0.11229369093119343,
+   "episodes_so_far": 250
+  },
+  {
+   "name": "A T=0.6 amp=0.6",
+   "succ": 0.56,
+   "min_dist": 0.10016835975414437,
+   "episodes_so_far": 300
+  },
+  {
+   "name": "A T=0.6 amp=1.0",
+   "succ": 0.66,
+   "min_dist": 0.11359611176026062,
+   "episodes_so_far": 350
+  },
+  {
+   "name": "B linear",
+   "succ": 0.54,
+   "min_dist": 0.1210131691203637,
+   "episodes_so_far": 400
+  },
+  {
+   "name": "B soft_l1 fs=3",
+   "succ": 0.6,
+   "min_dist": 0.10143498065331259,
+   "episodes_so_far": 450
+  },
+  {
+   "name": "C sq=.003 sv=.03",
+   "succ": 0.46,
+   "min_dist": 0.14779882133028033,
+   "episodes_so_far": 500
+  },
+  {
+   "name": "C sq=.03 sv=.3",
+   "succ": 0.64,
+   "min_dist": 0.11562054990134615,
+   "episodes_so_far": 550
+  },
+  {
+   "name": "D g_sd=0.05",
+   "succ": 0.42,
+   "min_dist": 0.14810486329365355,
+   "episodes_so_far": 600
+  },
+  {
+   "name": "D g_sd=0 (free slope)",
+   "succ": 0.36,
+   "min_dist": 0.15235413359665312,
+   "episodes_so_far": 650
+  },
+  {
+   "name": "D fr_sd=0.5",
+   "succ": 0.5,
+   "min_dist": 0.12660881525700934,
+   "episodes_so_far": 700
+  },
+  {
+   "name": "D fr_sd=0 (free friction)",
+   "succ": 0.52,
+   "min_dist": 0.1284226812952286,
+   "episodes_so_far": 750
+  },
+  {
+   "name": "E ngrid=9 nstart=6 nfev=50",
+   "succ": 0.5,
+   "min_dist": 0.131653037476143,
+   "episodes_so_far": 800
+  },
+  {
+   "name": "F T/2",
+   "succ": 0.56,
+   "min_dist": 0.1321904939621692,
+   "episodes_so_far": 850
+  },
+  {
+   "name": "F amp x1.5",
+   "succ": 0.54,
+   "min_dist": 0.12184942822413017,
+   "episodes_so_far": 900
+  }
+ ],
+ "episodes": 900,
+ "wall": 1737.9922761917114,
+ "chosen": {
+  "pm": "grad",
+  "T": 0.6,
+  "amp": 1.0,
+  "loss": "soft_l1",
+  "f_scale": 1.0,
+  "sq": 0.01,
+  "sv": 0.1,
+  "preg": 0.0,
+  "g_sd": 0.15,
+  "fr_sd": 1.0,
+  "prefixes": [
+   0.5,
+   0.75,
+   1.0
+  ],
+  "ngrid": 7,
+  "nstart": 4,
+  "nfev": 30
+ },
+ "chosen_cal": 0.66
+}

@@ -1,0 +1,18 @@
+{
+ "s": 1.5,
+ "tune": "A",
+ "rule": "accepted",
+ "params": {
+  "k_scale": 1.5699430903581426,
+  "t_shift": 0.02741631413863058,
+  "v_scale": 0.9684835617823343,
+  "brake_T": 0.5644683321098036,
+  "qp": 657178.0108054525,
+  "qv": 199.99999999999991
+ },
+ "strongest": "tuned",
+ "succ_cal": 0.675,
+ "tuning_set": "CAL",
+ "tuning_episodes": 10200,
+ "tuning_wall_s": 713.8834850788116
+}

@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "arena"
+version = "0.1.0"
+description = "Controller Ladder arena: shared robot/task/perturbation/controller/eval skeleton"
+requires-python = ">=3.10"
+dependencies = ["numpy", "scipy", "mujoco", "pillow"]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.setuptools.packages.find]
+include = ["arena*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

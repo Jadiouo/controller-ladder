@@ -1,0 +1,339 @@
+{
+ "nominal": {
+  "median": 100.0,
+  "hits": [
+   100,
+   100,
+   100,
+   100,
+   100,
+   100,
+   100,
+   100,
+   100,
+   100,
+   100,
+   100,
+   100,
+   100,
+   100,
+   100,
+   100,
+   100,
+   100,
+   100,
+   100,
+   100,
+   100,
+   100,
+   100,
+   100,
+   100,
+   100,
+   100,
+   100,
+   100,
+   100,
+   100,
+   100,
+   100,
+   100,
+   100,
+   100,
+   100,
+   100,
+   100,
+   100,
+   100,
+   100,
+   100,
+   100,
+   100,
+   100,
+   100,
+   100
+  ]
+ },
+ "restitution": [
+  {
+   "kw": {
+    "e": 0.48,
+    "name": "e=0.48"
+   },
+   "median": 100.0,
+   "mean": 100.0,
+   "q25": 100.0,
+   "fails": {
+    "cap": 50
+   }
+  },
+  {
+   "kw": {
+    "e": 0.46,
+    "name": "e=0.46"
+   },
+   "median": 100.0,
+   "mean": 100.0,
+   "q25": 100.0,
+   "fails": {
+    "cap": 50
+   }
+  },
+  {
+   "kw": {
+    "e": 0.44,
+    "name": "e=0.44"
+   },
+   "median": 100.0,
+   "mean": 100.0,
+   "q25": 100.0,
+   "fails": {
+    "cap": 50
+   }
+  },
+  {
+   "kw": {
+    "e": 0.42,
+    "name": "e=0.42"
+   },
+   "median": 54.0,
+   "mean": 54.88,
+   "q25": 49.0,
+   "fails": {
+    "dead": 50
+   }
+  },
+  {
+   "kw": {
+    "e": 0.4,
+    "name": "e=0.4"
+   },
+   "median": 26.0,
+   "mean": 25.9,
+   "q25": 24.0,
+   "fails": {
+    "dead": 50
+   }
+  }
+ ],
+ "restitution_chosen": {
+  "e": 0.4,
+  "name": "e=0.4"
+ },
+ "mass": [
+  {
+   "kw": {
+    "mscale": 2.0,
+    "name": "mass x2.0"
+   },
+   "median": 100.0,
+   "mean": 100.0,
+   "q25": 100.0,
+   "fails": {
+    "cap": 50
+   }
+  },
+  {
+   "kw": {
+    "mscale": 3.0,
+    "name": "mass x3.0"
+   },
+   "median": 100.0,
+   "mean": 100.0,
+   "q25": 100.0,
+   "fails": {
+    "cap": 50
+   }
+  },
+  {
+   "kw": {
+    "mscale": 4.0,
+    "name": "mass x4.0"
+   },
+   "median": 100.0,
+   "mean": 100.0,
+   "q25": 100.0,
+   "fails": {
+    "cap": 50
+   }
+  },
+  {
+   "kw": {
+    "mscale": 5.0,
+    "name": "mass x5.0"
+   },
+   "median": 2.0,
+   "mean": 35.32,
+   "q25": 2.0,
+   "fails": {
+    "dropped": 7,
+    "lateral": 26,
+    "cap": 17
+   }
+  },
+  {
+   "kw": {
+    "mscale": 6.0,
+    "name": "mass x6.0"
+   },
+   "median": 2.0,
+   "mean": 1.62,
+   "q25": 1.0,
+   "fails": {
+    "dropped": 23,
+    "lateral": 27
+   }
+  }
+ ],
+ "mass_chosen": {
+  "mscale": 5.0,
+  "name": "mass x5.0"
+ },
+ "sensing": [
+  {
+   "kw": {
+    "sigma": 0.004,
+    "delay": 6,
+    "name": "sigma 4mm + delay 30ms"
+   },
+   "median": 100.0,
+   "mean": 100.0,
+   "q25": 100.0,
+   "fails": {
+    "cap": 50
+   }
+  },
+  {
+   "kw": {
+    "sigma": 0.004,
+    "delay": 12,
+    "name": "sigma 4mm + delay 60ms"
+   },
+   "median": 100.0,
+   "mean": 100.0,
+   "q25": 100.0,
+   "fails": {
+    "cap": 50
+   }
+  },
+  {
+   "kw": {
+    "sigma": 0.004,
+    "delay": 16,
+    "name": "sigma 4mm + delay 80ms"
+   },
+   "median": 100.0,
+   "mean": 100.0,
+   "q25": 100.0,
+   "fails": {
+    "cap": 50
+   }
+  },
+  {
+   "kw": {
+    "sigma": 0.004,
+    "delay": 20,
+    "name": "sigma 4mm + delay 100ms"
+   },
+   "median": 100.0,
+   "mean": 100.0,
+   "q25": 100.0,
+   "fails": {
+    "cap": 50
+   }
+  },
+  {
+   "kw": {
+    "sigma": 0.004,
+    "delay": 24,
+    "name": "sigma 4mm + delay 120ms"
+   },
+   "median": 100.0,
+   "mean": 100.0,
+   "q25": 100.0,
+   "fails": {
+    "cap": 50
+   }
+  },
+  {
+   "kw": {
+    "sigma": 0.004,
+    "delay": 30,
+    "name": "sigma 4mm + delay 150ms"
+   },
+   "median": 18.0,
+   "mean": 18.7,
+   "q25": 13.25,
+   "fails": {
+    "dead": 50
+   }
+  }
+ ],
+ "sensing_chosen": {
+  "sigma": 0.004,
+  "delay": 30,
+  "name": "sigma 4mm + delay 150ms"
+ },
+ "restitution_round1": [
+  {
+   "kw": {
+    "e": 0.7,
+    "name": "e=0.7"
+   },
+   "median": 100.0,
+   "mean": 100.0,
+   "q25": 100.0,
+   "fails": {
+    "cap": 50
+   }
+  },
+  {
+   "kw": {
+    "e": 0.6,
+    "name": "e=0.6"
+   },
+   "median": 100.0,
+   "mean": 100.0,
+   "q25": 100.0,
+   "fails": {
+    "cap": 50
+   }
+  },
+  {
+   "kw": {
+    "e": 0.55,
+    "name": "e=0.55"
+   },
+   "median": 100.0,
+   "mean": 100.0,
+   "q25": 100.0,
+   "fails": {
+    "cap": 50
+   }
+  },
+  {
+   "kw": {
+    "e": 0.52,
+    "name": "e=0.52"
+   },
+   "median": 100.0,
+   "mean": 100.0,
+   "q25": 100.0,
+   "fails": {
+    "cap": 50
+   }
+  },
+  {
+   "kw": {
+    "e": 0.5,
+    "name": "e=0.5"
+   },
+   "median": 100.0,
+   "mean": 100.0,
+   "q25": 100.0,
+   "fails": {
+    "cap": 50
+   }
+  }
+ ]
+}

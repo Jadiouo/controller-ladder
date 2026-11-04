@@ -1,0 +1,44 @@
+{
+ "0": {
+  "frac_cap": 0.76,
+  "mean": 229.38,
+  "median": 300.0,
+  "steps": 762835,
+  "res_mean": 0.0
+ },
+ "1": {
+  "frac_cap": 0.0,
+  "mean": 3.16,
+  "median": 3.0,
+  "steps": 11640,
+  "res_mean": 0.0
+ },
+ "2": {
+  "frac_cap": 0.0,
+  "mean": 1.7,
+  "median": 2.0,
+  "steps": 7515,
+  "res_mean": 0.0
+ },
+ "3": {
+  "frac_cap": 0.0,
+  "mean": 1.16,
+  "median": 1.0,
+  "steps": 6134,
+  "res_mean": 0.0
+ },
+ "4": {
+  "frac_cap": 0.0,
+  "mean": 1.0,
+  "median": 1.0,
+  "steps": 5418,
+  "res_mean": 0.0
+ },
+ "6": {
+  "frac_cap": 0.0,
+  "mean": 0.28,
+  "median": 0.0,
+  "steps": 4777,
+  "res_mean": 0.0
+ }
+}

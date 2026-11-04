@@ -1,0 +1,52 @@
+{
+ "bc_multi": {
+  "ms_per_chunk_cpu1": 0.12434897672695418,
+  "ms_per_control_step_amortised": 0.015543622090869272,
+  "params": 621039
+ },
+ "mip_multi": {
+  "ms_per_chunk_cpu1": 0.2715041467066234,
+  "ms_per_control_step_amortised": 0.03393801833832792,
+  "params": 622480
+ },
+ "diffusion_multi": {
+  "ms_per_chunk_cpu1": 1.6318846566719003,
+  "ms_per_control_step_amortised": 0.20398558208398754,
+  "params": 622480
+ },
+ "flow_multi": {
+  "ms_per_chunk_cpu1": 1.3451480232955269,
+  "ms_per_control_step_amortised": 0.16814350291194086,
+  "params": 622480
+ },
+ "flow1_multi": {
+  "ms_per_chunk_cpu1": 0.1498248267065113,
+  "ms_per_control_step_amortised": 0.01872810333831391,
+  "params": 622480
+ },
+ "bc_canon": {
+  "ms_per_chunk_cpu1": 0.1247989566763863,
+  "ms_per_control_step_amortised": 0.015599869584548287,
+  "params": 621039
+ },
+ "mip_canon": {
+  "ms_per_chunk_cpu1": 0.27277747004215297,
+  "ms_per_control_step_amortised": 0.03409718375526912,
+  "params": 622480
+ },
+ "diffusion_canon": {
+  "ms_per_chunk_cpu1": 1.6540888233187918,
+  "ms_per_control_step_amortised": 0.20676110291484898,
+  "params": 622480
+ },
+ "flow_canon": {
+  "ms_per_chunk_cpu1": 1.3370639599937324,
+  "ms_per_control_step_amortised": 0.16713299499921655,
+  "params": 622480
+ },
+ "flow1_canon": {
+  "ms_per_chunk_cpu1": 0.1475271800882183,
+  "ms_per_control_step_amortised": 0.018440897511027288,
+  "params": 622480
+ }
+}

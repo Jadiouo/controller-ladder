@@ -1,0 +1,19 @@
+{
+ "n": 500,
+ "B": 86.6,
+ "Cens": 79.60000000000001,
+ "R0": 69.19999999999999,
+ "R1": 86.0,
+ "Lens": 71.0,
+ "ref_B": 86.6,
+ "ref_Cens": 79.6,
+ "ref_R0": 69.2,
+ "ref_R1": 86.0,
+ "ref_Lens": 71.0,
+ "base_equals_R0_frac": 1.0,
+ "B_episode_agreement_with_spike15c": 1.0,
+ "Cens_episode_agreement_with_spike15d": 1.0,
+ "diff_B_pp": 0.0,
+ "diff_Cens_pp": 1.4210854715202004e-14,
+ "pass": true
+}

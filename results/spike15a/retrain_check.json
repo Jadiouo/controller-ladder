@@ -1,0 +1,28 @@
+{
+ "new_seed_success": [
+  71.2,
+  70.39999999999999,
+  69.39999999999999
+ ],
+ "old_seed_success": [
+  71.2,
+  70.39999999999999,
+  69.39999999999999
+ ],
+ "new_merged": 70.33333333333333,
+ "old_merged": 70.33333333333333,
+ "diff_pp": 0.0,
+ "per_seed_episode_agreement": [
+  1.0,
+  1.0,
+  1.0
+ ],
+ "merged_agreement_majority": 1.0,
+ "merged_agreement_exact": 1.0,
+ "theta_rms_diff": {
+  "0": 0.0,
+  "1": 0.0,
+  "2": 0.0
+ },
+ "accepted": true
+}

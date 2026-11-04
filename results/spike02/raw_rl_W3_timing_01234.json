@@ -1,0 +1,1 @@
+{"args": {"w": "W3", "seeds": "0,1,2,3,4", "steps": 2000000, "bound": 16.0, "nenv": 64, "horizon": 200, "lr": 0.0003, "epochs": 10, "mb": 2048, "tracking_w": 200.0, "res_pen": 0.0001, "out": null, "no_pulses": false, "fresh_eval": false}, "weak": {"cap": 80.0, "delay": 0, "fc": 1.5, "fv": 0.3}, "total": 882.4782922267914}

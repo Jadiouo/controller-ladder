@@ -1,0 +1,125 @@
+{
+ "best_classical": "adapt2",
+ "n": 500,
+ "adapt2_cfg": {
+  "T": 0.4,
+  "amp": 0.6,
+  "loss": "soft_l1",
+  "f_scale": 1.0,
+  "sq": 0.01,
+  "sv": 0.1,
+  "prefixes": [
+   0.5,
+   0.75,
+   1.0
+  ],
+  "ngrid": 9,
+  "nstart": 6
+ },
+ "success": {
+  "nom": 0.54,
+  "robust": 0.524,
+  "oracle_in": 0.76,
+  "oracle_full": 0.918,
+  "adapt": 0.56,
+  "adapt2": 0.584
+ },
+ "ci": {
+  "nom": [
+   0.494,
+   0.584
+  ],
+  "robust": [
+   0.48,
+   0.568
+  ],
+  "oracle_in": [
+   0.722,
+   0.798
+  ],
+  "oracle_full": [
+   0.894,
+   0.942
+  ],
+  "adapt": [
+   0.516,
+   0.6020499999999992
+  ],
+  "adapt2": [
+   0.54,
+   0.626
+  ]
+ },
+ "oracle_full-best": {
+  "diff_pp": 33.4,
+  "ci_pp": [
+   28.199999999999996,
+   38.4
+  ]
+ },
+ "oracle_in-best": {
+  "diff_pp": 17.599999999999998,
+  "ci_pp": [
+   11.799999999999999,
+   23.200000000000003
+  ]
+ },
+ "by_chain_length_quartile": {
+  "ls_q1": {
+   "n": 125,
+   "ls_range": [
+    0.8012429853612023,
+    0.8981545139639288
+   ],
+   "nom": 0.472,
+   "robust": 0.448,
+   "oracle_in": 0.768,
+   "oracle_full": 0.912,
+   "adapt": 0.568,
+   "adapt2": 0.664,
+   "best_classical": 0.664
+  },
+  "ls_q2": {
+   "n": 125,
+   "ls_range": [
+    0.9015970133072577,
+    0.9912513197686152
+   ],
+   "nom": 0.584,
+   "robust": 0.536,
+   "oracle_in": 0.832,
+   "oracle_full": 0.936,
+   "adapt": 0.592,
+   "adapt2": 0.6,
+   "best_classical": 0.6
+  },
+  "ls_q3": {
+   "n": 125,
+   "ls_range": [
+    0.9915645354647966,
+    1.0935403773070957
+   ],
+   "nom": 0.648,
+   "robust": 0.568,
+   "oracle_in": 0.72,
+   "oracle_full": 0.928,
+   "adapt": 0.504,
+   "adapt2": 0.56,
+   "best_classical": 0.56
+  },
+  "ls_q4": {
+   "n": 125,
+   "ls_range": [
+    1.0940844117739577,
+    1.1998348905834497
+   ],
+   "nom": 0.456,
+   "robust": 0.544,
+   "oracle_in": 0.72,
+   "oracle_full": 0.896,
+   "adapt": 0.576,
+   "adapt2": 0.512,
+   "best_classical": 0.512
+  }
+ }
+}

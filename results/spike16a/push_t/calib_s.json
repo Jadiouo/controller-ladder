@@ -1,0 +1,30 @@
+{
+ "grid_eval": [
+  {
+   "s": 0.25,
+   "default_cal_a": 1.0,
+   "err": 0
+  },
+  {
+   "s": 0.5,
+   "default_cal_a": 0.98,
+   "err": 0
+  },
+  {
+   "s": 0.75,
+   "default_cal_a": 0.8,
+   "err": 0
+  },
+  {
+   "s": 1.0,
+   "default_cal_a": 0.62,
+   "err": 0
+  },
+  {
+   "s": 1.5,
+   "default_cal_a": 0.38,
+   "err": 0
+  }
+ ],
+ "s0": 1.5
+}

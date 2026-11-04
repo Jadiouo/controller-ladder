@@ -1,0 +1,19 @@
+| N2 | dist | C0 -> C1-new | -0.0061 [-0.0070, -0.0052] | +41.0% | +63.5% | +104.3% |
+| N2 | dist | C1-old -> C1-new | -0.0026 [-0.0037, -0.0015] | +22.8% | +45.9% | -76.7% |
+| N2 | dist | C1-new -> C1-new+LPF | -0.0001 [-0.0002, -0.0001] | +1.3% | +5.9% | -4.3% |
+| N2 | dist | C0 -> C1-new+LPF | -0.0062 [-0.0071, -0.0053] | +41.8% | +65.7% | +95.5% |
+
+## 4. H7 verdict (rule in H7.md)
+
+WIN cell = RL(base C1*) beats C1* by >= 10% (mean RMSE) with paired CI of (RL - C1*) entirely < 0. Primary = N1 (YES if both N1 cells WIN, PARTIAL if one, else NO); N2 judged the same way (secondary).
+
+| cond | eval | C1* | RMSE C1* | RMSE RL(base C1*) | impr | CI of RL-C1* | cell |
+|---|---|---|---|---|---|---|---|
+| N1 | clean | C1-new | 0.0104 | 0.0127 | -21.7% | [+0.0019, +0.0027] | RL worse (CI>0) |
+| N1 | dist | C1-new | 0.0214 | 0.0219 | -2.6% | [+0.0002, +0.0010] | RL worse (CI>0) |
+
+**H7 primary (N1, noise + delay): NO.  N2 (noise only, secondary): not run.**
+
+Per-seed RL RMSE (RL base C1*, test, clean / dist) for the spread across PPO seeds:
+
+- N1 RL(base C1*): 0.0134/0.0221, 0.0129/0.0227, 0.0129/0.0220, 0.0116/0.0211, 0.0127/0.0217

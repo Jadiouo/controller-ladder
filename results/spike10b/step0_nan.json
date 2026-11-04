@@ -1,0 +1,46 @@
+{
+ "nom|abc": {
+  "diverged_flag": 0.0,
+  "eps_with_env_step_instability": 1,
+  "n": 40,
+  "sites": {
+   "env.py:step": 1
+  },
+  "succ": 0.425
+ },
+ "adapt|abc": {
+  "diverged_flag": 0.0,
+  "eps_with_env_step_instability": 1,
+  "n": 40,
+  "sites": {
+   "env.py:step": 1
+  },
+  "succ": 0.65
+ },
+ "oracle_full|abc": {
+  "diverged_flag": 0.0,
+  "eps_with_env_step_instability": 2,
+  "n": 40,
+  "sites": {
+   "whip_teacher.py:_closed_loop": 17,
+   "env.py:step": 2
+  },
+  "succ": 0.925
+ },
+ "nom|none": {
+  "diverged_flag": 0.0,
+  "eps_with_env_step_instability": 2,
+  "n": 40,
+  "sites": {
+   "env.py:step": 4
+  },
+  "succ": 0.525
+ },
+ "adapt|none": {
+  "diverged_flag": 0.0,
+  "eps_with_env_step_instability": 0,
+  "n": 40,
+  "sites": {},
+  "succ": 1.0
+ }
+}

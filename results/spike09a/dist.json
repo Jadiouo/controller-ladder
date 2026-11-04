@@ -1,0 +1,65 @@
+{
+ "w": 0.2,
+ "form": "per-episode seed rng([seed,9109]): len_rel~U(-w,w) (all links), mass_factor=exp(U(-5w,5w)), damp_factor=exp(U(-10w,10w)); chain_len/mass/damp scaled uniformly over links",
+ "sweep": {
+  "0.0": {
+   "succ": 1.0,
+   "ci": [
+    1.0,
+    1.0
+   ],
+   "min_dist": 0.059553576515573275
+  },
+  "0.05": {
+   "succ": 0.78,
+   "ci": [
+    0.66,
+    0.88
+   ],
+   "min_dist": 0.0834375377707747
+  },
+  "0.1": {
+   "succ": 0.72,
+   "ci": [
+    0.6,
+    0.84
+   ],
+   "min_dist": 0.09556276794395992
+  },
+  "0.15": {
+   "succ": 0.68,
+   "ci": [
+    0.54,
+    0.8
+   ],
+   "min_dist": 0.087775181651846
+  },
+  "0.2": {
+   "succ": 0.56,
+   "ci": [
+    0.42,
+    0.7
+   ],
+   "min_dist": 0.12318762363763928
+  },
+  "0.25": {
+   "succ": 0.5,
+   "ci": [
+    0.36,
+    0.64
+   ],
+   "min_dist": 0.14254666506741467
+  },
+  "0.3": {
+   "succ": 0.4,
+   "ci": [
+    0.26,
+    0.54
+   ],
+   "min_dist": 0.20641588229372496
+  }
+ },
+ "rule": "mildest width with T-nom success on CAL 1000-1049 in [20%,60%]",
+ "cal_seeds": "1000-1049",
+ "holdout": "1100-1599"
+}

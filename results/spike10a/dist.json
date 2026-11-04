@@ -1,0 +1,22 @@
+{
+ "base": "spike09a dist w=0.2 (chain len +-20%, mass x exp(U(+-1)), damping x exp(U(+-2)), uniform over links), drawn from seed rng([seed,9109])",
+ "draw": "extra layer from rng([seed,1010]): mass_f = exp(0.3*U(-1,1)) x10 links, fric = FRIC0*U(0.5,1.5), act_sigma = U(0.01,0.02); obs/torque noise from rng([seed,1011]) / ([seed,1012])",
+ "a_sensor_noise": {
+  "pos_rad": 0.001,
+  "vel_rad_s": 0.01,
+  "applied_to": "obs.q, obs.qd of the 3 arm joints, iid gaussian every control step (200 Hz). The chain state is never observed by any method; T-adapt/T-adapt2/oracles use only arm q,qd."
+ },
+ "b_unmodelled": {
+  "per_link_mass_factor": "exp(U(-0.3,0.3)) iid per link",
+  "chain_coulomb_friction_Nm": "0.002*U(0.5,1.5) per episode on all 10 chain hinges (mujoco dof_frictionloss)",
+  "note": "estimator model class = uniform chain (length, mass, damping scales) with viscous damping only"
+ },
+ "c_actuator_noise": {
+  "sigma_Nm": "U(0.01,0.02) per episode",
+  "applied_to": "applied torque, iid per step per joint (after command, not visible to controllers)"
+ },
+ "switches": "each of a,b,c can be on/off alone: conditions none,a,b,c,abc (c10a.COND)",
+ "cal_seeds": "1000-1049",
+ "holdout": "1100-1599",
+ "test": "never touched (guard asserts seed>=1000)"
+}

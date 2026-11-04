@@ -1,0 +1,60 @@
+{
+ "frozen": "2026-10-31T15:21:36",
+ "best_classical": "adapt3_full",
+ "md5": {
+  "results/spike10b/best_classical.json": "0404cc9598339a7e12c6f2261759f869",
+  "results/spike10b/holdout1.json": "8f77b07499bb1cf5546dd568c5d1cc3a",
+  "results/spike10b/lest_eff_s0.pkl": "5d2c0e9f1c6a0fb744cabfdd44e0ea71",
+  "results/spike10b/lest_eff_s1.pkl": "f184f22d0f81dead8dcf1a908c54f127",
+  "results/spike10b/lest_eff_s2.pkl": "ff00ede530fab73a984f422c61be86c3",
+  "results/spike10b/lest_full_s0.pkl": "f4bbf3b09070e4157c0b55e100ebbef0",
+  "results/spike10b/lest_full_s1.pkl": "b37b687da9fa810d41bd05f1fbff990d",
+  "results/spike10b/lest_full_s2.pkl": "7f9a4ee5baeb4e4f7ac20a847571a221",
+  "results/spike10b/lest_ood_s0.pkl": "0ef6775bf37c8c574c80a9f589585b0c",
+  "results/spike10b/lest_ood_s1.pkl": "86b5504ba91c3b3968afbf29b5adab4f",
+  "results/spike10b/lest_ood_s2.pkl": "497257dfc89db516ead9299e37123a44",
+  "results/spike10b/lest_train.json": "7cd4669b5dfc78037bd932d7bc919ee7",
+  "results/spike10b/probe_for_lest.json": "414bca35e4b28f026fbb08a95acf8042",
+  "results/spike10b/tune_full.json": "d19b8166f04e79c67516c75db4637742",
+  "results/spike10b/tune_grad.json": "53881ff85296d44b6a1419b1b0750c41",
+  "results/spike10b/tune_ood.json": "e6a14a67f0a0342e14629b64a0d28db5",
+  "results/spike10b/ppo_hist_diag.pkl": "42bbe469642bb83de0913005b3446584",
+  "results/spike10b/ppo_hist.pkl": "4c9ec65369d292d0b3277768562d470c",
+  "spike10b/budget10b.py": "365afafc9d96fc2833bd1be04be970bd",
+  "spike10b/c10b.py": "7275a9515bf1c7eaeb7f6183db644d1a",
+  "spike10b/eval10b.py": "98cc4d8815ec50ba833195af02782355",
+  "spike10b/freeze10b.py": "e6677de1a22a0d78bf2a16d39135d97c",
+  "spike10b/pool10.py": "484072afa9b7e0beb17365022d1033da",
+  "spike10b/r10b.py": "da4d7f788f9679ba7b9b17b1a19bc0c6",
+  "spike10b/report10b.py": "b0c40c5eef076795af172db4eb17460d",
+  "spike10b/step0_nan.py": "b1962bb4a34df351ba4f13f799574f4d",
+  "spike10b/step1a_ident.py": "a9316435783db8f7d4cf69b7a7cee607",
+  "spike10b/step1b_tune.py": "5909023352632b1173a974c054d7c552",
+  "spike10b/step1c_holdout.py": "4f9ec0f2c2be75ad5b921748d864c675",
+  "spike10b/step3_lest.py": "d3be648983618ab9ea0c666b19aa70ca",
+  "spike10b/step4_dose.py": "e019eeba09ffc85e36ce5f91224246b9",
+  "spike10b/train10.py": "a7f15aa8b6b8490d8a313b2d6c6a1bbd"
+ },
+ "ppo_selected": {
+  "0": {
+   "sel": {
+    "succ": 0.82,
+    "min_dist": 0.06976728136204707,
+    "res_mean": 0.6091352055690212,
+    "res_max": 2.7758011777413056,
+    "episodes": 50,
+    "it": 314,
+    "train_steps": 2572288,
+    "train_episodes": 7045
+   },
+   "init": {
+    "succ": 0.78,
+    "min_dist": 0.07755499614885006,
+    "res_mean": 0.0,
+    "res_max": 0.0,
+    "episodes": 50
+   },
+   "learned": false
+  }
+ }
+}

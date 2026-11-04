@@ -1,0 +1,15 @@
+  [hist s0] it 0/122 steps 8192 recent-train-episodes median hits 2.0 (n=7) std 0.030 t 6s
+  [hist s0] it 10/122 steps 90112 recent-train-episodes median hits 4.0 (n=90) std 0.030 t 38s
+  [hist s0] it 20/122 steps 172032 recent-train-episodes median hits 5.0 (n=122) std 0.030 t 77s
+  [hist s0] it 30/122 steps 253952 recent-train-episodes median hits 5.0 (n=136) std 0.030 t 130s
+  [hist s0] it 40/122 steps 335872 recent-train-episodes median hits 4.0 (n=171) std 0.030 t 171s
+  [hist s0] it 50/122 steps 417792 recent-train-episodes median hits 4.0 (n=181) std 0.030 t 200s
+  [hist s0] it 60/122 steps 499712 recent-train-episodes median hits 4.0 (n=193) std 0.029 t 228s
+  [hist s0] it 70/122 steps 581632 recent-train-episodes median hits 4.0 (n=220) std 0.029 t 264s
+  [hist s0] it 80/122 steps 663552 recent-train-episodes median hits 5.0 (n=244) std 0.029 t 289s
+  [hist s0] it 90/122 steps 745472 recent-train-episodes median hits 5.0 (n=266) std 0.029 t 321s
+  [hist s0] it 100/122 steps 827392 recent-train-episodes median hits 4.0 (n=291) std 0.029 t 346s
+  [hist s0] it 110/122 steps 909312 recent-train-episodes median hits 2.0 (n=347) std 0.029 t 369s
+  [hist s0] it 120/122 steps 991232 recent-train-episodes median hits 2.0 (n=424) std 0.028 t 392s
+  [hist s0] it 121/122 steps 999424 recent-train-episodes median hits 2.5 (n=432) std 0.028 t 393s
+hist seed 0 trained in 393s

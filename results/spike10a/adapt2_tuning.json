@@ -1,0 +1,286 @@
+{
+ "log": [
+  {
+   "tag": "base(=T-adapt)",
+   "cfg": {
+    "T": 0.2,
+    "amp": 0.3,
+    "loss": "linear",
+    "f_scale": 1.0,
+    "sq": 0.01,
+    "sv": 0.1,
+    "prefixes": [
+     0.5,
+     0.75,
+     1.0
+    ],
+    "ngrid": 7,
+    "nstart": 4
+   },
+   "succ": 0.58,
+   "min_dist": 0.10676999412054934,
+   "episodes_so_far": 50,
+   "wall": 18.77984929084778
+  },
+  {
+   "tag": "A T=0.2 amp=0.6",
+   "cfg": {
+    "T": 0.2,
+    "amp": 0.6,
+    "loss": "linear",
+    "f_scale": 1.0,
+    "sq": 0.01,
+    "sv": 0.1,
+    "prefixes": [
+     0.5,
+     0.75,
+     1.0
+    ],
+    "ngrid": 7,
+    "nstart": 4
+   },
+   "succ": 0.58,
+   "min_dist": 0.12966921090728184,
+   "episodes_so_far": 100,
+   "wall": 57.72456407546997
+  },
+  {
+   "tag": "A T=0.2 amp=1.0",
+   "cfg": {
+    "T": 0.2,
+    "amp": 1.0,
+    "loss": "linear",
+    "f_scale": 1.0,
+    "sq": 0.01,
+    "sv": 0.1,
+    "prefixes": [
+     0.5,
+     0.75,
+     1.0
+    ],
+    "ngrid": 7,
+    "nstart": 4
+   },
+   "succ": 0.62,
+   "min_dist": 0.12176727128235061,
+   "episodes_so_far": 150,
+   "wall": 97.17779421806335
+  },
+  {
+   "tag": "A T=0.3 amp=0.3",
+   "cfg": {
+    "T": 0.3,
+    "amp": 0.3,
+    "loss": "linear",
+    "f_scale": 1.0,
+    "sq": 0.01,
+    "sv": 0.1,
+    "prefixes": [
+     0.5,
+     0.75,
+     1.0
+    ],
+    "ngrid": 7,
+    "nstart": 4
+   },
+   "succ": 0.64,
+   "min_dist": 0.09568429883749102,
+   "episodes_so_far": 200,
+   "wall": 139.390127658844
+  },
+  {
+   "tag": "A T=0.3 amp=0.6",
+   "cfg": {
+    "T": 0.3,
+    "amp": 0.6,
+    "loss": "linear",
+    "f_scale": 1.0,
+    "sq": 0.01,
+    "sv": 0.1,
+    "prefixes": [
+     0.5,
+     0.75,
+     1.0
+    ],
+    "ngrid": 7,
+    "nstart": 4
+   },
+   "succ": 0.48,
+   "min_dist": 0.14108977776493029,
+   "episodes_so_far": 250,
+   "wall": 174.57587003707886
+  },
+  {
+   "tag": "A T=0.4 amp=0.6",
+   "cfg": {
+    "T": 0.4,
+    "amp": 0.6,
+    "loss": "linear",
+    "f_scale": 1.0,
+    "sq": 0.01,
+    "sv": 0.1,
+    "prefixes": [
+     0.5,
+     0.75,
+     1.0
+    ],
+    "ngrid": 7,
+    "nstart": 4
+   },
+   "succ": 0.68,
+   "min_dist": 0.11462485880382549,
+   "episodes_so_far": 300,
+   "wall": 212.62728571891785
+  },
+  {
+   "tag": "B soft_l1 fs=1.0",
+   "cfg": {
+    "T": 0.4,
+    "amp": 0.6,
+    "loss": "soft_l1",
+    "f_scale": 1.0,
+    "sq": 0.01,
+    "sv": 0.1,
+    "prefixes": [
+     0.5,
+     0.75,
+     1.0
+    ],
+    "ngrid": 7,
+    "nstart": 4
+   },
+   "succ": 0.72,
+   "min_dist": 0.10667654659238415,
+   "episodes_so_far": 350,
+   "wall": 251.07847261428833
+  },
+  {
+   "tag": "B soft_l1 fs=3.0",
+   "cfg": {
+    "T": 0.4,
+    "amp": 0.6,
+    "loss": "soft_l1",
+    "f_scale": 3.0,
+    "sq": 0.01,
+    "sv": 0.1,
+    "prefixes": [
+     0.5,
+     0.75,
+     1.0
+    ],
+    "ngrid": 7,
+    "nstart": 4
+   },
+   "succ": 0.58,
+   "min_dist": 0.1072214586822918,
+   "episodes_so_far": 400,
+   "wall": 287.8954989910126
+  },
+  {
+   "tag": "B huber fs=2.0",
+   "cfg": {
+    "T": 0.4,
+    "amp": 0.6,
+    "loss": "huber",
+    "f_scale": 2.0,
+    "sq": 0.01,
+    "sv": 0.1,
+    "prefixes": [
+     0.5,
+     0.75,
+     1.0
+    ],
+    "ngrid": 7,
+    "nstart": 4
+   },
+   "succ": 0.66,
+   "min_dist": 0.11424184910596409,
+   "episodes_so_far": 450,
+   "wall": 311.34921860694885
+  },
+  {
+   "tag": "C sq=0.003 sv=0.03",
+   "cfg": {
+    "T": 0.4,
+    "amp": 0.6,
+    "loss": "soft_l1",
+    "f_scale": 1.0,
+    "sq": 0.003,
+    "sv": 0.03,
+    "prefixes": [
+     0.5,
+     0.75,
+     1.0
+    ],
+    "ngrid": 7,
+    "nstart": 4
+   },
+   "succ": 0.58,
+   "min_dist": 0.12660960369014362,
+   "episodes_so_far": 500,
+   "wall": 347.6791639328003
+  },
+  {
+   "tag": "C sq=0.03 sv=0.3",
+   "cfg": {
+    "T": 0.4,
+    "amp": 0.6,
+    "loss": "soft_l1",
+    "f_scale": 1.0,
+    "sq": 0.03,
+    "sv": 0.3,
+    "prefixes": [
+     0.5,
+     0.75,
+     1.0
+    ],
+    "ngrid": 7,
+    "nstart": 4
+   },
+   "succ": 0.6,
+   "min_dist": 0.1058487244136591,
+   "episodes_so_far": 550,
+   "wall": 372.7039985656738
+  },
+  {
+   "tag": "D denser start grid",
+   "cfg": {
+    "T": 0.4,
+    "amp": 0.6,
+    "loss": "soft_l1",
+    "f_scale": 1.0,
+    "sq": 0.01,
+    "sv": 0.1,
+    "prefixes": [
+     0.5,
+     0.75,
+     1.0
+    ],
+    "ngrid": 9,
+    "nstart": 6
+   },
+   "succ": 0.74,
+   "min_dist": 0.10004080601242435,
+   "episodes_so_far": 600,
+   "wall": 415.5504515171051
+  }
+ ],
+ "episodes": 600,
+ "wall_s": 415.55105805397034,
+ "chosen": {
+  "T": 0.4,
+  "amp": 0.6,
+  "loss": "soft_l1",
+  "f_scale": 1.0,
+  "sq": 0.01,
+  "sv": 0.1,
+  "prefixes": [
+   0.5,
+   0.75,
+   1.0
+  ],
+  "ngrid": 9,
+  "nstart": 6
+ },
+ "chosen_cal": 0.74
+}

@@ -1,0 +1,8 @@
+.venv/
+.venv-*/
+.scratch/
+__pycache__/
+*.pyc
+*.egg-info/
+MUJOCO_LOG.TXT
+.pytest_cache/

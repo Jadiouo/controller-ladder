@@ -1,0 +1,22 @@
+{
+ "dr": {
+  "mean": {
+   "frac_cap": 0.76,
+   "mean": 229.28,
+   "median": 300.0,
+   "steps": 765691
+  },
+  "sample": {
+   "frac_cap": 0.74,
+   "mean": 223.4,
+   "median": 300.0,
+   "steps": 741906
+  },
+  "classical": {
+   "frac_cap": 0.76,
+   "mean": 229.38,
+   "median": 300.0,
+   "steps": 762835
+  }
+ }
+}

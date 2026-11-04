@@ -1,0 +1,6 @@
+T-nom {'frac_cap': 0.02, 'mean': 8.06, 'median': 2.0, 'fails': {'dead': 35, 'lateral': 1, 'cap': 1, 'dropped': 13}}
+T-robust(spike05) {'frac_cap': 0.4, 'mean': 127.24, 'median': 3.5, 'fails': {'lateral': 17, 'cap': 20, 'dropped': 13}}
+T-adapt(spike05) {'frac_cap': 0.5, 'mean': 151.84, 'median': 157.5, 'fails': {'dead': 2, 'lateral': 7, 'cap': 25, 'dropped': 16}}
+T-robust {'frac_cap': 0.76, 'mean': 229.38, 'median': 300.0, 'fails': {'lateral': 7, 'cap': 38, 'dropped': 5}}
+T-adapt {'frac_cap': 0.64, 'mean': 194.78, 'median': 300.0, 'fails': {'dead': 2, 'lateral': 9, 'cap': 32, 'dropped': 7}}
+best-classical = T-robust

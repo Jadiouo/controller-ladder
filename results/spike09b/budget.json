@@ -1,0 +1,150 @@
+{
+ "classical_reference": {
+  "T-robust episodes (spike09a)": 9050,
+  "T-adapt design/tuning episodes on CAL": 1300,
+  "note": "~1100 episodes of exploratory probe/estimator design on CAL seeds (p4-p9 scripts, not all logged) + 200 logged in adapt_probe_cal.json; total ~1300 (estimate)",
+  "total": 10350,
+  "2x": 20700
+ },
+ "learners": {
+  "R-PPO-hist": {
+   "0": {
+    "train_episodes": 9942,
+    "cal_eval_episodes": 400,
+    "total": 10342,
+    "steps": 2998272,
+    "wall_s": 465.43836307525635,
+    "init_cal": 1.0,
+    "selected_cal": 0.86,
+    "learned": false,
+    "res_mean_selected": 0.4718080110499951,
+    "ckpt_cal": [
+     0.82,
+     0.84,
+     0.76,
+     0.86,
+     0.82,
+     0.82,
+     0.84
+    ]
+   },
+   "1": {
+    "train_episodes": 9940,
+    "cal_eval_episodes": 400,
+    "total": 10340,
+    "steps": 2998272,
+    "wall_s": 466.4117524623871,
+    "init_cal": 1.0,
+    "selected_cal": 0.9,
+    "learned": false,
+    "res_mean_selected": 0.6493691412403635,
+    "ckpt_cal": [
+     0.84,
+     0.84,
+     0.82,
+     0.9,
+     0.86,
+     0.78,
+     0.86
+    ]
+   },
+   "2": {
+    "train_episodes": 9886,
+    "cal_eval_episodes": 400,
+    "total": 10286,
+    "steps": 2998272,
+    "wall_s": 484.6600558757782,
+    "init_cal": 1.0,
+    "selected_cal": 0.88,
+    "learned": false,
+    "res_mean_selected": 0.294379560876555,
+    "ckpt_cal": [
+     0.88,
+     0.82,
+     0.8,
+     0.78,
+     0.84,
+     0.84,
+     0.86
+    ]
+   }
+  },
+  "R-oracle": {
+   "0": {
+    "train_episodes": 9959,
+    "cal_eval_episodes": 400,
+    "total": 10359,
+    "steps": 2998272,
+    "wall_s": 506.932914018631,
+    "init_cal": 1.0,
+    "selected_cal": 0.94,
+    "learned": false,
+    "res_mean_selected": 0.5023104113183017,
+    "ckpt_cal": [
+     0.88,
+     0.82,
+     0.84,
+     0.94,
+     0.84,
+     0.76,
+     0.76
+    ]
+   },
+   "1": {
+    "train_episodes": 9923,
+    "cal_eval_episodes": 400,
+    "total": 10323,
+    "steps": 2998272,
+    "wall_s": 535.3387141227722,
+    "init_cal": 1.0,
+    "selected_cal": 0.86,
+    "learned": false,
+    "res_mean_selected": 0.34075603961122425,
+    "ckpt_cal": [
+     0.86,
+     0.82,
+     0.84,
+     0.78,
+     0.78,
+     0.82,
+     0.78
+    ]
+   },
+   "2": {
+    "train_episodes": 9843,
+    "cal_eval_episodes": 400,
+    "total": 10243,
+    "steps": 2998272,
+    "wall_s": 488.52821159362793,
+    "init_cal": 1.0,
+    "selected_cal": 0.84,
+    "learned": false,
+    "res_mean_selected": 0.4426334929214659,
+    "ckpt_cal": [
+     0.82,
+     0.84,
+     0.84,
+     0.8,
+     0.84,
+     0.78,
+     0.78
+    ]
+   }
+  },
+  "L-est": {
+   "probe_only_episodes": 12400,
+   "probe_len_s": 0.2,
+   "full_episode_equivalent": 992.0,
+   "wall_s": 143.00129079818726,
+   "per_model": "3 models share the same data; 3 training seeds differ in init only",
+   "mlp_params": 97539
+  }
+ },
+ "free_params": {
+  "T-robust": 5,
+  "T-adapt": "3 fitted per episode + probe design (T, amp) =2 chosen on CAL",
+  "L-est": 97539,
+  "R-PPO": "actor+critic ~167936",
+  "PPO deviation": "3M steps/run (spec cap: 2x classical); no hyperparameter sweep"
+ }
+}

@@ -1,0 +1,17 @@
+N1 no-noise calib RMSE {'C0': (np.float64(0.014350560369871219), np.float64(0.022704390493081386)), 'C1old': (np.float64(2.025863898240994), np.float64(2.0906603868657925))}
+N1 0.0001 {'C0': [np.float64(0.2174), np.float64(0.2196), np.float64(15.15), np.float64(9.67)], 'C1old': [np.float64(2.2315), np.float64(2.2906), np.float64(1.1), np.float64(1.1)]}
+N1 0.0002 {'C0': [np.float64(0.2177), np.float64(0.22), np.float64(15.17), np.float64(9.69)], 'C1old': [np.float64(2.3111), np.float64(2.316), np.float64(1.14), np.float64(1.11)]}
+N1 0.0005 {'C0': [np.float64(0.2185), np.float64(0.2198), np.float64(15.23), np.float64(9.68)], 'C1old': [np.float64(2.3635), np.float64(2.2514), np.float64(1.17), np.float64(1.08)]}
+N1 0.001 {'C0': [np.float64(0.2186), np.float64(0.2235), np.float64(15.24), np.float64(9.84)], 'C1old': [np.float64(2.2211), np.float64(2.2273), np.float64(1.1), np.float64(1.07)]}
+N1 0.002 {'C0': [np.float64(0.2131), np.float64(0.2196), np.float64(14.85), np.float64(9.67)], 'C1old': [np.float64(2.3343), np.float64(2.286), np.float64(1.15), np.float64(1.09)]}
+N1 0.003 {'C0': [np.float64(0.1983), np.float64(0.1985), np.float64(13.82), np.float64(8.74)], 'C1old': [np.float64(2.2407), np.float64(2.1935), np.float64(1.11), np.float64(1.05)]}
+N1 0.005 {'C0': [np.float64(0.1356), np.float64(0.136), np.float64(9.45), np.float64(5.99)], 'C1old': [np.float64(2.0939), np.float64(2.0904), np.float64(1.03), np.float64(1.0)]}
+N2 no-noise calib RMSE {'C0': (np.float64(0.010720017158758475), np.float64(0.016120001678194204)), 'C1old': (np.float64(0.008939857964182134), np.float64(0.009108767588410414))}
+N2 0.0001 {'C0': [np.float64(0.0107), np.float64(0.0161), np.float64(1.0), np.float64(1.0)], 'C1old': [np.float64(0.009), np.float64(0.0092), np.float64(1.01), np.float64(1.01)]}
+N2 0.0002 {'C0': [np.float64(0.0107), np.float64(0.0161), np.float64(0.99), np.float64(1.0)], 'C1old': [np.float64(0.009), np.float64(0.0092), np.float64(1.01), np.float64(1.01)]}
+N2 0.0005 {'C0': [np.float64(0.0107), np.float64(0.016), np.float64(0.99), np.float64(1.0)], 'C1old': [np.float64(0.0093), np.float64(0.0095), np.float64(1.05), np.float64(1.04)]}
+N2 0.001 {'C0': [np.float64(0.0107), np.float64(0.016), np.float64(1.0), np.float64(0.99)], 'C1old': [np.float64(0.0124), np.float64(0.0126), np.float64(1.39), np.float64(1.38)]}
+N2 0.002 {'C0': [np.float64(0.0118), np.float64(0.0168), np.float64(1.1), np.float64(1.04)], 'C1old': [np.float64(0.0225), np.float64(0.0229), np.float64(2.52), np.float64(2.51)]}
+N2 0.003 {'C0': [np.float64(0.0201), np.float64(0.024), np.float64(1.87), np.float64(1.49)], 'C1old': [np.float64(0.0351), np.float64(0.0357), np.float64(3.93), np.float64(3.92)]}
+N2 0.005 {'C0': [np.float64(0.065), np.float64(0.0686), np.float64(6.07), np.float64(4.25)], 'C1old': [np.float64(0.0646), np.float64(0.0657), np.float64(7.23), np.float64(7.21)]}
+SIGMA None N2-only 0.001 N1-only None wall 92.99498009681702

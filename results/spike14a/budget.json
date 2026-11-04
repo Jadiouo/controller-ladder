@@ -1,0 +1,73 @@
+{
+ "L-mlp1 (spike10b L-est-full)": {
+  "probe_episodes": 12000,
+  "full_equiv": 2880.0,
+  "cal_label_eps": 200,
+  "wall_s": "645 (whole spike10b lest pipeline incl. 2 other variants; upper bound)",
+  "labels": "simulator theta13 for 12000 training episodes",
+  "note": "frozen from spike10b; reused as is"
+ },
+ "L-gru1": {
+  "probe_episodes": 12000,
+  "full_equiv": 2880.0,
+  "train_wall_s": 147.18442296981812,
+  "data_wall_s": "166 (8 workers, loaded machine)",
+  "labels": "simulator theta13 x 12000"
+ },
+ "L-gru4": {
+  "probe_episodes": 48000,
+  "full_equiv": 11520.0,
+  "train_wall_s": 197.51138401031494,
+  "data_wall_s": "166 + 807",
+  "labels": "simulator theta13 x 48000"
+ },
+ "L-mlp4": {
+  "probe_episodes": 48000,
+  "full_equiv": 11520.0,
+  "train_wall_s": 61.68554162979126,
+  "labels": "simulator theta13 x 48000"
+ },
+ "L-dec1": {
+  "probe_episodes": 12000,
+  "full_equiv": 4480.0,
+  "oracle_plans": 1600,
+  "train_wall_s": 146.82601165771484,
+  "sens_wall_s": 1585,
+  "labels": "simulator theta13 x 12000 + true plant for 1600 oracle plans + finite-difference sensitivities (26 swing simulations each)"
+ },
+ "L-dec4": {
+  "probe_episodes": 48000,
+  "full_equiv": 13120.0,
+  "oracle_plans": 1600,
+  "train_wall_s": 367.2503652572632,
+  "sens_wall_s": 1585,
+  "labels": "simulator theta13 x 48000 + true plant for 1600 oracle plans (sensitivities of the other 46400 episodes use the mean sensitivity)"
+ },
+ "C0 (T-adapt3-full)": {
+  "tuning_episodes": 750,
+  "tuning_wall_s": 3007,
+  "labels": "none (tuned on CAL success)",
+  "per_episode_fit_cpu_s": 46.06675415754318
+ },
+ "C_ms10 (CAL screening fits)": {
+  "fit_episodes": 200,
+  "fit_cpu_s": 12482.39662861824,
+  "fit_wall_s": 1621.6786799430847,
+  "per_episode_cpu_s": 62.4119831430912,
+  "labels": "CAL label error used to screen; none for the fit itself"
+ },
+ "C_map1_ms (CAL screening fits)": {
+  "fit_episodes": 200,
+  "fit_cpu_s": 13368.410453796387,
+  "fit_wall_s": 1724.197535276413,
+  "per_episode_cpu_s": 66.84205226898193,
+  "labels": "CAL label error used to screen; none for the fit itself"
+ },
+ "C_hyb (CAL screening fits)": {
+  "fit_episodes": 200,
+  "fit_cpu_s": 1162.9638650417328,
+  "fit_wall_s": 151.17953515052795,
+  "per_episode_cpu_s": 5.8148193252086635,
+  "labels": "CAL label error used to screen; none for the fit itself"
+ }
+}

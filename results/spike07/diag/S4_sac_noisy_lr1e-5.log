@@ -1,0 +1,10 @@
+./spike07/rl7.py:160: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /__w/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:820.)
+  if it % 2000 == 0 or it == nit - 1: trainlog(it, nit, f'upd {upd} alpha {float(log_alpha.exp()):.4f}')
+  [sac hist s100] it 0/37500 steps 32 train-frac_cap(last60) nan meanhits nan (n=0) upd 0 alpha 0.0200 t 1s
+  [sac hist s100] it 2000/37500 steps 64032 train-frac_cap(last60) 0.00 meanhits 4.2 (n=12) upd 1756 alpha 0.0200 t 27s
+  [sac hist s100] it 4000/37500 steps 128032 train-frac_cap(last60) 0.00 meanhits 11.7 (n=14) upd 9756 alpha 0.0200 t 112s
+  [sac hist s100] it 6000/37500 steps 192032 train-frac_cap(last60) 0.00 meanhits 7.8 (n=110) upd 17756 alpha 0.0962 t 257s
+  [sac hist s100] it 8000/37500 steps 256032 train-frac_cap(last60) 0.00 meanhits 4.5 (n=240) upd 25756 alpha 1.0528 t 420s
+  [sac hist s100] it 10000/37500 steps 320032 train-frac_cap(last60) 0.00 meanhits 6.2 (n=246) upd 33756 alpha 11.5359 t 583s
+  [sac hist s100] it 12000/37500 steps 384032 train-frac_cap(last60) 0.00 meanhits 7.3 (n=247) upd 41756 alpha 126.5905 t 740s

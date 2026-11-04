@@ -1,0 +1,1 @@
+{"args": {"cond": "N1", "base": "C1STAR", "seeds": "1", "steps": 2000000, "bound": 16.0, "nenv": 64, "horizon": 200, "lr": 0.0003, "epochs": 10, "mb": 2048, "tracking_w": 200.0, "res_pen": 0.0001, "out": null, "no_pulses": false, "fresh_eval": false}, "weak": {"cap": 80.0, "delay": 6, "fc": 0.0, "fv": 0.0}, "total": 654.6895413398743}

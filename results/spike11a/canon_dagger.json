@@ -1,0 +1,156 @@
+{
+ "canon_dagger": {
+  "teacher_data": {
+   "episodes": 400,
+   "samples": 118712,
+   "teacher_succ": 0.92
+  },
+  "iter0_bc": {
+   "succ": 0.14,
+   "ci": [
+    0.06,
+    0.24
+   ],
+   "min_dist": 0.36535779360329956,
+   "diverged": 0.0,
+   "unstable": 0.0,
+   "n": 50,
+   "episodes": 400,
+   "samples": 118712,
+   "val_mse_z": 0.0105572659522295
+  },
+  "iter1": {
+   "succ": 0.66,
+   "ci": [
+    0.52,
+    0.78
+   ],
+   "min_dist": 0.09854212443395319,
+   "diverged": 0.0,
+   "unstable": 0.0,
+   "n": 50,
+   "episodes": 600,
+   "samples": 205857,
+   "student_train_succ": 0.265,
+   "val_mse_z": 0.017508134245872498,
+   "wall": 153.8782877922058
+  },
+  "iter2": {
+   "succ": 0.66,
+   "ci": [
+    0.52,
+    0.78
+   ],
+   "min_dist": 0.09417358665434071,
+   "diverged": 0.0,
+   "unstable": 0.0,
+   "n": 50,
+   "episodes": 800,
+   "samples": 281627,
+   "student_train_succ": 0.585,
+   "val_mse_z": 0.02134411223232746,
+   "wall": 224.09480547904968
+  },
+  "iter3": {
+   "succ": 0.56,
+   "ci": [
+    0.42,
+    0.7
+   ],
+   "min_dist": 0.10495276067670747,
+   "diverged": 0.0,
+   "unstable": 0.0,
+   "n": 50,
+   "episodes": 1000,
+   "samples": 357013,
+   "student_train_succ": 0.585,
+   "val_mse_z": 0.02429930493235588,
+   "wall": 304.683002948761
+  },
+  "iter4": {
+   "succ": 0.56,
+   "ci": [
+    0.42,
+    0.7
+   ],
+   "min_dist": 0.10199494556178754,
+   "diverged": 0.0,
+   "unstable": 0.0,
+   "n": 50,
+   "episodes": 1200,
+   "samples": 431113,
+   "student_train_succ": 0.6,
+   "val_mse_z": 0.028320319950580597,
+   "wall": 397.6382791996002
+  }
+ },
+ "canon_dagger_priv": {
+  "teacher_data": {
+   "episodes": 400,
+   "samples": 118712,
+   "teacher_succ": 0.92
+  },
+  "iter0_bc": {
+   "succ": 0.3,
+   "ci": [
+    0.18,
+    0.44
+   ],
+   "min_dist": 0.2643571083361876,
+   "diverged": 0.0,
+   "unstable": 0.0,
+   "n": 50,
+   "episodes": 400,
+   "samples": 118712,
+   "val_mse_z": 0.008341187611222267
+  },
+  "iter1": {
+   "succ": 0.56,
+   "ci": [
+    0.42,
+    0.7
+   ],
+   "min_dist": 0.13428090217883948,
+   "diverged": 0.0,
+   "unstable": 0.0,
+   "n": 50,
+   "episodes": 600,
+   "samples": 207937,
+   "student_train_succ": 0.235,
+   "val_mse_z": 0.012948504649102688,
+   "wall": 154.10323929786682
+  },
+  "iter2": {
+   "succ": 0.64,
+   "ci": [
+    0.5,
+    0.76
+   ],
+   "min_dist": 0.09305813167303822,
+   "diverged": 0.0,
+   "unstable": 0.0,
+   "n": 50,
+   "episodes": 800,
+   "samples": 281589,
+   "student_train_succ": 0.66,
+   "val_mse_z": 0.015255783684551716,
+   "wall": 225.0270221233368
+  },
+  "iter3": {
+   "succ": 0.66,
+   "ci": [
+    0.52,
+    0.78
+   ],
+   "min_dist": 0.09567674092704026,
+   "diverged": 0.0,
+   "unstable": 0.0,
+   "n": 50,
+   "episodes": 1000,
+   "samples": 357789,
+   "student_train_succ": 0.58,
+   "val_mse_z": 0.018454572185873985,
+   "wall": 305.6920163631439
+  }
+ }
+}

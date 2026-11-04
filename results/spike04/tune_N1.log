@@ -1,0 +1,31 @@
+  gen 0 best 0.01738 sigma 0.453
+  gen 1 best 0.01738 sigma 0.546
+  gen 2 best 0.01738 sigma 0.521
+  gen 3 best 0.01738 sigma 0.458
+  gen 4 best 0.01687 sigma 0.408
+  gen 5 best 0.01687 sigma 0.335
+  gen 6 best 0.01687 sigma 0.261
+  gen 7 best 0.01687 sigma 0.223
+  gen 8 best 0.01687 sigma 0.207
+  gen 9 best 0.01687 sigma 0.198
+N1 C1 {'params': [-0.27758817655980345, -0.23023260746948643], 'sp': 0.7576087583236578, 'sd': 0.7943488095455781, 'calib_obj': 0.016871913709048707, 'evals': 80, 'sim_steps': 6400000, 'wall': 291.35200238227844, 'dof': 2} C0 obj 0.22106943090953013 C1old obj 2.22421415904608
+  gen 0 best 0.02136 sigma 0.459
+  gen 1 best 0.02104 sigma 0.474
+  gen 2 best 0.01914 sigma 0.390
+  gen 3 best 0.01849 sigma 0.339
+  gen 4 best 0.01849 sigma 0.341
+  gen 5 best 0.01764 sigma 0.357
+  gen 6 best 0.01764 sigma 0.342
+  gen 7 best 0.01764 sigma 0.295
+  gen 8 best 0.01743 sigma 0.259
+  gen 9 best 0.01743 sigma 0.267
+  gen 10 best 0.01743 sigma 0.235
+  gen 11 best 0.01743 sigma 0.204
+  gen 12 best 0.01743 sigma 0.199
+  gen 13 best 0.01743 sigma 0.171
+N1 C1F {'params': [-0.25762192920871757, -0.19751107090335213, 4.173783892506323], 'sp': 0.7728873830210554, 'sd': 0.8207710539004137, 'fc': 64.96079229940412, 'calib_obj': 0.017427051583087584, 'evals': 112, 'sim_steps': 8960000, 'wall': 408.7422790527344, 'dof': 3}
+C* = C1
+
+real	14m9.200s
+user	9m23.707s
+sys	0m1.525s

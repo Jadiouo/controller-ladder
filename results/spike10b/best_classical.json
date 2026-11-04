@@ -1,0 +1,36 @@
+{
+ "best_classical": "adapt3_full",
+ "spec": [
+  "adapt3",
+  {
+   "pm": "full",
+   "T": 0.6,
+   "amp": 0.6,
+   "loss": "linear",
+   "f_scale": 1.0,
+   "sq": 0.01,
+   "sv": 0.1,
+   "preg": 1.0,
+   "g_sd": 0.0,
+   "fr_sd": 1.0,
+   "prefixes": [
+    0.5,
+    0.75,
+    1.0
+   ],
+   "ngrid": 7,
+   "nstart": 4,
+   "nfev": 30
+  }
+ ],
+ "success": {
+  "nom": 0.5566666666666666,
+  "robust": 0.52,
+  "adapt": 0.5733333333333334,
+  "adapt2": 0.5766666666666667,
+  "adapt3_grad": 0.5266666666666666,
+  "adapt3_full": 0.6966666666666667,
+  "oracle": 0.9
+ },
+ "n": 300
+}

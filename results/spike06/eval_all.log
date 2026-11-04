@@ -1,0 +1,12 @@
+T-nom frac_cap 0.0 mean 2.3 median 2.0 maxres 0.0 (0s)
+T-robust frac_cap 0.82 mean 246.9 median 300.0 maxres 0.0 (23s)
+T-robust(spike05) frac_cap 0.46 mean 145.84 median 28.0 maxres 0.0 (49s)
+T-adapt frac_cap 0.7 mean 210.62 median 300.0 maxres 0.0 (82s)
+T-adapt(spike05) frac_cap 0.6 mean 183.44 median 300.0 maxres 0.0 (117s)
+R-dr#0 frac_cap 0.84 mean 252.32 median 300.0 maxres 0.89 (148s)
+R-dr#1 frac_cap 0.8 mean 245.66 median 300.0 maxres 0.37 (187s)
+R-dr#2 frac_cap 0.8 mean 240.56 median 300.0 maxres 0.45 (227s)
+R-hist#0 frac_cap 0.78 mean 237.06 median 300.0 maxres 0.57 (267s)
+R-hist#1 frac_cap 0.8 mean 240.88 median 300.0 maxres 0.87 (312s)
+R-hist#2 frac_cap 0.78 mean 234.88 median 300.0 maxres 0.47 (356s)
+done; identical plant errors across all methods: OK

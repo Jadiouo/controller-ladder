@@ -1,0 +1,47 @@
+  [hist s100] it 0/366 steps 8192 recent-train-episodes frac_cap 0.00 mean hits 1.2 (n=5) std 0.030 t 1s
+  [hist s100] it 10/366 steps 90112 recent-train-episodes frac_cap 0.00 mean hits 4.4 (n=14) std 0.030 t 6s
+  [hist s100] it 20/366 steps 172032 recent-train-episodes frac_cap 0.00 mean hits 8.5 (n=15) std 0.030 t 12s
+  [hist s100] it 30/366 steps 253952 recent-train-episodes frac_cap 0.00 mean hits 21.2 (n=17) std 0.030 t 18s
+  [hist s100] it 40/366 steps 335872 recent-train-episodes frac_cap 0.00 mean hits 34.7 (n=21) std 0.030 t 24s
+  [hist s100] it 50/366 steps 417792 recent-train-episodes frac_cap 0.11 mean hits 69.1 (n=27) std 0.030 t 30s
+  ckpt {'frac_cap': 0.44, 'mean': 136.92, 'median': 13.5, 'steps': 446634, 'it': 60}
+  [hist s100] it 60/366 steps 499712 recent-train-episodes frac_cap 0.16 mean hits 84.6 (n=31) std 0.030 t 63s
+  [hist s100] it 70/366 steps 581632 recent-train-episodes frac_cap 0.21 mean hits 99.8 (n=38) std 0.030 t 69s
+  [hist s100] it 80/366 steps 663552 recent-train-episodes frac_cap 0.33 mean hits 130.8 (n=48) std 0.030 t 75s
+  [hist s100] it 90/366 steps 745472 recent-train-episodes frac_cap 0.34 mean hits 131.5 (n=58) std 0.030 t 81s
+  [hist s100] it 100/366 steps 827392 recent-train-episodes frac_cap 0.38 mean hits 144.0 (n=64) std 0.030 t 86s
+  [hist s100] it 110/366 steps 909312 recent-train-episodes frac_cap 0.42 mean hits 153.8 (n=69) std 0.029 t 92s
+  ckpt {'frac_cap': 0.6, 'mean': 185.68, 'median': 300.0, 'steps': 617098, 'it': 120}
+  [hist s100] it 120/366 steps 991232 recent-train-episodes frac_cap 0.50 mean hits 178.1 (n=74) std 0.029 t 130s
+  [hist s100] it 130/366 steps 1073152 recent-train-episodes frac_cap 0.55 mean hits 185.0 (n=78) std 0.029 t 136s
+  [hist s100] it 140/366 steps 1155072 recent-train-episodes frac_cap 0.60 mean hits 197.1 (n=82) std 0.029 t 141s
+  [hist s100] it 150/366 steps 1236992 recent-train-episodes frac_cap 0.65 mean hits 206.0 (n=90) std 0.029 t 147s
+  [hist s100] it 160/366 steps 1318912 recent-train-episodes frac_cap 0.63 mean hits 201.8 (n=97) std 0.029 t 153s
+  [hist s100] it 170/366 steps 1400832 recent-train-episodes frac_cap 0.63 mean hits 200.8 (n=106) std 0.029 t 159s
+  ckpt {'frac_cap': 0.56, 'mean': 188.48, 'median': 300.0, 'steps': 595936, 'it': 180}
+  [hist s100] it 180/366 steps 1482752 recent-train-episodes frac_cap 0.60 mean hits 198.4 (n=116) std 0.029 t 192s
+  [hist s100] it 190/366 steps 1564672 recent-train-episodes frac_cap 0.63 mean hits 210.6 (n=119) std 0.029 t 197s
+  [hist s100] it 200/366 steps 1646592 recent-train-episodes frac_cap 0.50 mean hits 183.4 (n=137) std 0.029 t 203s
+  [hist s100] it 210/366 steps 1728512 recent-train-episodes frac_cap 0.33 mean hits 144.7 (n=152) std 0.029 t 209s
+  [hist s100] it 220/366 steps 1810432 recent-train-episodes frac_cap 0.37 mean hits 153.4 (n=156) std 0.029 t 215s
+  [hist s100] it 230/366 steps 1892352 recent-train-episodes frac_cap 0.37 mean hits 149.3 (n=161) std 0.029 t 220s
+  ckpt {'frac_cap': 0.66, 'mean': 202.16, 'median': 300.0, 'steps': 669668, 'it': 240}
+  [hist s100] it 240/366 steps 1974272 recent-train-episodes frac_cap 0.33 mean hits 141.8 (n=164) std 0.028 t 259s
+  [hist s100] it 250/366 steps 2056192 recent-train-episodes frac_cap 0.30 mean hits 129.7 (n=169) std 0.028 t 265s
+  [hist s100] it 260/366 steps 2138112 recent-train-episodes frac_cap 0.35 mean hits 144.8 (n=176) std 0.028 t 271s
+  [hist s100] it 270/366 steps 2220032 recent-train-episodes frac_cap 0.35 mean hits 138.6 (n=184) std 0.028 t 277s
+  [hist s100] it 280/366 steps 2301952 recent-train-episodes frac_cap 0.45 mean hits 160.2 (n=198) std 0.028 t 283s
+  [hist s100] it 290/366 steps 2383872 recent-train-episodes frac_cap 0.48 mean hits 167.4 (n=202) std 0.028 t 289s
+  ckpt {'frac_cap': 0.66, 'mean': 208.12, 'median': 300.0, 'steps': 682894, 'it': 300}
+  [hist s100] it 300/366 steps 2465792 recent-train-episodes frac_cap 0.52 mean hits 173.4 (n=206) std 0.028 t 330s
+  [hist s100] it 310/366 steps 2547712 recent-train-episodes frac_cap 0.55 mean hits 183.3 (n=208) std 0.028 t 336s
+  [hist s100] it 320/366 steps 2629632 recent-train-episodes frac_cap 0.52 mean hits 187.1 (n=220) std 0.028 t 342s
+  [hist s100] it 330/366 steps 2711552 recent-train-episodes frac_cap 0.50 mean hits 181.8 (n=228) std 0.028 t 348s
+  [hist s100] it 340/366 steps 2793472 recent-train-episodes frac_cap 0.47 mean hits 178.8 (n=236) std 0.028 t 355s
+  [hist s100] it 350/366 steps 2875392 recent-train-episodes frac_cap 0.45 mean hits 171.2 (n=245) std 0.028 t 363s
+  ckpt {'frac_cap': 0.56, 'mean': 178.84, 'median': 300.0, 'steps': 606119, 'it': 360}
+  [hist s100] it 360/366 steps 2957312 recent-train-episodes frac_cap 0.47 mean hits 174.6 (n=250) std 0.028 t 422s
+  ckpt {'frac_cap': 0.58, 'mean': 178.3, 'median': 300.0, 'steps': 591760, 'it': 366}
+  [hist s100] it 365/366 steps 2998272 recent-train-episodes frac_cap 0.45 mean hits 169.2 (n=253) std 0.028 t 475s
+CAL selected ckpt (mean action): {'frac_cap': 0.66, 'mean': 208.12, 'median': 300.0, 'steps': 682894, 'it': 300}
+hist seed 100 trained in 475s

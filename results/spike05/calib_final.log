@@ -1,0 +1,3 @@
+T-nom {'median': 5.0, 'mean': 48.02, 'frac_cap': 0.14, 'fails': {'cap': 7, 'dead': 43}}
+T-robust {'median': 300.0, 'mean': 300.0, 'frac_cap': 1.0, 'fails': {'cap': 50}}
+T-adapt {'median': 300.0, 'mean': 300.0, 'frac_cap': 1.0, 'fails': {'cap': 50}}

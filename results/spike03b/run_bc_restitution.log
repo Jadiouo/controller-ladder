@@ -1,0 +1,14 @@
+restitution Cond(e=0.4: e=0.4, m x1.0, sigma=0.2mm, delay=0ms) teacher median 25.5
+./spike03b/run_bc.py:23: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /__w/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:820.)
+  print(f'{a.cond} BC+DART seed {s}: n={n} loss {float(loss):.4f} median hits {np.median(r["hits"])} (teacher {np.median(res["teacher"]["hits"])}) {time.time()-t1:.0f}s', flush=True)
+restitution BC+DART seed 0: n=33809 loss 0.0007 median hits 23.0 (teacher 25.5) 7s
+restitution BC+DART seed 1: n=34221 loss 0.0007 median hits 26.0 (teacher 25.5) 7s
+restitution BC+DART seed 2: n=34746 loss 0.0007 median hits 25.0 (teacher 25.5) 8s
+restitution BC+DART seed 3: n=33443 loss 0.0007 median hits 26.0 (teacher 25.5) 7s
+restitution BC+DART seed 4: n=36773 loss 0.0008 median hits 23.0 (teacher 25.5) 7s
+restitution BC+DART seed 5: n=36573 loss 0.0007 median hits 24.0 (teacher 25.5) 7s
+restitution BC+DART seed 6: n=34042 loss 0.0008 median hits 26.0 (teacher 25.5) 8s
+restitution BC+DART seed 7: n=34099 loss 0.0008 median hits 25.0 (teacher 25.5) 7s
+restitution BC+DART seed 8: n=33711 loss 0.0007 median hits 24.5 (teacher 25.5) 7s
+restitution BC+DART seed 9: n=36927 loss 0.0008 median hits 28.0 (teacher 25.5) 8s

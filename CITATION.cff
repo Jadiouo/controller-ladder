@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this software or the benchmark, please cite it as below. (Placeholder: authors and paper link to be filled.)"
+title: "Controller Ladder arena"
+version: 0.1.0
+date-released: 2026-11-03
+authors:
+  - family-names: "AUTHOR-FAMILY-NAME"
+    given-names: "AUTHOR-GIVEN-NAME"
+# url: "https://example.org/TO-BE-FILLED"
+# preferred-citation: paper (arXiv link to be added)

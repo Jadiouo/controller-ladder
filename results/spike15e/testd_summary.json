@@ -1,0 +1,61 @@
+{
+ "n": 500,
+ "verdict": {
+  "H15": 1.0,
+  "H15b": 1.0,
+  "H16a": 1.0,
+  "H16b": 0.0
+ },
+ "p": {
+  "H15": 5e-05,
+  "H15b": 4.999750012499375e-05,
+  "H16a": 0.0162,
+  "H16b": 0.0432
+ },
+ "holm_adj": {
+  "H15b": 0.000199990000499975,
+  "H15": 0.000199990000499975,
+  "H16a": 0.0324,
+  "H16b": 0.0432
+ },
+ "survives_holm": {
+  "H15": true,
+  "H15b": true,
+  "H16a": true,
+  "H16b": false
+ },
+ "sentence": "\u5b78\u7fd2\u5f0f\u512a\u52e2\u53ef\u80fd \u226510 pp\uff0c\u8ad6\u6587\u7167\u5be6\u6539\u5beb K2",
+ "sentence_unadjusted": "\u5b78\u7fd2\u5f0f\u512a\u52e2\u53ef\u80fd \u226510 pp\uff0c\u8ad6\u6587\u7167\u5be6\u6539\u5beb K2",
+ "ci": {
+  "H15": [
+   10.6,
+   5.800000000000001,
+   15.4
+  ],
+  "H15b": [
+   16.2,
+   11.0,
+   21.4
+  ],
+  "BminusC": [
+   5.6000000000000005,
+   0.6,
+   10.6
+  ]
+ },
+ "means": {
+  "R0 T-adapt3-full": 66.4,
+  "R1 true theta": 84.39999999999999,
+  "L-ens (3 frozen L-dec4, mean theta, base pick)": 70.8,
+  "B  c11/M3c/max (learned)": 82.6,
+  "C-ens LAP/c11/M3c/hit06 (classical)": 77.0,
+  "B9 c11/M9/mean (descriptive)": 84.39999999999999,
+  "R0 + c11/centre LAP (descriptive)": 70.0
+ },
+ "cpu": {
+  "B": 20.403417431437997,
+  "Cens_sel": 20.44983683049,
+  "Cens_fit": 42.89401973772049
+ },
+ "base_eq_R0": 1.0
+}

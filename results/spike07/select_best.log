@@ -1,0 +1,4 @@
+T-robust(spike06) {'frac_cap': 0.76, 'mean': 229.38, 'median': 300.0, 'fails': {'lateral': 7, 'dropped': 5, 'cap': 38}, 'steps': 762835} kp 2500.0
+T-robust(kp10000) {'frac_cap': 0.76, 'mean': 229.36, 'median': 300.0, 'fails': {'lateral': 5, 'dropped': 7, 'cap': 38}, 'steps': 855785} kp 4349.879651246132
+T-adapt(spike06) {'frac_cap': 0.64, 'mean': 194.78, 'median': 300.0, 'fails': {'dead': 2, 'lateral': 9, 'dropped': 7, 'cap': 32}, 'steps': 1034300} kp 1906.8341270387225
+best-classical = T-robust(spike06)

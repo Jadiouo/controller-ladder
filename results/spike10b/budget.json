@@ -1,0 +1,62 @@
+{
+ "classical": {
+  "T-robust episodes (spike09a)": 9050,
+  "T-adapt design episodes (spike09b, estimate)": 1300,
+  "T-adapt2 tuning episodes (spike10a)": 600,
+  "T-adapt2 wall_s": 415.55105805397034,
+  "T-adapt3-grad tuning episodes (CAL, incl. 2 reference evals of T-adapt/T-adapt2)": 900,
+  "T-adapt3-grad tuning wall_s": 1737.9922761917114,
+  "T-adapt3-full tuning episodes (CAL, incl. 2 reference evals of T-adapt/T-adapt2)": 750,
+  "T-adapt3-full tuning wall_s": 3006.6451189517975,
+  "T-adapt3-ood tuning episodes (CAL, incl. 2 reference evals of T-adapt/T-adapt2)": 350,
+  "T-adapt3-ood tuning wall_s": 747.5069055557251,
+  "total for the 2x rule (T-robust + T-adapt2 + T-adapt3 grad+full)": 11300,
+  "2x": 22600
+ },
+ "L-est": {
+  "probe segment T (s)": 0.6,
+  "training probe episodes (full+eff share one set; ood its own)": 24000,
+  "full-episode equivalents (x T/2.5)": 5760.0,
+  "CAL probe episodes": 400,
+  "wall_s (data + sweep + 3 seeds x 3 variants)": 644.5981554985046,
+  "label source": "simulator ground truth (full plant theta: length scale, 10 per-link masses, damping, Coulomb friction) for every training episode; classical methods use no labels"
+ },
+ "R-PPO-hist": {
+  "R-PPO-hist main recipe (adopted) seed 0": {
+   "train_episodes": 8204,
+   "cal_eval_episodes": 400,
+   "total_episodes": 8604,
+   "steps": 2998272,
+   "wall_s": 1358.7421414852142,
+   "init_cal": 0.78,
+   "selected_cal": 0.82,
+   "learned": false,
+   "res_mean_selected": 0.6091352055690212
+  },
+  "R-PPO-hist diagnostic round (4x batch, not adopted) seed 0": {
+   "train_episodes": 8094,
+   "cal_eval_episodes": 400,
+   "total_episodes": 8494,
+   "steps": 2981888,
+   "wall_s": 668.9929718971252,
+   "init_cal": 0.78,
+   "selected_cal": 0.82,
+   "learned": false,
+   "res_mean_selected": 0.22988465365909302
+  },
+  "pool cache-fill (zero residual, 300 scenarios)": {
+   "base": "('adapt3', {'pm': 'full', 'T': 0.6, 'amp': 0.6, 'loss': 'linear', 'f_scale': 1.0",
+   "M": 300,
+   "succ": 0.66,
+   "mean_steps": 364.6533333333333,
+   "unstable": 0.0,
+   "wall": 926.7437777519226
+  }
+ },
+ "label sources": {
+  "classical (T-nom/robust/adapt/adapt2/adapt3)": "none: only measured arm q, qd and applied probe torques; tuned on CAL success",
+  "L-est-*": "simulator ground-truth plant theta of every training episode (13 numbers for full/ood, 4 for eff)",
+  "R-PPO-hist": "reward uses privileged chain-tip distance (simulator); observations are arm-only history",
+  "T-oracle": "true plant given directly (reference)"
+ }
+}

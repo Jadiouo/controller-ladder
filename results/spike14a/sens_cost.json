@@ -1,0 +1,1 @@
+{"episodes": 1600, "wall_s": 1585, "mean_plan_cpu_s": 5.64, "note": "oracle plan (CMA-ES) + 27 swing-model rollouts per training episode"}
