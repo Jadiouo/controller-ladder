@@ -7,14 +7,14 @@ Numbers and verdict: `table.md`. Clip: `juggle_h8.mp4` (T-adapt left, R-DR-hist 
 
 ## Re-run (repo root, existing .venv; every heavy job wrapped in flock + systemd-run MemoryMax=6G; CPU only)
 ```
-.venv/bin/python experiments/spike05/zeta_map5.py                    # (already folded into zeta_map5.json: only zeta=0.05 -> e=0.86 kept, see deviations)
-experiments/spike05/run_calib.sh                                     # CMA-ES T-robust + T-adapt, calibration seeds only -> robust.json adapt.json, calib_*.log
-experiments/spike05/run_rl_all.sh                                    # calib_final.py, then residual PPO: dr and hist, seeds 0,1,2, 3M steps -> raw_rl_*.pkl, run_rl_*.log
-flock .scratch/heavy.lock systemd-run --user --scope -q -p MemoryMax=6G -p MemorySwapMax=0 .venv/bin/python experiments/spike05/eval_all.py   # LOCKED test set -> test_raw.pkl
-.venv/bin/python experiments/spike05/report5.py                      # table.md
-(flock ... ) .venv/bin/python experiments/spike05/video5.py T-adapt 0  # juggle_h8.mp4
+.venv/bin/python spike05/zeta_map5.py                    # (already folded into zeta_map5.json: only zeta=0.05 -> e=0.86 kept, see deviations)
+spike05/run_calib.sh                                     # CMA-ES T-robust + T-adapt, calibration seeds only -> robust.json adapt.json, calib_*.log
+spike05/run_rl_all.sh                                    # calib_final.py, then residual PPO: dr and hist, seeds 0,1,2, 3M steps -> raw_rl_*.pkl, run_rl_*.log
+flock .scratch/heavy.lock systemd-run --user --scope -q -p MemoryMax=6G -p MemorySwapMax=0 .venv/bin/python spike05/eval_all.py   # LOCKED test set -> test_raw.pkl
+.venv/bin/python spike05/report5.py                      # table.md
+(flock ... ) .venv/bin/python spike05/video5.py T-adapt 0  # juggle_h8.mp4
 ```
-Code: `env5.py` (env, parametrised teacher, T-adapt estimator, history), `cma.py`, `calib_classical.py`, `run_rl5.py`, `eval_all.py`, `report5.py`, `video5.py`. Reuses `experiments/spike03b/env.py` unmodified.
+Code: `env5.py` (env, parametrised teacher, T-adapt estimator, history), `cma.py`, `calib_classical.py`, `run_rl5.py`, `eval_all.py`, `report5.py`, `video5.py`. Reuses `spike03b/env.py` unmodified.
 
 ## Setup
 - Plant and teacher as spike03b (3-DoF arm, mirror law, alpha-beta filter, CTC; residual cap 12 Nm = 20% of 60 Nm, asserted: max observed 12.00 Nm). Changes: hit cap N=300, episode limit 300 s.

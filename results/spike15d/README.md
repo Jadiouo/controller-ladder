@@ -1,7 +1,7 @@
 # spike15d: whip -- classical control for spike15c "approach B" (same robust plan selection, uncertainty set from a classical estimator)
 
 Section 0 was written 2 Nov 2026 ~18:20, BEFORE any spike15d method produced a number (nothing of spike15d had been run) and is not edited afterwards. Sections 1+ are appended after the runs. Statements marked **(inference)** are interpretation.
-No locked set is touched: TEST 0-49, TEST-B 20000-20499, TEST-C 30000-30499 are blocked by a guard in the code (`experiments/spike15d/c15d.py`); `results/.test_access.log` must stay at 110 lines.
+No locked set is touched: TEST 0-49, TEST-B 20000-20499, TEST-C 30000-30499 are blocked by a guard in the code (`spike15d/c15d.py`); `results/.test_access.log` must stay at 110 lines.
 
 ## 0. Pre-registration
 
@@ -16,7 +16,7 @@ No locked set is touched: TEST 0-49, TEST-B 20000-20499, TEST-C 30000-30499 are 
 * **LAP (Gauss-Newton / Laplace posterior).** At the centre solution, J = Jacobian of the fit's own residual vector (probe residuals / (sq, sv) + the fit's regulariser terms) w.r.t. the 13 fit coordinates x (length, 10 log-masses, log-damping, friction). Posterior covariance Sigma = (J^T J + P)^-1, P = diag(1/sd^2) with the generative prior sd in x-space (length .1155, log-mass .60, log-damping 1.1547, friction .5774; the same quantities spike14a used for the classical MAP prior). No temperature scaling (scale 1). Members = draws x* + chol(Sigma) z, z~N(0,I) from an RNG seeded by the md5 of the probe key, clipped into the fit's bounds; the first 3 draws are M3, all 9 draws are M9. Residual bootstrap was NOT chosen (it needs refits; LAP gives a posterior from the same fit at no extra cost).
 * Member counts aligned with B: M3c = centre + 3 members (primary); M9c = centre + 9 members (descriptive, LAP only; MS has no 9 distinct near-loss solutions by construction of 12 starts -> not run unless >= 9 distinct exist in the median episode, otherwise reported as "not done").
 
-**Candidate pool and aggregator: identical to B.** Pool c8 (8 centre candidates from the centre-theta stage-1 CMA-ES + closed-loop rescoring) or c11 (c8 + each of the first 3 members' OWN best candidate: that member plans on its own theta and own replay-reconstructed chain state). Every candidate is scored in the closed-loop model of the centre and of every member (each with its own replayed chain state); aggregators mean / cmean / hit04 / hit06 / max over the chosen columns (code reused from `experiments/spike15c/analyzeB.py`: `choose`, `colset`). Every candidate is also EXECUTED on the true plant, so any rule is evaluated offline. Base candidate (argmin of centre score over c8) = the ordinary R0 episode (checked against the R0 reference run).
+**Candidate pool and aggregator: identical to B.** Pool c8 (8 centre candidates from the centre-theta stage-1 CMA-ES + closed-loop rescoring) or c11 (c8 + each of the first 3 members' OWN best candidate: that member plans on its own theta and own replay-reconstructed chain state). Every candidate is scored in the closed-loop model of the centre and of every member (each with its own replayed chain state); aggregators mean / cmean / hit04 / hit06 / max over the chosen columns (code reused from `spike15c/analyzeB.py`: `choose`, `colset`). Every candidate is also EXECUTED on the true plant, so any rule is evaluated offline. Base candidate (argmin of centre score over c8) = the ordinary R0 episode (checked against the R0 reference run).
 
 **Tuning budget (CAL only, <= 22 variants, B used 22).** Exactly 22 variants: family in {MS, LAP} x { pool in {c8, c11} x members M3c x aggregator in {mean, cmean, hit04, hit06, max} (10), + c11/centre/mean (1: R0 + extra candidates, no ensemble) } = 22. Selection = highest CAL success among the 22 EXCLUDING c11/centre/mean variants and the baseline (which are descriptive controls), i.e. among the 20 ensemble variants; ties -> listed order (MS before LAP; c8 before c11; mean, cmean, hit04, hit06, max). The winner is "C-ens". Selection is written to `results/spike15d/D_selection.json` BEFORE the holdout / new-seed collections are run. (Counting the 2 controls the family has 22 variants; the selection pool has 20, i.e. at most B's 22.)
 
@@ -32,12 +32,12 @@ Secondary: C-ens - R0 (paired, 95 % CI) and recovered fraction (X - R0)/(R1 - R0
 
 **Budget reported (three axes) for both sides:** episodes (full-episode equivalents), wall-clock (cpu-s and wall), label source.
 
-**Hard limits.** Total wall <= 6 h; heavy runs under `flock .scratch/heavy.lock` + `systemd-run MemoryMax=10G`, <= 8 workers, `free -h` available >= 8 GB before each start; GPU not needed (CPU inference of 3 small nets). Writes only in `experiments/spike15d/`, `results/spike15d/`, `.scratch/s15d/`. No commit; docs/ untouched.
+**Hard limits.** Total wall <= 6 h; heavy runs under `flock .scratch/heavy.lock` + `systemd-run MemoryMax=10G`, <= 8 workers, `free -h` available >= 8 GB before each start; GPU not needed (CPU inference of 3 small nets). Writes only in `spike15d/`, `results/spike15d/`, `.scratch/s15d/`. No commit; docs/ untouched.
 
 ---
 # Results (appended after the runs)
 
-## 1. Results (numbers: `D_table.md`, `D_summary.json`, `D_selection.json`; code `experiments/spike15d/`)
+## 1. Results (numbers: `D_table.md`, `D_summary.json`, `D_selection.json`; code `spike15d/`)
 * Selection on CAL (before hold/new): C-ens = LAP/c11/M3c/hit06 (CAL 81.0 %; MS family best 74.5 %). B on CAL 91.5 %.
 * Holdout n=500: R0 69.2, R1 86.0, L-ens 71.0, B 86.6, C-ens 79.6 (+10.4 vs R0 [+5.6,+15.0], recovered 0.62 [0.39,0.86]), R0+c11/centre: MS 70.0, LAP 73.6. B - C-ens +7.0 (95 % [+2.6,+11.4], 90 % [+3.4,+10.6]).
 * New 704000-704199 n=200: R0 63.0, R1 81.0, L-ens 68.0, B 82.5, C-ens 78.5 (+15.5 vs R0 [+8.0,+23.0], recovered 0.86 [0.51,1.33]); B - C-ens +4.0 (95 % [-3.0,+11.0], 90 % [-2.0,+10.0]).

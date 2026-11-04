@@ -1,6 +1,6 @@
 # spike15a: v8 locked confirmation of K3 on TEST-C (seeds 30000-30499, n=500)
 
-Rules: `docs/03_hypotheses.md` sections v8 and v8.1 (applied verbatim, not edited). Code: `experiments/spike15a/` (eval15a.py, stats15.py, retrain_dec4.py, infer_dec4.py, compare_retrain.py). Full tables: `table.md`. Per-episode results: `testc_episodes.json`. Retrain check: `retrain_check.json`.
+Rules: `docs/03_hypotheses.md` sections v8 and v8.1 (applied verbatim, not edited). Code: `spike15a/` (eval15a.py, stats15.py, retrain_dec4.py, infer_dec4.py, compare_retrain.py). Full tables: `table.md`. Per-episode results: `testc_episodes.json`. Retrain check: `retrain_check.json`.
 Setting as spike13b/14a: whip, conditions abc x1, plant step /4, plant of each seed seed-derived. All methods are the frozen spike13b / spike14a / spike10b implementations (imported, nothing retuned).
 
 ## 1. Verdicts (paired bootstrap over episodes, 20000 resamples, one shared resample index)
@@ -53,7 +53,7 @@ Chain state first: fitted theta + true chain state (Rrev1) 70.4 [66.4, 74.4] = *
 
 ## 6. Procedure, access log, deviations
 * Smoke test on CAL 1000-1009 before the locked run (no TEST-C): R0, R1, L-dec4 per seed, L-ens, C-MAP reproduced the stored spike14a CAL episode results 10/10 (C-MAP re-fitted), R2/R4/R5/L-est/Rrev1 ran. At smoke time L-dec4 used the stored predictions (weights did not exist yet); the inference path with re-trained weights was checked on holdout (section 3), not on CAL.
-* TEST-C run once: `results/.test_access.log` has exactly one new line (110 lines now, `2026-11-02T13:04:07  experiments/spike15a/eval15a.py  v8 single locked TEST-C run, seeds=30000-30499`). No crash, no re-run. TEST (0-49) and TEST-B (20000-20499) untouched (guard in eval15a.py). The retrain acceptance check used holdout only.
+* TEST-C run once: `results/.test_access.log` has exactly one new line (110 lines now, `2026-11-02T13:04:07  spike15a/eval15a.py  v8 single locked TEST-C run, seeds=30000-30499`). No crash, no re-run. TEST (0-49) and TEST-B (20000-20499) untouched (guard in eval15a.py). The retrain acceptance check used holdout only.
 * Run under flock + systemd-run (MemoryMax 10G), 8 workers, wall 7118 s (C-MAP fits 1794 s, R0 with fresh T-adapt3 fits 1718 s; the other methods 4-6 min each).
 * Deviations: (1) L-dec4 re-trained (3, v8.1, accepted). (2) Holm threshold per v8.1: alpha 0.05 on one-sided bootstrap p (my initial 0.025 reading was replaced). (3) R0 for all contrasts = the spike13b pipeline run on TEST-C (T-adapt3-full via run10); the L-dec4 / L-ens / C-MAP episodes use spike14a's Lookup pipeline on the same probe data (reproduces R0 exactly on CAL/holdout). (4) L-est-full uses the spike13b path (run10), not spike14a's float32 lookup. (5) R3 was not run (not needed by any v8 judgement); H13b uses R4 - R2 as written in the card.
 * Limits: one plant family, simulation only, in-distribution learned estimators; H14's TOST passes by 0.1 pp unadjusted and fails after Holm, so it should be reported as not confirmed under v8.1.

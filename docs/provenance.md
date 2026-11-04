@@ -1,8 +1,8 @@
 # Provenance of the pre-specification (hypothesis cards)
 
-Paper contribution K1 states that the hypothesis cards were written and frozen BEFORE the confirmatory runs. The evidence is the commit order of the private development repository. This public repository is a fresh single-snapshot export (no history, neutral author), so the order is documented here instead. Only the abbreviated commit hash, the author-date (ISO 8601, local time zone as recorded) and the commit subject are listed. No names, e-mails or trailers are included.
+Paper contribution K1 states that the hypothesis cards were written and frozen BEFORE the confirmatory runs. The evidence is the commit order of the private development repository. This public repository is a clean export that does not contain the private development history, so the order is documented here instead. Only the abbreviated commit hash, the author-date (ISO 8601, local time zone as recorded) and the commit subject are listed. No names, e-mails or trailers are included.
 
-**Verification.** The commit hashes below belong to the private repository. The authors can provide the private repository (or a signed `git log` / bundle) to reviewers on request, so that the hash chain and the ordering "card commit < result commit" can be checked independently. Until then these tables are an assertion by the authors, not an independently verifiable proof.
+**Verification.** The commit hashes below belong to the private repository. The author can provide the private repository (or a signed `git log` / bundle) to reviewers on request, so that the hash chain and the ordering "card commit < result commit" can be checked independently. Until then these tables are an assertion by the author, not an independently verifiable proof.
 
 Subjects are copied verbatim from the private history (some are about the version of the card, some about the spike added in the same commit). Card contents (`docs/03_hypotheses.md`) are included in this repository in their final form (v9); earlier versions v1-v4 are folded into the snapshot commit `b4185d3`.
 

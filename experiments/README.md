@@ -6,6 +6,8 @@ The first study, `spike/`, writes to `results/spike01/` (it was called spike01 w
 
 Run everything from the repository root, e.g. `.venv/bin/python experiments/spike13a/report13.py`.
 Each study's pre-specification, deviations and "Re-run" commands are in `results/<result folder>/README.md`.
+**Frozen documents keep the old paths.** The hypothesis cards (`docs/03_hypotheses.md`) and the experiment READMEs under `results/` are kept exactly as they were written before the runs, so that they still match the private history listed in `docs/provenance.md`. They refer to the earlier layout: read `spikeNN/...` as `experiments/spikeNN/...` and `docs/paper/...` as `paper/support/...` (the LaTeX source moved to `paper/arxiv/`).
+
 Scripts find the repository root from their own location, so the working directory only matters for the few that write to `.scratch/`.
 
 | Folder | Research question (one sentence) | Results | Paper setting |

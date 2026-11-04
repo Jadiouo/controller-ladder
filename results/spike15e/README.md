@@ -1,14 +1,14 @@
 # spike15e: v9 locked TEST-D confirmation (seeds 40000-40499, n=500, run once)
 
 ## 0. Specification
-Rules: docs/03_hypotheses.md section v9 (commit 800de6e, written before this run). Code: experiments/spike15e/ (eval15e.py, infer15e.py, stats15e.py). Frozen methods: B = c11/M3c/max (spike15c), C-ens = LAP/c11/M3c/hit06 (spike15d), R0, R1, L-ens; descriptive B9, R0+c11/centre LAP. Weights: results/spike15c/models/.
-Pre-run commit: 800de6e95a5048de0f44f4a60b5861379d55c051 (code in experiments/spike15e/ was uncommitted at run time; committed together with these results).
+Rules: docs/03_hypotheses.md section v9 (commit 800de6e, written before this run). Code: spike15e/ (eval15e.py, infer15e.py, stats15e.py). Frozen methods: B = c11/M3c/max (spike15c), C-ens = LAP/c11/M3c/hit06 (spike15d), R0, R1, L-ens; descriptive B9, R0+c11/centre LAP. Weights: results/spike15c/models/.
+Pre-run commit: 800de6e95a5048de0f44f4a60b5861379d55c051 (code in spike15e/ was uncommitted at run time; committed together with these results).
 
 ## 1. Reproduction check (holdout 1100-1599, before TEST-D)
 repro_hold.json: B 86.6 (ref 86.6), C-ens 79.6 (ref 79.6), R0 69.2, R1 86.0, L-ens 71.0; per-episode agreement with spike15c/15d 100 %. PASS. Holdout stage-1 plans partly hit the .scratch/s10b_plans cache (input-hash keyed), so holdout CPU seconds are low; TEST-D had no cache.
 
 ## 2. TEST-D
-Access log: one line added (110 -> 111): `2026-11-02T21:54:34	experiments/spike15e/eval15e.py	v9 single locked TEST-D run, seeds=40000-40499`. Full numbers: table.md; per-episode: testd_episodes.json.
+Access log: one line added (110 -> 111): `2026-11-02T21:54:34	spike15e/eval15e.py	v9 single locked TEST-D run, seeds=40000-40499`. Full numbers: table.md; per-episode: testd_episodes.json.
 
 | | success % [95% CI] | vs R0 pp |
 |---|---|---|

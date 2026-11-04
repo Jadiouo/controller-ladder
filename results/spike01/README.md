@@ -4,11 +4,11 @@
 ```
 uv venv .venv && uv pip install --python .venv/bin/python mujoco numpy scipy matplotlib
 uv pip install --python .venv/bin/python torch --index-url https://download.pytorch.org/whl/cpu
-.venv/bin/python experiments/spike/sanity.py                       # teacher sanity check (seconds)
-systemd-run --user --scope -q -p MemoryMax=6G -p MemorySwapMax=0 .venv/bin/python experiments/spike/run_spike.py > results/spike01/run.log
-.venv/bin/python experiments/spike/report.py                       # writes table.md, rmse_vs_error.png from raw.pkl
+.venv/bin/python spike/sanity.py                       # teacher sanity check (seconds)
+systemd-run --user --scope -q -p MemoryMax=6G -p MemorySwapMax=0 .venv/bin/python spike/run_spike.py > results/spike01/run.log
+.venv/bin/python spike/report.py                       # writes table.md, rmse_vs_error.png from raw.pkl
 ```
-Files: experiments/spike/sim.py (env, refs, teacher, rollout), experiments/spike/run_spike.py, experiments/spike/report.py, results/spike01/{raw.pkl,run.log,raw_timing.json,table.md,rmse_vs_error.png}.
+Files: spike/sim.py (env, refs, teacher, rollout), spike/run_spike.py, spike/report.py, results/spike01/{raw.pkl,run.log,raw_timing.json,table.md,rmse_vs_error.png}.
 
 ## Wall-clock (important for cost estimates)
 Full run_spike.py (5 e x 10 seeds x {BC, DART} = 100 students + 5 teacher evals): **2974 s (~50 min)** on CPU, 2 torch threads, 1 process.

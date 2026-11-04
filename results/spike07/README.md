@@ -1,6 +1,6 @@
 # spike07: H9 (oracle headroom) and H10 (fair RL) on ball juggling, distribution C, cap N=300
 
-Numbers: `table.md` (all CIs, subgroups, residual norms, CAL curves). PPO-collapse diagnosis: `diag.md`. Code: `experiments/spike07/` (`env7.py`, `calib7.py`, `select_best7.py`, `rl7.py`, `diag_table.py`, `merge_final.py`, `eval7.py`, `report7.py`, `run_*.sh`). experiments/spike06/, arena/, docs/ untouched.
+Numbers: `table.md` (all CIs, subgroups, residual norms, CAL curves). PPO-collapse diagnosis: `diag.md`. Code: `spike07/` (`env7.py`, `calib7.py`, `select_best7.py`, `rl7.py`, `diag_table.py`, `merge_final.py`, `eval7.py`, `report7.py`, `run_*.sh`). spike06/, arena/, docs/ untouched.
 
 ## Verdict (rules from docs/03_hypotheses.md v5, applied unchanged)
 - **H9 NOT SUPPORTED.** R-oracle (PPO-fixed + true e, ball mass, delay in the observation) 81% [69,91] vs best-classical 82% [70,92]: **-1.3 pp [-4.0, +0.0]** (required: >= +10 pp, CI excludes 0). Per seed 82/80/80%.
@@ -59,11 +59,11 @@ Free parameters: T-robust 11 tunable classical parameters (kp range widened); PP
 
 ## Re-run (repo root, existing .venv, every heavy job wrapped with flock + systemd-run MemoryMax=10G)
 ```
-experiments/spike07/run_calib7.sh; flock ... .venv/bin/python experiments/spike07/select_best7.py     # classical -> best.json
-experiments/spike07/run_diag.sh; run_diag2.sh; run_diag3.sh; run_diag4.sh; run_diag5.sh   # diagnosis (diag.md; D2/D5/D6/S* were stopped early by hand)
-experiments/spike07/run_finals_seq.sh   # PPO + oracle (hold A, B; its hold C = first SAC attempt, aborted)
-experiments/spike07/run_final_sac2.sh   # SAC A/B x 3 seeds
-.venv/bin/python experiments/spike07/merge_final.py                                     # CAL-only R-SAC config choice, final_methods.json
-flock ... .venv/bin/python experiments/spike07/eval7.py                                 # LOCKED TEST, once
-.venv/bin/python experiments/spike07/report7.py                                         # table.md
+spike07/run_calib7.sh; flock ... .venv/bin/python spike07/select_best7.py     # classical -> best.json
+spike07/run_diag.sh; run_diag2.sh; run_diag3.sh; run_diag4.sh; run_diag5.sh   # diagnosis (diag.md; D2/D5/D6/S* were stopped early by hand)
+spike07/run_finals_seq.sh   # PPO + oracle (hold A, B; its hold C = first SAC attempt, aborted)
+spike07/run_final_sac2.sh   # SAC A/B x 3 seeds
+.venv/bin/python spike07/merge_final.py                                     # CAL-only R-SAC config choice, final_methods.json
+flock ... .venv/bin/python spike07/eval7.py                                 # LOCKED TEST, once
+.venv/bin/python spike07/report7.py                                         # table.md
 ```

@@ -1,6 +1,6 @@
 # spike04: does the tuned classical controller (C1) still tie residual RL once the simulator has sensor noise + delay? (H7)
 
-Verdict and all numbers: `table.md`. Pre-registration: `H7.md` (written before any run; Amendment 1 appended before any noise result). Code in `experiments/spike04/` (imports experiments/spike/, experiments/spike02/, experiments/spike03a/ unchanged; nothing else modified). Outputs here.
+Verdict and all numbers: `table.md`. Pre-registration: `H7.md` (written before any run; Amendment 1 appended before any noise result). Code in `spike04/` (imports spike/, spike02/, spike03a/ unchanged; nothing else modified). Outputs here.
 
 ## Result in one paragraph
 **H7 = NO** (N1 = noise sigma 1e-3 rad + 30 ms delay). C1-new (re-tuned) has RMSE 0.0104 (clean) / 0.0214 (dist); residual PPO on top of it (5 seeds x 2M steps) has 0.0127 / 0.0219, i.e. RL is 21.7% WORSE clean (CI of RL-C1 [+0.0019,+0.0027]) and 2.6% worse with pulses (CI [+0.0002,+0.0010]). The premise was only half right: noise/delay do punish the spike03a gains (C1-old diverges under delay; in N2 noise-only C1-old loses 39% vs no noise and the re-tuned Kp falls from x9.2 to x3.7; in N1 to x0.76), but the re-tuned classical controller still ties or beats RL. RL has no gain that classical retuning cannot reach in this task, at least in N1 with this RL recipe. N2 (noise only) RL was not run (see deviations), so for N2 only the classical result is available.
@@ -8,12 +8,12 @@ Verdict and all numbers: `table.md`. Pre-registration: `H7.md` (written before a
 ## Re-run (repo root)
 ```
 H="flock .scratch/heavy.lock systemd-run --user --scope -q -p MemoryMax=6G -p MemorySwapMax=0"
-$H .venv/bin/python experiments/spike04/calib_sigma.py            # sigma_q from calibration seeds 1000-1049 -> calib_sigma.json (then set json["sigma"]=0.001, see deviation 1)
-$H .venv/bin/python experiments/spike04/tune4.py N2               # CMA-ES C1-new and C1-new+LPF, calibration only -> tuned_N2.json
-$H .venv/bin/python experiments/spike04/tune4.py N1               # -> tuned_N1.json
-for s in 0 1 2 3 4; do $H .venv/bin/python experiments/spike04/run_rl4.py --cond N1 --base C1STAR --seeds $s --steps 2000000; done   # -> raw_rl_N1_C1STAR.pkl
-$H .venv/bin/python experiments/spike04/eval4.py                  # locked test seeds 0-49 -> eval.pkl
-.venv/bin/python experiments/spike04/report4.py                   # -> table.md (sections 0-4)
+$H .venv/bin/python spike04/calib_sigma.py            # sigma_q from calibration seeds 1000-1049 -> calib_sigma.json (then set json["sigma"]=0.001, see deviation 1)
+$H .venv/bin/python spike04/tune4.py N2               # CMA-ES C1-new and C1-new+LPF, calibration only -> tuned_N2.json
+$H .venv/bin/python spike04/tune4.py N1               # -> tuned_N1.json
+for s in 0 1 2 3 4; do $H .venv/bin/python spike04/run_rl4.py --cond N1 --base C1STAR --seeds $s --steps 2000000; done   # -> raw_rl_N1_C1STAR.pkl
+$H .venv/bin/python spike04/eval4.py                  # locked test seeds 0-49 -> eval.pkl
+.venv/bin/python spike04/report4.py                   # -> table.md (sections 0-4)
 ```
 torch 2 threads, CPU only. `--base C0` and `--cond N2` are supported by run_rl4.py but were not run.
 
