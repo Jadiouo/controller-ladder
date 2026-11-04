@@ -1,0 +1,42 @@
+\section{Experimental Setup}
+\label{sec:setup}
+
+\textbf{Arm and simulator.} All experiments run in MuJoCo with planar serial arms. The default arm has two links (0.5 and 0.4\,m, 1.0 and 0.8\,kg); the whip uses a three-link arm (0.40, 0.35 and 0.25\,m; 1.0, 0.8 and 0.5\,kg; 0.2\,kg tip payload). A task, a robot, a controller and a list of perturbations plug into one environment interface. Controllers see only the nominal model; perturbations change the true plant. Control runs at 5\,ms.
+
+\begin{table*}[t]
+\centering
+\caption{The eight settings. ``Strongest classical'' is the comparator of Table~\ref{tab:cross}; on S7 it changed from R0 to C-ens during the study (Section~\ref{sec:k3}).}
+\label{tab:settings}
+\small
+\begin{tabular}{@{}lp{3.6cm}p{3.7cm}p{4.6cm}p{3.4cm}@{}}
+\toprule
+ & Task and condition & Strongest classical & Learned methods & Evidence sets \\ \midrule
+S1 & tracking, weaknesses W0/W3 (2-link) & C1: gains retuned by CMA-ES & residual PPO (5 seeds) & TEST \\
+S2 & tracking + sensor noise + 30\,ms delay & C1-new (retuned for noise and delay) & residual PPO & TEST \\
+S3 & tracking, clean nominal plant & CTC+LQR teacher (exact) & BC, MIP, flow-1, flow-10, DDIM-10 students & HOLD, fresh seeds \\
+S4 & juggling, one known error (pilot) & one-parameter retuned mirror-law teacher & residual PPO & TEST \\
+S5 & juggling, wide unknown error & T-robust (CMA-ES over the error distribution) & residual PPO, SAC, PPO with oracle observation & TEST, HOLD, fresh \\
+S6 & whip, idealised (noise-free, in model class) & T-adapt (online identification) & L-est, residual PPO, PPO with oracle observation & TEST, HOLD, fresh \\
+S7 & whip, realistic conditions & R0 (T-adapt3-full), later C-ens & L-est, L-dec4, ensembles (B), residual PPO, SAC & TEST-B/C/D, HOLD, NEW \\
+S8 & whip, privileged-teacher distillation & T-adapt3-full & students on multimodal and canonical teacher data & NEW \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\textbf{Seven tasks and where each is used.} The task set is figure tracking (a tool-tip glyph), pole balancing, Push-T, ball juggling, ball catching, ball tossing into a basket, and whip. Learned-versus-classical comparisons with a full protocol cover tracking, juggling and whip (settings S1--S8, Table~\ref{tab:cross}). Pole balancing was run only on the classical ladder; catching, tossing and Push-T have classical pilots (5--20 demo seeds) and, in Appendix~\ref{app:breadth}, residual-PPO mini-comparisons that add breadth but not evidence for K2.
+
+\textbf{Whip.} The arm flings a chain of ten capsules (0.10\,m, 0.015\,kg each, hinged at the tip) so that the \emph{chain tip} passes within 0.08\,m of a target 1.15--1.70\,m from the shoulder, outside the arm's 1.0\,m reach, within 2.5\,s. The chain state is not observed. ``Realistic conditions'' add encoder noise (1e-3\,rad, 1e-2\,rad/s), actuator noise $U(0.01, 0.02)$\,Nm, Coulomb friction $2\text{e-}3\,\text{Nm} \times U(0.5, 1.5)$ and per-link mass factors $\exp U(-0.3, 0.3)$. These magnitudes are our choice, set before the results, and are not derived from hardware. Success is the primary metric.
+
+\textbf{Classical ladder.} For tracking the ladder runs PID, computed torque with LQR (CTC+LQR), iLQR, iLQR-MPC and MPPI. For tuning, C0 is the untuned teacher, C1 retunes Kp/Kd or Q/R with CMA-ES on CAL, and C2 adds an integral term. For juggling and whip we use T-nom (nominal), T-robust (CMA-ES over the perturbation distribution), T-adapt (online system identification from a short probe) and, for realistic whip, T-adapt3 with an extended model class (length scale, ten per-link masses, damping, Coulomb friction; 13 parameters, called R0 below). On whip the plan comes from CMA-ES keyframes tracked by computed torque.
+
+\textbf{Learned methods.} Imitation students are an MLP trained by behaviour cloning (BC, with DART noise or DAgger where stated), MIP (two-step regression), flow matching with 1 or 10 steps, and a DDIM-10 diffusion policy. Residual RL is PPO (SAC in sensitivity runs) on top of the strongest classical controller, with a residual capped at 12\,Nm in juggling and whip. Learned estimators map a short probe to the plant parameters: L-est is an MLP on the probe's tracking residuals (12{,}000 probe-only training episodes, simulator labels), and L-dec4 is a GRU on the raw probe time series with a decision-weighted loss and four times the data, with three training seeds. Ensembles average the estimated parameters of the three frozen L-dec4 networks. All training seeds are at least 500{,}000.
+
+\textbf{Residual PPO recipe.} The residual policy has two tanh layers of 256 units and a zero-initialised output, so the learner starts exactly at its base controller; its input includes lagged arm positions and velocities, and it is trained for 2.5M to 3M steps (12M in one probe) with learning rate $10^{-4}$. Seven equally spaced checkpoints are evaluated on CAL and the best is chosen, with initialisation excluded; the learned verdict then uses disjoint seeds. The exploration log-std was the one parameter we found to matter most (Section~\ref{sec:protocol}).
+
+\textbf{Reproducibility.} Each result table is regenerated by a script from stored per-episode data, with the exception of runs that depend on untracked intermediate files; locked-set runs (TEST-B, TEST-C, TEST-D) were once-only and must not be repeated. All training seeds are at least 500{,}000 so that no training episode overlaps an evaluation set.
+
+\textbf{Headroom ladder.} On whip we measure what each source of error costs with a fixed-order ladder on the same pipeline. R0 is the fitted-parameter pipeline; R1 gives it the true plant parameters; R2 adds the true chain state; R4 is an oracle planner with no probe time; R5 uses the canonical oracle. Paired differences between rungs give the size of each block. We also run the reverse order (true chain state first). R3 was not run.
+
+\textbf{Perturbations.} Tracking uses payload error, torque cap, delay, Coulomb friction, sensor noise and torque pulses; ball tasks use drag, mass, release delay and observation noise or delay; whip uses chain mass, damping and length. S5 (juggling) draws restitution, ball mass and sensing delay per episode from a wide distribution that the controller does not know.
+
+\textbf{Statistics.} Paired percentile bootstrap, 95\% CI, per comparison, with $10^4$ to $2{\times}10^4$ resamples depending on the script. ``Recovered fraction'' is $(\text{X}-\text{R0})/(\text{R1}-\text{R0})$ with the same resample in numerator and denominator. Holm correction applies within a hypothesis family: three hypotheses for the TEST-C card and four for the TEST-D card, both on one-sided bootstrap $p$-values at family $\alpha=0.05$.

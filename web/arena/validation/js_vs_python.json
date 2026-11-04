@@ -1,0 +1,31 @@
+{
+ "mujoco_wasm": "mujoco@3.1.16",
+ "glyph": "S",
+ "steps": 400,
+ "cases": {
+  "clean/pid": {
+   "max_abs_q_err_rad": 1.7905854576838465e-10,
+   "rms_q_err_rad": 4.667218535176397e-11,
+   "max_abs_tau_err_Nm": 2.602691484554498e-7,
+   "joint_range_rad": 2.171139093798396
+  },
+  "clean/ctc_lqr": {
+   "max_abs_q_err_rad": 1.7873102997612023e-10,
+   "rms_q_err_rad": 4.496196865283024e-11,
+   "max_abs_tau_err_Nm": 2.4461467695857664e-7,
+   "joint_range_rad": 2.1675747281354956
+  },
+  "hard/pid": {
+   "max_abs_q_err_rad": 1.9280821383915736e-10,
+   "rms_q_err_rad": 5.316791407152511e-11,
+   "max_abs_tau_err_Nm": 3.0193672451162e-7,
+   "joint_range_rad": 2.179599651240941
+  },
+  "hard/ctc_lqr": {
+   "max_abs_q_err_rad": 1.828797113745395e-10,
+   "rms_q_err_rad": 4.8742218685851776e-11,
+   "max_abs_tau_err_Nm": 2.4776075235877215e-7,
+   "joint_range_rad": 2.1741199061313106
+  }
+ }
+}

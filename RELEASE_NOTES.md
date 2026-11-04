@@ -44,3 +44,8 @@ See the verification section appended at the end of this file (scan results and 
 * Scan over tracked files for the account names, e-mail domain, `/home/`, machine/school/VPN/session/AI-tool strings, trailers: 0 hits outside this file (this file names the removed items, an intended exception). Generic `ssh machine-B` (placeholder alias) remains in `results/spike16a/README.md` by design. The words `lex` as a substring appear only inside ordinary words.
 * `python -m pytest -q` in a fresh `.venv` (install `-e . pytest`, run under `flock` + `systemd-run` MemoryMax=6G): 194 passed, 6 skipped, 343 s.
 * Git: one commit, neutral author, no remote.
+
+## Second snapshot (2026-11-03)
+* Added `web/` (portfolio page, 11 task videos, MuJoCo WASM arena with vendored mujoco@3.1.16 and three r160; upstream build paths inside the vendored binaries are not ours), `docs/paper/arxiv/` (LaTeX sources, figures script, compiled PDF; build artefacts excluded), and the frozen whip estimator weights `results/spike15c/models/*.pt` (15 MB).
+* Removed the internal AI-simulated review records (`review_r1.md`, `review_r2.md`, `r2_fixlog.md`, `review_a1.md`); some documents still mention them by name. The paper's acknowledgement discloses that reviews were simulated with AI agents.
+* License: MIT (author confirmed); copyright holder and author names remain placeholders.

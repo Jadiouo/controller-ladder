@@ -1,0 +1,18 @@
+\section{Introduction}
+\label{sec:intro}
+
+A learned controller that beats a classical one is a common headline, and the comparison behind it is often weaker than it looks. Our own first experiment shows how. A residual PPO policy beat the untuned computed-torque teacher on a 2-DoF tracking task by 16.7\% in RMSE without disturbances. After a two-parameter gain retune of the teacher, the advantage disappeared: the learned side was 7.1\% worse, with a 95\% CI of $[-13.8, +0.3]\%$ (Table~\ref{tab:cross}, S1). The gap was a tuning gap, not a learning gap.
+
+This paper asks a narrower question than ``does learning win'': \emph{what extra ingredient does a learned student need to beat its classical teacher?} Candidate ingredients are more information (privileged state), better optimisation (reinforcement learning on top of the teacher), a richer model class (generative students), and more data. To answer under one set of rules, we built a benchmark with an explicit protocol and report every deviation from it. All claims are scoped to this protocol and to one simulator.
+
+We make four contributions, each tied to a named evidence set: the access log for K1, locked sets for K2 and K3, and fresh but unlocked seeds for K4.
+\begin{enumerate}
+\item[\textbf{K1}] \textbf{An audited protocol} (Section~\ref{sec:protocol}): classical tooling extended on the same footing as the learner's, three-axis budgets with disclosed over-runs, rules pre-specified in time-stamped hypothesis cards, a sanity gate that a learner must pass before its null is interpreted, and an access log for test evaluations. The gate passed only marginally (+10.2\pp\ against a +10\pp\ threshold), and its first lesson was that a default exploration scale left PPO unable to learn a learnable correction.
+\item[\textbf{K2}] \textbf{A cross-setting result with one whip qualification} (Section~\ref{sec:k2}): in 8 tracking, juggling and whip settings no learned method beat the strongest classical baseline by the +10\pp\ bar. On whip, a learned estimator is ahead of the upgraded classical one by +5.6\pp\ [0.6, 10.6] under the same robust plan-selection rule, and an advantage of 10\pp\ or more cannot be excluded.
+\item[\textbf{K3}] \textbf{A headroom decomposition on realistic whip} (Section~\ref{sec:k3}): true parameters add +17.6\pp\ [12.6, 22.6] over fitted ones, and scoring candidate swings across several plausible plants recovers 0.59 [0.36, 0.82] of that gap with a classical Laplace ensemble and 0.90 [0.68, 1.16] with learned estimators.
+\item[\textbf{K4}] \textbf{A multimodal-teacher result} (Section~\ref{sec:k4}): replacing a multimodal teacher by a canonicalised one raised every student's success by 17.5--33.5\pp, while the best generative student added only +5.0\pp\ [$-0.3$, 10.2] over an MLP.
+\end{enumerate}
+
+Two sources of fragility run through these results, and we state them here rather than in the limitations. First, in 3 of the 8 settings the RL learner did not learn, so those settings cannot show that classical is better. Second, the classical comparator on whip, a Laplace ensemble, was added after the learned method had already beaten the original classical baseline; the final contrast is pre-specified, but the comparator was built with the learned result in view.
+
+To our knowledge no prior work combines an independent-physics manipulator, an auditable fairness protocol, extended classical tooling and a headroom ladder (the literature search ended in October 2026; Section~\ref{sec:related}). Every number in the text is traced to a result file, a README line or a code constant (\texttt{numbers\_check.md} in the accompanying repository); the appendices give the deviations, budgets and the remaining experiments.

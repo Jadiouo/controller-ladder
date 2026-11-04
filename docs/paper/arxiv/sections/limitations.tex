@@ -1,0 +1,12 @@
+\section{Limitations}
+\label{sec:limitations}
+
+\begin{enumerate}
+\item \textbf{RL did not learn where it matters.} On realistic whip, 13 tuned PPO and SAC configurations and a 12M-step run stayed within $-3$ to +2\pp\ of initialisation; the first gate passed marginally and later gates are single-seed. Our null is ``not learned under this recipe'', not ``cannot learn''.
+\item \textbf{Holdout reuse.} HOLD selected the best classical baseline and was then reused, so classical numbers are optimistic there (R0 69.2\% on HOLD against 65.6--66.4\% on the three locked sets).
+\item \textbf{Our own realism.} Noise, friction and mass magnitudes were set by us, not derived from hardware.
+\item \textbf{One simulator, one dominant task.} All results are MuJoCo and the mechanistic claims (K3, K4) rest on whip alone; there is no second engine or hardware.
+\item \textbf{Budgets, multiplicity and the order of the classical upgrade.} Budget ratios were unequal (up to 9--17$\times$); Holm applies within a hypothesis only; the classical ensemble was added after the learned result was seen, and the learned advantage +5.6\pp\ [0.6, 10.6] does not exclude 10\pp.
+\item \textbf{Numerical warnings.} The TEST-D log contains 125{,}555 MuJoCo ``simulation unstable'' warnings; a re-run on 100 holdout episodes attributes 92--98\% of them to planner model rollouts and none to the executed plant (0 of 100 executed episodes diverged), but the check is $n{=}100$ on holdout only.
+\end{enumerate}
+Appendix~\ref{app:audit} gives the full text of these items and the forking paths.

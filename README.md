@@ -2,7 +2,7 @@
 
 A MuJoCo benchmark and shared skeleton for asking one question under a fair, pre-specified protocol: **what extra ingredient does a learned controller need before it beats its classical teacher?** Robots, tasks, perturbations ("weaknesses"), controllers (PID, computed-torque + LQR, iLQR, iLQR-MPC, MPPI, residual RL, imitation students such as BC, MIP, diffusion and flow matching) and the evaluation protocol plug into the same interface, so every comparison is recorded and tabulated the same way.
 
-Paper: *link to be added (preprint / workshop page).* Status: research code accompanying a paper; numbers in the paper are indexed in `docs/canonical_numbers.md`.
+Paper: `docs/paper/arxiv/main.pdf` (LaTeX sources and figure script in `docs/paper/arxiv/`; arXiv link to be added). Portfolio site and in-browser MuJoCo controller arena: `web/` (serve with `python -m http.server -d web`). Status: research code accompanying a paper; numbers in the paper are indexed in `docs/canonical_numbers.md`.
 
 ## Install
 
@@ -30,7 +30,7 @@ Unit tests never write `results/.test_access.log`; real evaluations on the locke
 * `docs/experiments.tsv` lists, per run, the hypothesis ids, seeds, command and result file; `docs/canonical_numbers.md` maps every number used in the paper to a run and command; `docs/paper/claims_evidence.md` (section 5) gives the "regenerate table" command per result.
 * Cheap path (no simulation): re-build a table from the stored per-episode data, e.g. `python spike15e/stats15e.py testd`, `python spike10b/report10b.py`, `python spike13a/report13.py`, `python spike15b/report15.py`, `python docs/paper/stats/equivalence.py`.
 * Full re-runs are listed in each `results/spikeNN/README.md` ("Re-run"). Some are long (hours; RL training) and a few use locked test seeds that must be evaluated **once**: do not repeat TEST-B/C/D runs (see below).
-* Trained model weights, training-data shards, videos and large arrays are **not** included (size); see `RELEASE_NOTES.md` for the list. Tables derived from them are included.
+* The frozen whip estimator weights used on TEST-D are included (`results/spike15c/models/`, 15 MB). Other weights, training-data shards and large arrays are **not** included (size); see `RELEASE_NOTES.md` for the list. Tables derived from them are included.
 
 Demo (about a minute, writes tables and mp4 to `results/arena_demo/`):
 
@@ -60,4 +60,4 @@ Architecture, how to add a task / controller / perturbation, and the design deci
 
 ## License and citation
 
-MIT (placeholder, to be confirmed by the authors): see `LICENSE`. Citation metadata: `CITATION.cff` (placeholder).
+MIT: see `LICENSE` (copyright holder to be filled in). Citation metadata: `CITATION.cff` (placeholder).

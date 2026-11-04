@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Controller Arena</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="../style.css">
+<style>
+  .arena{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(280px,1fr);gap:20px;align-items:start}
+  @media(max-width:860px){.arena{grid-template-columns:1fr}}
+  #view{border:1px solid var(--line);border-radius:10px;overflow:hidden;touch-action:none;background:#f6f7f9}
+  #view canvas{display:block;width:100%;cursor:grab}
+  #chart{width:100%;height:170px;display:block;border:1px solid var(--line);border-radius:10px;background:#fff;margin-top:12px}
+  .panel{border:1px solid var(--line);border-radius:10px;padding:14px 16px;background:var(--card);margin-bottom:14px}
+  .panel h3{margin:0 0 8px;font-size:.95rem}
+  .row{display:grid;grid-template-columns:7.5rem 1fr 6.5rem;gap:8px;align-items:center;margin:6px 0;font-size:.88rem}
+  .row input[type=range]{width:100%;min-width:0}
+  .row{grid-template-columns:7rem minmax(0,1fr) 5.8rem}
+  .row output{font-size:.8rem;white-space:nowrap;font-variant-numeric:tabular-nums;color:var(--muted);text-align:right}
+  .seg{display:flex;gap:8px}
+  .seg button,.btns button{flex:1;padding:9px 10px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--fg);font:inherit;cursor:pointer}
+  .seg button[aria-pressed=true]{background:var(--accent);color:#fff;border-color:var(--accent)}
+  .btns{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+  #readout{font:12.5px/1.4 ui-monospace,monospace;color:var(--muted);margin:8px 2px;min-height:2.6em}
+  #status{font-size:.8rem;color:var(--muted)}
+  select{font:inherit;padding:4px}
+  .legend span{display:inline-block;width:10px;height:10px;border-radius:2px;margin:0 4px 0 12px}
+</style>
+</head>
+<body>
+<header class="top"><a href="../index.html">&larr; Portfolio</a></header>
+<main class="wrap">
+  <h1>Controller Arena</h1>
+  <p class="lead">Drag the arm with your mouse (or finger) while a classical controller tries to trace the figure. Switch controllers
+  live, tune the gains, and add model error or latency. Physics: MuJoCo (WebAssembly) in your browser. Learned controllers are not
+  in this page yet (planned: ONNX export).</p>
+  <div class="arena">
+    <section>
+      <div id="view" aria-label="2-link arm simulation"></div>
+      <div id="readout"></div>
+      <canvas id="chart" aria-label="tip error over time"></canvas>
+      <p class="legend small"><span style="background:#2563eb"></span>PID + gravity comp. <span style="background:#dc2626"></span>CTC + LQR &nbsp; (line colour = controller active at that moment; red dot = target, grey line = figure, black = actual tip path)</p>
+      <p id="status" role="status">starting ...</p>
+    </section>
+    <aside>
+      <div class="panel">
+        <h3>Controller: <span id="ctl-name"></span></h3>
+        <div class="seg">
+          <button class="ctl-btn" data-ctl="pid" aria-pressed="true">PID</button>
+          <button class="ctl-btn" data-ctl="ctc" aria-pressed="false">CTC + LQR</button>
+        </div>
+        <div id="panel-pid">
+          <div class="row"><label for="pid-wn">bandwidth w_n</label><input id="pid-wn" type="range" min="4" max="60" step="1" value="20"><output id="pid-wn-v"></output></div>
+          <div class="row"><label for="pid-ki">integral Ki</label><input id="pid-ki" type="range" min="0" max="400" step="10" value="0"><output id="pid-ki-v"></output></div>
+          <div class="row"><label for="pid-grav">gravity comp.</label><input id="pid-grav" type="checkbox" checked><span></span></div>
+          <p class="small">Per-joint Kp = w_n&sup2; M_ii, Kd = 2 w_n M_ii (critically damped on the nominal inertia). No inverse dynamics.</p>
+        </div>
+        <div id="panel-ctc" hidden>
+          <div class="row"><label for="ctc-qp">LQR weight Q_p</label><input id="ctc-qp" type="range" min="2" max="7" step="0.1" value="5.204"><output id="ctc-qp-v"></output></div>
+          <div class="row"><label for="ctc-qv">LQR weight Q_v</label><input id="ctc-qv" type="range" min="1" max="5" step="0.1" value="2.903"><output id="ctc-qv-v"></output></div>
+          <p class="small" id="ctc-gains"></p>
+          <p class="small">Computed torque: tau = ID(q, qd, qdd_ref + Kp e + Kd ed) with the nominal model; [Kp, Kd] is the LQR gain of the per-joint double integrator.</p>
+        </div>
+      </div>
+      <div class="panel">
+        <h3>Task and weaknesses</h3>
+        <div class="row"><label for="glyph">figure</label><select id="glyph"></select><span></span></div>
+        <div class="row"><label for="payload">true payload</label><input id="payload" type="range" min="-50" max="100" step="5" value="0"><output id="payload-v"></output></div>
+        <div class="row"><label for="delay">command delay</label><input id="delay" type="range" min="0" max="8" step="1" value="0"><output id="delay-v"></output></div>
+        <div class="row"><label for="speed">speed</label><select id="speed"><option value="0.25">0.25x</option><option value="0.5">0.5x</option><option value="1" selected>1x</option><option value="2">2x</option></select><span></span></div>
+        <div class="row"><label for="loop">repeat episode</label><input id="loop" type="checkbox" checked><span></span></div>
+        <p class="small">The controllers always assume the nominal 1.5 kg payload; "true payload" changes the plant only. Delay is an actuator latency of whole 5 ms control periods.</p>
+        <div class="btns"><button id="reset">Restart</button><button id="pause">Pause</button></div>
+      </div>
+      <p class="small">Same arm, same references, same controller code path as the Python arena (numerical comparison: <a href="VALIDATION.md">VALIDATION.md</a>).</p>
+    </aside>
+  </div>
+</main>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>

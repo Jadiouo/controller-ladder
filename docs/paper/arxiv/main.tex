@@ -1,0 +1,55 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{microtype}
+\usepackage[table]{xcolor}
+\usepackage{cite}
+\usepackage[hidelinks]{hyperref}
+
+\newcommand{\pp}{\,pp}
+\newcommand{\todo}[1]{\textbf{[TODO: #1]}}
+\graphicspath{{figures/}}
+
+\begin{document}
+
+\title{An Audited, Budget-Disclosed Benchmark of Classical Teachers\\and Learned Students on a Simulated Arm}
+
+\author{\IEEEauthorblockN{Author Name (placeholder)}
+\IEEEauthorblockA{Affiliation (placeholder)\\
+Email (placeholder)}}
+
+\maketitle
+
+\begin{abstract}
+Learning-based controllers are often reported to beat classical ones, yet comparisons rarely give the classical side extended tooling, a disclosed budget, and rules fixed before testing. We propose an audited protocol for classical-versus-learned arm control in simulation: extended classical tooling, three-axis budgets, rules pre-specified in time-stamped hypothesis cards, a sanity gate for learners, and an access log. Across 8 tracking, juggling and whip settings, no learned method beat the strongest classical baseline by the pre-specified +10\pp\ bar, but only the whip has headroom; in 3 settings the residual-RL learner did not learn, and with a single-seed-gated exploration scale (gate passed) it nevertheless degraded the base by 17.6--23.8\pp\ where tested. On realistic whip, locked sets ($n{=}500$) show true parameters add +17.6\pp\ [12.6, 22.6], yet most of that gap is recovered without better parameters: scoring candidate swings across several plausible plants, a rule built first for the learned side and then given to the classical side, recovers 0.59 [0.36, 0.82] of it with a classical Laplace ensemble and 0.90 [0.68, 1.16] with estimators trained on simulator labels. Under this rule the learned side is ahead by +5.6\pp\ [0.6, 10.6]; 10\pp\ cannot be excluded. One simulator, mostly one task.
+\end{abstract}
+
+\begin{IEEEkeywords}
+robot manipulation, classical versus learned control, imitation learning, residual reinforcement learning, evaluation protocol, whip
+\end{IEEEkeywords}
+
+\input{sections/intro}
+\input{sections/related}
+\input{sections/protocol}
+\input{sections/setup}
+\input{sections/results}
+\input{sections/discussion}
+\input{sections/limitations}
+\input{sections/conclusion}
+
+\section*{Acknowledgment}
+\emph{Use of AI tools.} The research question, the choice of tasks, every direction change and every decision recorded in the hypothesis cards were made by the author. Most of the code, the execution of the experiments, the statistical analysis and the drafting of this text were carried out by AI agents (Anthropic's Claude models, used through Claude Code) working under the author's direction; internal reviews of the drafts were also simulated with AI agents. The author checked the results reported here and takes full responsibility for the content.
+
+\bibliographystyle{IEEEtran}
+\bibliography{refs}
+
+\clearpage
+\onecolumn
+\appendices
+\input{sections/appendix}
+
+\end{document}

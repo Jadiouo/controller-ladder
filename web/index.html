@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Controller Ladder</title>
+<meta name="description" content="Can learned controllers beat a strong classical teacher? An audited comparison on seven robot-arm tasks in MuJoCo, with an in-browser arena.">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="top" aria-label="sections">
+  <a href="#problem">Problem</a><a href="#tasks">Seven tasks</a><a href="#protocol">Fair protocol</a>
+  <a href="#findings">Findings</a><a href="#negative">Negative results</a><a href="arena/">Arena (interactive)</a>
+</nav>
+<main class="wrap">
+
+<header>
+  <p class="small">Robot-arm control portfolio &middot; MuJoCo simulation</p>
+  <h1>Can a learned controller beat a classical one that is given the same care?</h1>
+  <p class="lead">PID, computed torque with LQR, iLQR/MPPI, residual RL, PPO and imitation students (MLP, diffusion, flow) compete on seven
+  arm tasks under one audited protocol. Most of the time they tie. Where there is headroom, it comes from something unexpected.</p>
+  <div class="cta">
+    <a class="btn primary" href="arena/">Play with the arena</a>
+    <a class="btn" href="#paper" aria-disabled="true">Paper PDF (coming soon)</a>
+    <a class="btn" href="#paper" aria-disabled="true">arXiv (coming soon)</a>
+  </div>
+  <video class="hero-video" src="media/tracking.mp4" poster="media/tracking.jpg" muted loop playsinline autoplay controls preload="metadata" aria-label="PID versus CTC plus LQR tracking a glyph under model error"></video>
+  <p class="small">Left: PID. Right: computed torque with LQR gains. Same arm, same figure, same disturbances (30% payload error, sensor noise, 10 ms delay, torque pulses).</p>
+</header>
+
+<section id="problem">
+  <h2>The question</h2>
+  <p>Papers often report that learning-based controllers beat classical ones. But the classical side usually gets a textbook PID and
+  no tuning budget. This project asks the stricter question: <strong>if the classical controller gets extended tooling on the same
+  footing as the learner, can a learned controller still win by a margin that matters?</strong> The margin is fixed in advance:
+  <span class="num">+10 percentage points</span> of success rate.</p>
+</section>
+
+<section id="tasks">
+  <h2>Seven tasks, one shared arena</h2>
+  <p>Every task and controller plugs into one interface (gym-like environment, composable weaknesses, protocol-v2 metrics, paired
+  confidence intervals, video recorder), so any pair can be compared the same way. The clips below show the classical teacher on
+  calibration seeds; where a second clip is shown, it is a calibration seed on which the teacher fails once a single model error is injected.</p>
+  <div class="grid">
+    <article class="card">
+      <h3>1. Writing / figure tracking</h3><span class="tag">PID vs CTC+LQR</span>
+      <video src="media/tracking.mp4" poster="media/tracking.jpg" muted loop playsinline controls preload="none"></video>
+      <p class="small">The tip draws a glyph. Joint-space reference from IK; weaknesses: payload error, noise, delay, torque pulses. Try it live in the <a href="arena/">arena</a>.</p>
+    </article>
+    <article class="card">
+      <h3>2. Pole balancing on the tip</h3><span class="tag">PID vs CTC+LQR</span>
+      <video src="media/pole_balance.mp4" poster="media/pole_balance.jpg" muted loop playsinline controls preload="none"></video>
+      <p class="small">An unstable passive pole on the end effector. LQR on the linearised pole plus operational-space computed torque.</p>
+    </article>
+    <article class="card">
+      <h3>3. Push-T</h3><span class="tag">contact task</span>
+      <video src="media/push_t_success.mp4" poster="media/push_t_success.jpg" muted loop playsinline controls preload="none"></video>
+      <video src="media/push_t_failure.mp4" poster="media/push_t_failure.jpg" muted loop playsinline controls preload="none"></video>
+      <p class="small">Planner-based teacher pushes a T block onto a goal pose. Second clip: 30 ms sensor delay.</p>
+    </article>
+    <article class="card">
+      <h3>4. Racket juggling</h3><span class="tag">mirror-law teacher</span>
+      <video src="media/juggling.mp4" poster="media/juggling.jpg" muted loop playsinline controls preload="none"></video>
+      <p class="small">A 3-link arm bounces a ball with a flat racket (Buhler/Koditschek-style mirror law plus computed torque).</p>
+    </article>
+    <article class="card">
+      <h3>5. Catching a thrown ball</h3><span class="tag">intercept teacher</span>
+      <video src="media/catch_success.mp4" poster="media/catch_success.jpg" muted loop playsinline controls preload="none"></video>
+      <video src="media/catch_failure.mp4" poster="media/catch_failure.jpg" muted loop playsinline controls preload="none"></video>
+      <p class="small">Basket tool, ballistic prediction. Second clip: 10 ms delay on the ball observation.</p>
+    </article>
+    <article class="card">
+      <h3>6. Whip / rope fling</h3><span class="tag">under-actuated</span>
+      <video src="media/whip_success.mp4" poster="media/whip_success.jpg" muted loop playsinline controls preload="none"></video>
+      <video src="media/whip_failure.mp4" poster="media/whip_failure.jpg" muted loop playsinline controls preload="none"></video>
+      <p class="small">A 13-DoF chain must hit a target with its free end. Second clip: chain 10% shorter than the planner assumes. This is the one task with headroom.</p>
+    </article>
+    <article class="card">
+      <h3>7. Toss into a basket</h3><span class="tag">ballistic inversion + CTC</span>
+      <video src="media/toss_success.mp4" poster="media/toss_success.jpg" muted loop playsinline controls preload="none"></video>
+      <video src="media/toss_failure.mp4" poster="media/toss_failure.jpg" muted loop playsinline controls preload="none"></video>
+      <p class="small">Release the object so that it lands in the basket. Second clip: release 40 ms late.</p>
+    </article>
+  </div>
+</section>
+
+<section id="protocol">
+  <h2>A fair protocol</h2>
+  <ol class="steps">
+    <li><strong>Classical tooling extended on the same footing.</strong> The classical side gets tuning, adaptation and estimation tools as
+    well, not a fixed textbook gain.</li>
+    <li><strong>Three-axis budget.</strong> Training/tuning compute, data and wall-clock are counted for both sides, and over-runs are disclosed.</li>
+    <li><strong>Rules fixed before testing.</strong> Hypotheses live in time-stamped hypothesis cards with a public deviation table.</li>
+    <li><strong>Sanity gate for learners.</strong> A learner must first show it learned something on easy conditions; otherwise it cannot be used as evidence against learning.</li>
+    <li><strong>Locked evaluation sets with an access log.</strong> Calibration, holdout, fresh and locked test seed sets are disjoint; every evaluation of a locked set is logged.</li>
+  </ol>
+</section>
+
+<section id="findings">
+  <h2>Main findings</h2>
+  <div class="finding">
+    <h3>K2. No learned method beat the strongest classical baseline by the +10 pp bar in any of the 8 settings.</h3>
+    <p>Only the whip has headroom. In 3 settings the residual-RL learner did not learn, so those settings cannot show that classical
+    is better. With a single-seed-gated exploration scale, residual PPO degraded its base controller by
+    <span class="num">17.6 to 23.8 pp</span> where it was tested.</p>
+  </div>
+  <div class="finding">
+    <h3>K3. On the realistic whip, the largest rung of the headroom ladder is parameter estimation, and a large share of it is recoverable by choosing the plan more carefully.</h3>
+    <p>On locked sets (n = 500), knowing the true parameters adds <span class="num">+17.6 pp [12.6, 22.6]</span> (R1 - R0). Scoring candidate
+    swings across several plausible plants recovers <span class="num">0.59 [0.36, 0.82]</span> of that gap with a classical Laplace ensemble
+    and <span class="num">0.90 [0.68, 1.16]</span> with estimators trained on simulator labels. That the bottleneck is plan selection is an
+    interpretation; variance reduction by averaging over nearby plants is not ruled out.</p>
+  </div>
+  <div class="finding">
+    <h3>The learned side ends up slightly ahead, with a caveat.</h3>
+    <p>Under the same robust plan-selection rule, the learned estimator is ahead of the upgraded classical controller by
+    <span class="num">+5.6 pp [0.6, 10.6]</span>. An advantage of 10 pp or more cannot be excluded, so the pre-specified equivalence claim is not supported.
+    The learned method beat the original classical baseline R0 by +16.2 [11.0, 21.4]; the upgraded classical (C-ens) was built after that
+    result was seen, and this order is disclosed in the paper.</p>
+  </div>
+  <div class="finding">
+    <h3>K4 (secondary). For a multimodal teacher, canonicalising the teacher helped every student by 17 to 34 pp.</h3>
+    <p>The best generative student exceeded the MLP by +5.0 pp (95% CI [-0.3, 10.2]), below the bar. This is one task, behaviour cloning only, and the student was chosen post hoc.</p>
+  </div>
+</section>
+
+<section id="negative">
+  <h2>Honest negative results</h2>
+  <div class="finding neg">
+    <ul>
+      <li><strong>RL did not learn where it mattered most.</strong> On the realistic whip, 11 PPO and 2 SAC configurations tuned on calibration seeds all stayed within -3 to +2 pp of initialisation.</li>
+      <li><strong>Imitation students only match the teacher</strong> on tracking; none wins. There is no headroom by construction when the teacher is exact.</li>
+      <li><strong>Order effects are disclosed.</strong> The upgraded classical baseline C-ens was added after the learned method had already beaten the weaker one, and one hypothesis rule (H16b) fails on a technicality that the paper reports as a card inconsistency.</li>
+      <li><strong>Scope.</strong> One simulator, mostly one task (the whip), in-distribution learned estimators.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="arena-cta">
+  <h2>Try it yourself</h2>
+  <p>The <a href="arena/">interactive arena</a> runs MuJoCo in your browser (WebAssembly). Push the arm with your mouse while PID or
+  computed-torque control tries to hold the figure, and switch controllers live. Learned controllers are not in the page yet (planned: ONNX export).</p>
+  <div class="cta"><a class="btn primary" href="arena/">Open the arena</a></div>
+</section>
+
+<section id="paper">
+  <h2>Paper and code</h2>
+  <p>Workshop paper (4 pages): <em>PDF link placeholder</em> &middot; arXiv: <em>placeholder</em> &middot; Code: <em>placeholder</em>.</p>
+</section>
+
+<footer class="small">
+  <p>Simulation only. All numbers are quoted from the paper draft (v4). Videos were recorded with the Python arena on calibration seeds.
+  The in-browser arena uses MuJoCo WASM <code>mujoco@3.1.16</code> and three.js r160 (both vendored, no network needed).</p>
+</footer>
+</main>
+</body>
+</html>

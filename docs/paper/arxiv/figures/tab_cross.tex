@@ -1,0 +1,20 @@
+\begin{tabular}{@{}llrlrl@{}}\toprule
+Set. & Learned vs.\ classical & $n$ & Seeds & $\Delta$ [95\% CI] & Learner \\ \midrule
+S5 & PPO vs T-robust & 500 & HOLD & $-$23.8 [$-$26.9, $-$20.7] & degrades \\
+S6 & PPO vs T-adapt & 500 & HOLD & $-$17.6 [$-$20.3, $-$14.9] & degrades \\
+S6 & L-est vs T-adapt & 50 & TEST & $-$15.3 [$-$22.0, $-$8.7] & estimator \\
+S7 & PPO vs R0 & 500 & HOLD & $-$2.1 [$-$5.2, +1.1] & not learned \\
+S7 & L-est-full vs R0 & 500 & TEST-B & +0.9 [$-$3.5, +5.4] & estimator \\
+S7 & L-dec4 vs R0 (H14) & 500 & TEST-C & +6.1 [+1.5, +10.7] & estimator \\
+S7 & B vs C-ens (H16a) & 500 & TEST-D & +5.6 [+0.6, +10.6] & estimator + selection \\
+S7 & B vs R0 (weaker baseline)$^\dagger$ & 500 & TEST-D & +16.2 [+11.0, +21.4] & estimator + selection \\
+S8 & MIP D-canon vs T-adapt3-full & 200 & NEW & $-$12.0 [$-$19.8, $-$4.0] & BC student \\
+\midrule
+\multicolumn{6}{@{}l}{Tracking, relative RMSE change in \% (positive = learned better)} \\
+S1 & PPO vs C1 (W0 clean) & 50 & TEST & $-$7.1 [$-$13.8, +0.3] & RL, 5 seeds \\
+S2 & PPO vs C1-new (noise+delay, clean) & 50 & TEST & $-$21.7 [$-$25.7, $-$17.9] & RL, 5 seeds \\
+S2 & PPO vs C1-new (noise+delay, disturbed) & 50 & TEST & $-$2.6 [$-$4.5, $-$0.7] & RL, 5 seeds \\
+S3 & BC student vs teacher & 500 & HOLD & $-$0.8 [$-$1.0, $-$0.6] & imitation \\
+S3 & flow-1 student vs teacher & 500 & HOLD & $-$0.5 [$-$0.7, $-$0.4] & imitation \\
+S3 & DDIM-10 student vs teacher & 500 & HOLD & $-$6.2 [$-$6.7, $-$5.7] & imitation \\
+\bottomrule\end{tabular}
