@@ -180,11 +180,12 @@ def fig_ladder():
     for yy, (lab, m, lo, hi, grp) in zip(y, rows):
         c, mk = style[grp]
         ax.errorbar(m, yy, xerr=[[m - lo], [hi - m]], fmt=mk, color=c, mfc=("white" if grp == "desc" else c), ms=4, capsize=2, lw=0.9)
-        ax.text(max(hi, m) + 0.8, yy, f"{m:.1f}", va="center", fontsize=6.5)
+        ax.text(max(hi, m) + 0.8, yy, f"{m:.1f}", va="center", fontsize=6.5, zorder=6,
+                bbox=dict(fc="white", ec="none", pad=0.6))
     r0 = rows[0][1]
     r1 = rows[1][1]
-    ax.axvline(r0, color=C_GREY, ls=":", lw=0.8)
-    ax.axvline(r1, color=C_GREY, ls=":", lw=0.8)
+    ax.axvline(r0, color=C_GREY, ls=":", lw=0.8, zorder=1)
+    ax.axvline(r1, color=C_GREY, ls=":", lw=0.8, zorder=1)
     ax.set_yticks(y)
     ax.set_yticklabels([r[0] for r in rows])
     ax.set_xlabel("TEST-C success (%), n=500")
@@ -263,35 +264,48 @@ def fig_k4():
 
 def fig_protocol():
     from matplotlib.patches import FancyBboxPatch, FancyArrowPatch
-    fig, ax = plt.subplots(figsize=(7.1, 1.9))
-    ax.set_xlim(0, 100)
-    ax.set_ylim(0, 27)
+    W, H = 7.1, 2.75
+    fig = plt.figure(figsize=(W, H))
+    ax = fig.add_axes([0, 0, 1, 1])
+    ax.set_xlim(0, W)
+    ax.set_ylim(0, H)
     ax.axis("off")
 
-    def box(x, y, w, h, txt, fc="#F2F2F2", ec="#444444", fs=6.6, bold=False):
-        ax.add_patch(FancyBboxPatch((x, y), w, h, boxstyle="round,pad=0.25,rounding_size=0.8", fc=fc, ec=ec, lw=0.7))
-        ax.text(x + w / 2, y + h / 2, txt, ha="center", va="center", fontsize=fs, fontweight="bold" if bold else "normal")
+    def box(x, y, w, h, txt, fc, fs=6.6, ls=1.25):
+        ax.add_patch(FancyBboxPatch((x, y), w, h, boxstyle="round,pad=0,rounding_size=0.05", fc=fc, ec="#444444", lw=0.7))
+        ax.text(x + w / 2, y + h / 2, txt, ha="center", va="center", fontsize=fs, linespacing=ls)
 
     def arrow(x0, y0, x1, y1):
-        ax.add_patch(FancyArrowPatch((x0, y0), (x1, y1), arrowstyle="-|>", mutation_scale=7, lw=0.7, color="#444444"))
+        ax.add_patch(FancyArrowPatch((x0, y0), (x1, y1), arrowstyle="-|>", mutation_scale=7, lw=0.8,
+                                     color="#444444", shrinkA=0, shrinkB=0))
 
-    box(1, 16, 15, 9, "CAL\n1000-1049\ntune, select, gate", "#DCEBF7")
-    box(20, 16, 17, 9, "HOLD\n1100-1599\nclassical selection\n(reused, optimistic)", "#DCEBF7")
-    box(41, 16, 15, 9, "NEW\n700000+, n=200\nfresh confirmation", "#DCEBF7")
-    box(60, 21.0, 18, 4.0, "TEST-B  20000-20499, once", "#FBE5D6", fs=6.3)
-    box(60, 16.0, 18, 4.0, "TEST-C  30000-30499, once", "#FBE5D6", fs=6.3)
-    box(60, 11.0, 18, 4.0, "TEST-D  40000-40499, once", "#FBE5D6", fs=6.3)
-    arrow(16.6, 20.5, 19.4, 20.5)
-    arrow(37.6, 20.5, 40.4, 20.5)
-    arrow(56.6, 20.5, 59.4, 23.0)
-    arrow(56.6, 19.5, 59.4, 18.0)
-    arrow(56.6, 18.5, 59.4, 13.0)
-    box(82, 16, 17, 9, "arena access log\n(arena evaluations\nonly; Sec. III)", "#E8F3E1")
-    arrow(78.6, 18, 81.4, 19)
-    box(1, 1, 30, 11, "three budget axes per method\nepisodes | wall-clock | label source\n(declared cap 2x; over-runs disclosed)", "#FFF4CC")
-    box(35, 1, 30, 11, "sanity gate before a null is read\nconstant-bias correction: +10 pp over\ninit, CI > 0; learned = +5 pp on CAL", "#FFF4CC")
-    box(69, 1, 30, 11, "pre-specified cards (time-stamped)\nwin: CI excludes 0 and >= +10 pp\nPRE-git / PRE-README / POST tags", "#FFF4CC")
-    fig.tight_layout(pad=0.2)
+    # top row: seed-set flow
+    ty, th = 1.55, 1.0
+    ws = [1.05, 1.35, 1.2, 1.7, 1.1]
+    gap = (W - 0.1 - sum(ws)) / 4
+    xs = [0.05]
+    for w in ws[:-1]:
+        xs.append(xs[-1] + w + gap)
+    cy = ty + th / 2
+    ax.text(0.05, ty + th + 0.12, "Seed sets (tune \u2192 select \u2192 confirm \u2192 TEST sets)", fontsize=6.8,
+            ha="left", va="center", fontweight="bold")
+    box(xs[0], ty, ws[0], th, "CAL\n1000-1049\n(+2000-2149)\ntune, select, gate", "#DCEBF7")
+    box(xs[1], ty, ws[1], th, "HOLD\n1100-1599\nclassical selection\n(reused, optimistic)", "#DCEBF7")
+    box(xs[2], ty, ws[2], th, "NEW\n700000+, n=200\nfresh\nconfirmation", "#DCEBF7")
+    box(xs[3], ty, ws[3], th, "TEST sets\n0-49 (older spikes, reused)\nlocked, each used once:\nB  20000-20499\nC  30000-30499\nD  40000-40499", "#FBE5D6", fs=6.0, ls=1.12)
+    box(xs[4], ty, ws[4], th, "access log: one line\nper arena evaluation\non TEST seeds", "#E8F3E1", fs=6.0)
+    for i in range(3):
+        arrow(xs[i] + ws[i], cy, xs[i + 1], cy)
+    ax.add_patch(FancyArrowPatch((xs[3] + ws[3], cy), (xs[4], cy), arrowstyle="-", lw=0.8, ls=(0, (2, 2)),
+                                 color="#444444", shrinkA=0, shrinkB=0))
+
+    # bottom row: three rules
+    by, bh = 0.08, 1.0
+    bw = (W - 0.1 - 2 * 0.18) / 3
+    ax.text(0.05, by + bh + 0.14, "Rules governing every comparison", fontsize=6.8, ha="left", va="center", fontweight="bold")
+    box(0.05, by, bw, bh, "three budget axes per method\nepisodes | wall-clock | label source\n(declared cap 2x; over-runs disclosed)", "#FFF4CC")
+    box(0.05 + bw + 0.18, by, bw, bh, "sanity gate before a null is read\nconstant-bias correction: +10 pp over\ninit, CI > 0; learned = +5 pp on CAL", "#FFF4CC")
+    box(0.05 + 2 * (bw + 0.18), by, bw, bh, "pre-specified cards (time-stamped)\nwin: CI excludes 0 and >= +10 pp\nPRE-git / PRE-README / POST tags", "#FFF4CC")
     fig.savefig(HERE / "fig_protocol.pdf")
     plt.close(fig)
 

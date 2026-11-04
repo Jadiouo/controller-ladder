@@ -1,10 +1,11 @@
 cff-version: 1.2.0
-message: "If you use this software or the benchmark, please cite it as below. (Placeholder: authors and paper link to be filled.)"
+message: "If you use this software or the benchmark, please cite it as below. (Paper link to be added.)"
 title: "Controller Ladder arena"
 version: 0.1.0
 date-released: 2026-11-03
 authors:
-  - family-names: "AUTHOR-FAMILY-NAME"
-    given-names: "AUTHOR-GIVEN-NAME"
+  - family-names: "Ho"
+    given-names: "Hao-Ting"
+    affiliation: "Department of Electrical Engineering, Tunghai University"
 # url: "https://example.org/TO-BE-FILLED"
 # preferred-citation: paper (arXiv link to be added)

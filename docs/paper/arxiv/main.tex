@@ -18,14 +18,14 @@
 
 \title{An Audited, Budget-Disclosed Benchmark of Classical Teachers\\and Learned Students on a Simulated Arm}
 
-\author{\IEEEauthorblockN{Author Name (placeholder)}
-\IEEEauthorblockA{Affiliation (placeholder)\\
-Email (placeholder)}}
+\author{\IEEEauthorblockN{Hao-Ting Ho}
+\IEEEauthorblockA{Department of Electrical Engineering, Tunghai University\\
+Taichung, Taiwan}}
 
 \maketitle
 
 \begin{abstract}
-Learning-based controllers are often reported to beat classical ones, yet comparisons rarely give the classical side extended tooling, a disclosed budget, and rules fixed before testing. We propose an audited protocol for classical-versus-learned arm control in simulation: extended classical tooling, three-axis budgets, rules pre-specified in time-stamped hypothesis cards, a sanity gate for learners, and an access log. Across 8 tracking, juggling and whip settings, no learned method beat the strongest classical baseline by the pre-specified +10\pp\ bar, but only the whip has headroom; in 3 settings the residual-RL learner did not learn, and with a single-seed-gated exploration scale (gate passed) it nevertheless degraded the base by 17.6--23.8\pp\ where tested. On realistic whip, locked sets ($n{=}500$) show true parameters add +17.6\pp\ [12.6, 22.6], yet most of that gap is recovered without better parameters: scoring candidate swings across several plausible plants, a rule built first for the learned side and then given to the classical side, recovers 0.59 [0.36, 0.82] of it with a classical Laplace ensemble and 0.90 [0.68, 1.16] with estimators trained on simulator labels. Under this rule the learned side is ahead by +5.6\pp\ [0.6, 10.6]; 10\pp\ cannot be excluded. One simulator, mostly one task.
+Learned controllers are often reported to beat classical ones, yet comparisons rarely give the classical side comparable tuning effort, a disclosed budget, and rules fixed before testing. We propose an audited protocol for simulated arm control: tuned classical baselines, three-axis disclosed budgets, rules time-stamped before testing, a sanity gate (a learner must first learn a known-learnable correction), and a test-evaluation log. Across 8 tracking, juggling and whip settings, no learned method beat the strongest classical baseline by the pre-specified +10\pp\ bar, and only whip leaves room to improve. In 3 settings the residual reinforcement-learning (RL) learner did not learn; in two of them (juggling and idealised whip), with a gate-passing exploration scale, it degraded its base by 17.6--23.8\pp. On realistic whip, the locked set TEST-C ($n{=}500$) shows that true plant parameters add +17.6\pp\ [12.6, 22.6]. Robust plan selection scores candidate swings under several plausible plants; it was built for the learned side and then given to the classical side. On a second locked set, TEST-D (gap +18.0\pp), it alone recovers 0.59 [0.36, 0.82] of the gap with a classical Laplace ensemble, and 0.90 [0.68, 1.16] when combined with estimators trained on simulator labels. The learned side leads by +5.6\pp\ [0.6, 10.6]; 10\pp\ cannot be excluded. One simulator, mostly one task.
 \end{abstract}
 
 \begin{IEEEkeywords}

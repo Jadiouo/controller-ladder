@@ -60,4 +60,4 @@ Architecture, how to add a task / controller / perturbation, and the design deci
 
 ## License and citation
 
-MIT: see `LICENSE` (copyright holder to be filled in). Citation metadata: `CITATION.cff` (placeholder).
+MIT: see `LICENSE`. Citation metadata: `CITATION.cff`.

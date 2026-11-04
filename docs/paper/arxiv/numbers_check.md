@@ -18,6 +18,7 @@ Conventions
 | n = 500 | locked-set size | CE:L11 |
 | +17.6 [12.6, 22.6] | TEST-C R1 - R0 | CE:L108 (C-H1); s15a/table.md:7, 42; CN:A6 |
 | 0.59 [0.36, 0.82]; 0.90 [0.68, 1.16] | TEST-D recovered fractions, C-ens and B | CE:L116 (C-H9); s15e/table.md:23-24; CN:A7, A8 |
+| +18.0 pp | TEST-D R1 - R0 (R0 66.4, R1 84.4); denominator of the 0.59 / 0.90 fractions; stated in Abstract, Intro K3, Results, Conclusion | s15e/table.md:20-21, 39 |
 | +5.6 [0.6, 10.6]; 10 pp not excluded | TEST-D B - C-ens; H16b not supported | CE:L117, L118 (C-H10, C-H11); s15e/table.md:9-10; CN:A9, A10 |
 | 16.7% | residual PPO vs untuned teacher, W0 clean | CE:L36 (C-B1a); CN:K2k; s02/table.md:58 |
 | 7.1% worse, 95% CI [-13.8, +0.3]% | retuned C1 vs residual PPO, W0 clean | eq:32 (S1-W0-clean); CE:L37 (C-B1b) |
