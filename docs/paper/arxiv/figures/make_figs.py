@@ -192,8 +192,8 @@ def fig_ladder():
     ax.set_xlim(58, 102)
     ax.grid(axis="x", lw=0.3)
     d = steps["R1-R0"]
-    ax.text(0.99, 0.03, f"R1$-$R0 =\n{d[0]:+.1f} pp\n[{d[1]:+.1f}, {d[2]:+.1f}]\n(dotted: R0, R1)", transform=ax.transAxes,
-            ha="right", va="bottom", fontsize=6.3)
+    ax.text(0.375, 0.74, f"R1$-$R0 = {d[0]:+.1f} pp\n[{d[1]:+.1f}, {d[2]:+.1f}]\n(dotted: R0, R1)", transform=ax.transAxes,
+            ha="center", va="center", fontsize=6.3, zorder=7, bbox=dict(fc="white", ec="none", pad=1.0))
     from matplotlib.lines import Line2D
     h = [Line2D([], [], marker="o", color=C_DARK, ls="", ms=4, label="ladder"),
          Line2D([], [], marker="s", color=C_BLUE, ls="", ms=4, label="learned est."),
@@ -250,12 +250,13 @@ def fig_k4():
             ax.bar(x, m, width=w, color=col, label=lab if i == 0 else None, zorder=2)
             ax.errorbar(x, m, yerr=[[m - lo], [hi - m]], color="black", capsize=1.8, lw=0.8, zorder=3)
     ax.axhline(base["adapt3full"][0], color=C_ORANGE, ls="--", lw=0.9)
-    ax.text(4.55, base["adapt3full"][0] + 1.0, "T-adapt3-full", color=C_ORANGE, ha="right", fontsize=6.5)
+    ax.text(4.55, base["adapt3full"][0] + 2.2, "T-adapt3-full", color=C_ORANGE, ha="right", va="bottom", fontsize=6.5,
+            bbox=dict(fc="white", ec="none", pad=0.8), zorder=5)
     ax.set_xticks(range(5))
     ax.set_xticklabels([n.replace("Diffusion DDIM-10", "DDIM-10").replace("MLP regression", "MLP").replace("Flow 10 steps", "Flow-10").replace("Flow 1 step", "Flow-1") for n in names], rotation=0)
     ax.set_ylabel("success on NEW seeds (%), n=200")
-    ax.set_ylim(0, 85)
-    ax.legend(loc="upper left", frameon=False)
+    ax.set_ylim(0, 92)
+    ax.legend(loc="upper left", frameon=True, facecolor="white", edgecolor="none", framealpha=1.0).set_zorder(10)
     ax.grid(axis="y", lw=0.3, zorder=0)
     fig.tight_layout(pad=0.3)
     fig.savefig(HERE / "fig_k4.pdf")

@@ -1,0 +1,26 @@
+{
+ "link_lengths": [
+  0.4,
+  0.35,
+  0.25
+ ],
+ "dt": 0.005,
+ "substeps": 2,
+ "tau_max": 80.0,
+ "duration": 2.6,
+ "drag": 0.1,
+ "ball_mass": 0.15,
+ "ball_radius": 0.04,
+ "gravity": 9.81,
+ "q_start": [
+  0.9,
+  0.7,
+  0.4
+ ],
+ "arm_reach": 1.0,
+ "release_time": 0.8,
+ "basket_hw": 0.11,
+ "basket_h": 0.2,
+ "floor_z": -0.9,
+ "drag_rate": 0.6666666666666667
+}

@@ -1,0 +1,489 @@
+{
+ "mujoco_wasm": "mujoco@3.1.16",
+ "traj": {
+  "d1.20_a-0.35|0.9|1.0": {
+   "steps": 500,
+   "max_abs_q_err_rad": 0.004181347042850274,
+   "max_abs_arm_q_err_rad": 0.0020994999064447573,
+   "max_abs_tau_err_Nm": 2.9552871673173735,
+   "q_range_rad": 7.38717735434,
+   "first_step_err_over_1e_6": 320,
+   "running_max_err_at_step": {
+    "100": 6.1546601148876334e-12,
+    "200": 2.4763378847492135e-11,
+    "300": 3.962363770426691e-11,
+    "400": 0.0027512117370805944
+   }
+  },
+  "d1.20_a-0.35|0.9|1.1": {
+   "steps": 500,
+   "max_abs_q_err_rad": 0.004155982301218941,
+   "max_abs_arm_q_err_rad": 0.0020972277635346592,
+   "max_abs_tau_err_Nm": 2.9566221357240012,
+   "q_range_rad": 7.14306876248,
+   "first_step_err_over_1e_6": 320,
+   "running_max_err_at_step": {
+    "100": 5.7764210081856504e-12,
+    "200": 1.8443524485434182e-11,
+    "300": 4.416911281168723e-11,
+    "400": 0.0026246560267469965
+   }
+  },
+  "d1.20_a-0.35|0.9|0.9": {
+   "steps": 154,
+   "max_abs_q_err_rad": 1.6550316672692134e-11,
+   "max_abs_arm_q_err_rad": 5.082601006733967e-12,
+   "max_abs_tau_err_Nm": 5.029292537983565e-10,
+   "q_range_rad": 2.05977272622,
+   "first_step_err_over_1e_6": null,
+   "running_max_err_at_step": {
+    "100": 5.8027471716570744e-12
+   }
+  },
+  "d1.20_a-0.35|1.0|0.9": {
+   "steps": 289,
+   "max_abs_q_err_rad": 2.374417329420453e-11,
+   "max_abs_arm_q_err_rad": 5.182188012042843e-12,
+   "max_abs_tau_err_Nm": 5.132285707531992e-10,
+   "q_range_rad": 7.62623667048,
+   "first_step_err_over_1e_6": null,
+   "running_max_err_at_step": {
+    "100": 5.395683899678261e-12,
+    "200": 1.2769563184633625e-11
+   }
+  }
+ },
+ "grid": {
+  "n": 108,
+  "outcome_agree": 106,
+  "py_success": 72,
+  "max_abs_min_dist_diff_m": 0.05899370561590614,
+  "by_condition": {
+   "assumed 0.9 / true 0.9": {
+    "py": 11,
+    "js": 11,
+    "n": 12
+   },
+   "assumed 0.9 / true 1": {
+    "py": 6,
+    "js": 6,
+    "n": 12
+   },
+   "assumed 0.9 / true 1.1": {
+    "py": 3,
+    "js": 3,
+    "n": 12
+   },
+   "assumed 1 / true 0.9": {
+    "py": 8,
+    "js": 8,
+    "n": 12
+   },
+   "assumed 1 / true 1": {
+    "py": 12,
+    "js": 11,
+    "n": 12
+   },
+   "assumed 1 / true 1.1": {
+    "py": 7,
+    "js": 8,
+    "n": 12
+   },
+   "assumed 1.1 / true 0.9": {
+    "py": 6,
+    "js": 6,
+    "n": 12
+   },
+   "assumed 1.1 / true 1": {
+    "py": 8,
+    "js": 8,
+    "n": 12
+   },
+   "assumed 1.1 / true 1.1": {
+    "py": 11,
+    "js": 11,
+    "n": 12
+   }
+  }
+ },
+ "cal": {
+  "nominal": {
+   "success_py": 20,
+   "success_js": 20,
+   "seeds": 20,
+   "outcome_agree": 20,
+   "max_abs_min_dist_diff_m": 0.049182822204885755,
+   "detail": [
+    {
+     "seed": 1000,
+     "py": "success",
+     "js": "success",
+     "py_steps": 250,
+     "js_steps": 250,
+     "py_min": 0.04576345565967726,
+     "js_min": 0.04576345565691255
+    },
+    {
+     "seed": 1001,
+     "py": "success",
+     "js": "success",
+     "py_steps": 146,
+     "js_steps": 146,
+     "py_min": 0.054858872271265145,
+     "js_min": 0.05485887227305272
+    },
+    {
+     "seed": 1002,
+     "py": "success",
+     "js": "success",
+     "py_steps": 295,
+     "js_steps": 295,
+     "py_min": 0.060091608534867245,
+     "js_min": 0.06009160853380989
+    },
+    {
+     "seed": 1003,
+     "py": "success",
+     "js": "success",
+     "py_steps": 259,
+     "js_steps": 259,
+     "py_min": 0.0706004559643563,
+     "js_min": 0.07060048015569902
+    },
+    {
+     "seed": 1004,
+     "py": "success",
+     "js": "success",
+     "py_steps": 220,
+     "js_steps": 220,
+     "py_min": 0.0637867160767668,
+     "js_min": 0.06378671607812395
+    },
+    {
+     "seed": 1005,
+     "py": "success",
+     "js": "success",
+     "py_steps": 147,
+     "js_steps": 147,
+     "py_min": 0.0498107410425037,
+     "js_min": 0.04981074104715439
+    },
+    {
+     "seed": 1006,
+     "py": "success",
+     "js": "success",
+     "py_steps": 356,
+     "js_steps": 357,
+     "py_min": 0.06633736011038711,
+     "js_min": 0.01715453790550136
+    },
+    {
+     "seed": 1007,
+     "py": "success",
+     "js": "success",
+     "py_steps": 361,
+     "js_steps": 361,
+     "py_min": 0.055164523383567365,
+     "js_min": 0.06332052550304873
+    },
+    {
+     "seed": 1008,
+     "py": "success",
+     "js": "success",
+     "py_steps": 230,
+     "js_steps": 230,
+     "py_min": 0.07312496585131188,
+     "js_min": 0.07312496585133062
+    },
+    {
+     "seed": 1009,
+     "py": "success",
+     "js": "success",
+     "py_steps": 180,
+     "js_steps": 180,
+     "py_min": 0.07316450203469997,
+     "js_min": 0.07316450203475991
+    },
+    {
+     "seed": 1010,
+     "py": "success",
+     "js": "success",
+     "py_steps": 156,
+     "js_steps": 156,
+     "py_min": 0.059270499311124485,
+     "js_min": 0.059270499312121354
+    },
+    {
+     "seed": 1011,
+     "py": "success",
+     "js": "success",
+     "py_steps": 272,
+     "js_steps": 272,
+     "py_min": 0.024337531907670903,
+     "js_min": 0.024337531300171838
+    },
+    {
+     "seed": 1012,
+     "py": "success",
+     "js": "success",
+     "py_steps": 114,
+     "js_steps": 114,
+     "py_min": 0.06137801531434947,
+     "js_min": 0.06137801531597881
+    },
+    {
+     "seed": 1013,
+     "py": "success",
+     "js": "success",
+     "py_steps": 331,
+     "js_steps": 331,
+     "py_min": 0.052254574250192594,
+     "js_min": 0.04972503532848915
+    },
+    {
+     "seed": 1014,
+     "py": "success",
+     "js": "success",
+     "py_steps": 180,
+     "js_steps": 180,
+     "py_min": 0.06825070986083534,
+     "js_min": 0.06825070994468407
+    },
+    {
+     "seed": 1015,
+     "py": "success",
+     "js": "success",
+     "py_steps": 476,
+     "js_steps": 480,
+     "py_min": 0.05981313364463411,
+     "js_min": 0.0604318680292245
+    },
+    {
+     "seed": 1016,
+     "py": "success",
+     "js": "success",
+     "py_steps": 245,
+     "js_steps": 245,
+     "py_min": 0.03420730581081263,
+     "js_min": 0.03420730584765314
+    },
+    {
+     "seed": 1017,
+     "py": "success",
+     "js": "success",
+     "py_steps": 248,
+     "js_steps": 248,
+     "py_min": 0.05698843281048392,
+     "js_min": 0.05698843280931761
+    },
+    {
+     "seed": 1018,
+     "py": "success",
+     "js": "success",
+     "py_steps": 322,
+     "js_steps": 322,
+     "py_min": 0.060679791693670194,
+     "js_min": 0.06070633271732917
+    },
+    {
+     "seed": 1019,
+     "py": "success",
+     "js": "success",
+     "py_steps": 241,
+     "js_steps": 241,
+     "py_min": 0.0769835422681265,
+     "js_min": 0.0769835429686398
+    }
+   ]
+  },
+  "chain_len-10%": {
+   "success_py": 9,
+   "success_js": 10,
+   "seeds": 20,
+   "outcome_agree": 19,
+   "max_abs_min_dist_diff_m": 0.043381857887600836,
+   "detail": [
+    {
+     "seed": 1000,
+     "py": "timeout",
+     "js": "failure",
+     "py_steps": 500,
+     "js_steps": 500,
+     "py_min": 0.1368285635487748,
+     "js_min": 0.13682856354867595
+    },
+    {
+     "seed": 1001,
+     "py": "timeout",
+     "js": "failure",
+     "py_steps": 500,
+     "js_steps": 500,
+     "py_min": 0.0857061331055894,
+     "js_min": 0.08570613310501793
+    },
+    {
+     "seed": 1002,
+     "py": "timeout",
+     "js": "failure",
+     "py_steps": 500,
+     "js_steps": 500,
+     "py_min": 0.1113586685874998,
+     "js_min": 0.1113586685880759
+    },
+    {
+     "seed": 1003,
+     "py": "timeout",
+     "js": "failure",
+     "py_steps": 500,
+     "js_steps": 500,
+     "py_min": 0.1119627107604806,
+     "js_min": 0.11196271076080376
+    },
+    {
+     "seed": 1004,
+     "py": "success",
+     "js": "success",
+     "py_steps": 355,
+     "js_steps": 356,
+     "py_min": 0.07921342625626869,
+     "js_min": 0.035831568368667854
+    },
+    {
+     "seed": 1005,
+     "py": "success",
+     "js": "success",
+     "py_steps": 436,
+     "js_steps": 437,
+     "py_min": 0.06874905911932676,
+     "js_min": 0.07908746150610137
+    },
+    {
+     "seed": 1006,
+     "py": "timeout",
+     "js": "success",
+     "py_steps": 500,
+     "js_steps": 469,
+     "py_min": 0.0817481321373481,
+     "js_min": 0.07993248502384642
+    },
+    {
+     "seed": 1007,
+     "py": "success",
+     "js": "success",
+     "py_steps": 269,
+     "js_steps": 269,
+     "py_min": 0.06111140630600656,
+     "js_min": 0.06111140630533018
+    },
+    {
+     "seed": 1008,
+     "py": "timeout",
+     "js": "failure",
+     "py_steps": 500,
+     "js_steps": 500,
+     "py_min": 0.14641080300889361,
+     "js_min": 0.14641080301024412
+    },
+    {
+     "seed": 1009,
+     "py": "success",
+     "js": "success",
+     "py_steps": 152,
+     "js_steps": 152,
+     "py_min": 0.06203912175712408,
+     "js_min": 0.06203912175668306
+    },
+    {
+     "seed": 1010,
+     "py": "success",
+     "js": "success",
+     "py_steps": 151,
+     "js_steps": 151,
+     "py_min": 0.06257310653066342,
+     "js_min": 0.06257310653140823
+    },
+    {
+     "seed": 1011,
+     "py": "timeout",
+     "js": "failure",
+     "py_steps": 500,
+     "js_steps": 500,
+     "py_min": 0.1347127227054257,
+     "js_min": 0.13471272266465423
+    },
+    {
+     "seed": 1012,
+     "py": "success",
+     "js": "success",
+     "py_steps": 111,
+     "js_steps": 111,
+     "py_min": 0.043565072467391365,
+     "js_min": 0.04356507246736467
+    },
+    {
+     "seed": 1013,
+     "py": "success",
+     "js": "success",
+     "py_steps": 325,
+     "js_steps": 325,
+     "py_min": 0.07620650631186617,
+     "js_min": 0.0762615218268801
+    },
+    {
+     "seed": 1014,
+     "py": "success",
+     "js": "success",
+     "py_steps": 177,
+     "js_steps": 177,
+     "py_min": 0.05270021202825326,
+     "js_min": 0.05270021200766571
+    },
+    {
+     "seed": 1015,
+     "py": "timeout",
+     "js": "failure",
+     "py_steps": 500,
+     "js_steps": 500,
+     "py_min": 0.21577178251963025,
+     "js_min": 0.22003553085268052
+    },
+    {
+     "seed": 1016,
+     "py": "timeout",
+     "js": "failure",
+     "py_steps": 500,
+     "js_steps": 500,
+     "py_min": 0.09342660078042493,
+     "js_min": 0.09342660089078021
+    },
+    {
+     "seed": 1017,
+     "py": "success",
+     "js": "success",
+     "py_steps": 249,
+     "js_steps": 249,
+     "py_min": 0.06969765648296052,
+     "js_min": 0.06969765648172958
+    },
+    {
+     "seed": 1018,
+     "py": "timeout",
+     "js": "failure",
+     "py_steps": 500,
+     "js_steps": 500,
+     "py_min": 0.18599578316657606,
+     "js_min": 0.18537756919211548
+    },
+    {
+     "seed": 1019,
+     "py": "timeout",
+     "js": "failure",
+     "py_steps": 500,
+     "js_steps": 500,
+     "py_min": 0.1817563403618516,
+     "js_min": 0.1817563409564127
+    }
+   ]
+  }
+ }
+}

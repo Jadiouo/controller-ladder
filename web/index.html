@@ -42,45 +42,100 @@
   <p>Every task and controller plugs into one interface (gym-like environment, composable weaknesses, protocol-v2 metrics, paired
   confidence intervals, video recorder), so any pair can be compared the same way. The clips below show the classical teacher on
   calibration seeds; where a second clip is shown, it is a calibration seed on which the teacher fails once a single model error is injected.</p>
-  <div class="grid">
-    <article class="card">
-      <h3>1. Writing / figure tracking</h3><span class="tag">PID vs CTC+LQR</span>
-      <video src="media/tracking.mp4" poster="media/tracking.jpg" muted loop playsinline controls preload="none"></video>
-      <p class="small">The tip draws a glyph. Joint-space reference from IK; weaknesses: payload error, noise, delay, torque pulses. Try it live in the <a href="arena/">arena</a>.</p>
+  <div class="tasklist">
+    <article class="card task" id="task-tracking">
+      <header class="task-head"><h3>1. Writing / figure tracking</h3><span class="tag">PID vs CTC+LQR</span></header>
+      <div class="vids v1">
+        <figure><video src="media/tracking.mp4" poster="media/tracking.jpg" muted loop playsinline controls preload="metadata" aria-label="1. Writing / figure tracking: Classical teacher, nominal plant"></video><figcaption>Classical teacher, nominal plant</figcaption></figure>
+      </div>
+      <ul class="notes">
+        <li><strong>Goal.</strong> The tool tip draws a glyph (S, 8, M, Z, heart or circle) with minimum-jerk timing; inverse kinematics turns the figure into a joint reference, and the score is the joint-space tracking error (RMSE).</li>
+        <li><strong>Classical teacher.</strong> The ladder runs PID, computed torque with LQR gains (CTC+LQR), iLQR, iLQR-MPC and MPPI. In a 5-seed pilot the RMSE was 0.0074 rad for PID and 0.0061 rad for CTC+LQR.</li>
+        <li><strong>Weaknesses.</strong> Payload error, sensor noise, delay and torque pulses can be injected into the true plant while the controller keeps its nominal model.</li>
+        <li><strong>Role in the study.</strong> This is the S1&ndash;S3 setting. It has little headroom by construction: with a retuned computed-torque controller, residual PPO shows no decisive difference, and all five imitation students stay within 0.5% to 6.2% of the teacher.</li>
+      </ul>
+      <p class="try"><a class="btn" href="arena/?task=tracking">Try in the arena &rarr;</a></p>
     </article>
-    <article class="card">
-      <h3>2. Pole balancing on the tip</h3><span class="tag">PID vs CTC+LQR</span>
-      <video src="media/pole_balance.mp4" poster="media/pole_balance.jpg" muted loop playsinline controls preload="none"></video>
-      <p class="small">An unstable passive pole on the end effector. LQR on the linearised pole plus operational-space computed torque.</p>
+    <article class="card task" id="task-pole_balance">
+      <header class="task-head"><h3>2. Pole balancing on the tip</h3><span class="tag">classical ladder only</span></header>
+      <div class="vids v1">
+        <figure><video src="media/pole_balance.mp4" poster="media/pole_balance.jpg" muted loop playsinline controls preload="metadata" aria-label="2. Pole balancing on the tip: Classical controller"></video><figcaption>Classical controller</figcaption></figure>
+      </div>
+      <ul class="notes">
+        <li><strong>Goal.</strong> A passive-hinge pole stands on the tool tip. Keep it upright (the episode ends when it leans beyond 0.6 rad) and the tip near a hold point; the main metric is survival time.</li>
+        <li><strong>Classical teacher.</strong> LQR on the linearised pole plus operational-space computed torque. A plain position PD cannot balance a pole, so the PID baseline is a velocity servo driven by a PID on the pole angle; it balances the nominal case but is weak, which is what the ladder is meant to show.</li>
+        <li><strong>Role in the study.</strong> Pole balancing was run only on the classical ladder, with no learned comparison.</li>
+      </ul>
+      <p class="try"><a class="btn" href="arena/?task=pole_balance">Try in the arena &rarr;</a></p>
     </article>
-    <article class="card">
-      <h3>3. Push-T</h3><span class="tag">contact task</span>
-      <video src="media/push_t_success.mp4" poster="media/push_t_success.jpg" muted loop playsinline controls preload="none"></video>
-      <video src="media/push_t_failure.mp4" poster="media/push_t_failure.jpg" muted loop playsinline controls preload="none"></video>
-      <p class="small">Planner-based teacher pushes a T block onto a goal pose. Second clip: 30 ms sensor delay.</p>
+    <article class="card task" id="task-push_t">
+      <header class="task-head"><h3>3. Push-T</h3><span class="tag">contact task</span></header>
+      <div class="vids v2">
+        <figure><video src="media/push_t_success.mp4" poster="media/push_t_success.jpg" muted loop playsinline controls preload="metadata" aria-label="3. Push-T: Nominal"></video><figcaption>Nominal</figcaption></figure>
+        <figure><video src="media/push_t_failure.mp4" poster="media/push_t_failure.jpg" muted loop playsinline controls preload="metadata" aria-label="3. Push-T: With model error: 30 ms sensor delay"></video><figcaption>With model error: 30 ms sensor delay</figcaption></figure>
+      </div>
+      <ul class="notes">
+        <li><strong>Goal.</strong> A 2-link arm pushes a T-shaped block onto a fixed goal pose. Success means the block covers at least 90% of the goal area.</li>
+        <li><strong>Classical teacher.</strong> A planner-based teacher that models table friction as purely viscous, which gives an ellipsoidal limit surface as in quasi-static pushing theory.</li>
+        <li><strong>Weaknesses and failure.</strong> The real table also has dry friction the teacher does not model, and the block's centre of mass is offset from what the camera-like observation shows. The clip on the right adds a sensor delay: in a pilot the teacher succeeded 19 of 20 times with 20 ms delay and 0 of 20 with 30 ms.</li>
+        <li><strong>Role in the study.</strong> The nominal classical success rate is already 0.990 / 0.995 on the two evaluation sets, so a +10 percentage-point win is arithmetically impossible. Residual PPO tied it. This is the example of a classical controller that is almost unbeatable.</li>
+      </ul>
+      <p class="try"><a class="btn" href="arena/?task=push_t">Try in the arena &rarr;</a></p>
     </article>
-    <article class="card">
-      <h3>4. Racket juggling</h3><span class="tag">mirror-law teacher</span>
-      <video src="media/juggling.mp4" poster="media/juggling.jpg" muted loop playsinline controls preload="none"></video>
-      <p class="small">A 3-link arm bounces a ball with a flat racket (Buhler/Koditschek-style mirror law plus computed torque).</p>
+    <article class="card task" id="task-juggling">
+      <header class="task-head"><h3>4. Racket juggling</h3><span class="tag">mirror-law teacher</span></header>
+      <div class="vids v1">
+        <figure><video src="media/juggling.mp4" poster="media/juggling.jpg" muted loop playsinline controls preload="metadata" aria-label="4. Racket juggling: Classical teacher"></video><figcaption>Classical teacher</figcaption></figure>
+      </div>
+      <ul class="notes">
+        <li><strong>Goal.</strong> A 3-link arm keeps a ball bouncing with a flat racket; the score counts hits.</li>
+        <li><strong>Classical teacher.</strong> A Buhler/Koditschek-style mirror law plus computed torque. The study compares learners with T-robust, the same teacher tuned with CMA-ES over the distribution of plant errors.</li>
+        <li><strong>Weaknesses.</strong> In S4 one known error is injected and retuning one teacher parameter fixes it; in S5 the error is wide and unknown per episode, and the classical answer is a robust teacher tuned by CMA-ES over the error distribution.</li>
+        <li><strong>Role in the study.</strong> The untuned teacher is easy to beat (+292% median hits), but a one-parameter retune also reaches 100 hits. Against the strong baseline, residual PPO degrades its base, losing 23.8 percentage points on the HOLD set.</li>
+      </ul>
+      <p class="try"><a class="btn" href="arena/?task=juggling">Try in the arena &rarr;</a></p>
     </article>
-    <article class="card">
-      <h3>5. Catching a thrown ball</h3><span class="tag">intercept teacher</span>
-      <video src="media/catch_success.mp4" poster="media/catch_success.jpg" muted loop playsinline controls preload="none"></video>
-      <video src="media/catch_failure.mp4" poster="media/catch_failure.jpg" muted loop playsinline controls preload="none"></video>
-      <p class="small">Basket tool, ballistic prediction. Second clip: 10 ms delay on the ball observation.</p>
+    <article class="card task" id="task-catch">
+      <header class="task-head"><h3>5. Catching a thrown ball</h3><span class="tag">intercept teacher</span></header>
+      <div class="vids v2">
+        <figure><video src="media/catch_success.mp4" poster="media/catch_success.jpg" muted loop playsinline controls preload="metadata" aria-label="5. Catching a thrown ball: Nominal"></video><figcaption>Nominal</figcaption></figure>
+        <figure><video src="media/catch_failure.mp4" poster="media/catch_failure.jpg" muted loop playsinline controls preload="metadata" aria-label="5. Catching a thrown ball: With model error: 10 ms ball-observation delay"></video><figcaption>With model error: 10 ms ball-observation delay</figcaption></figure>
+      </div>
+      <ul class="notes">
+        <li><strong>Goal.</strong> A 3-DoF arm with a shallow basket must catch a ball thrown into the workspace and keep it inside the basket for at least 0.5 s.</li>
+        <li><strong>Classical teacher.</strong> It estimates the ball's velocity from positions only and intercepts using a ballistic prediction.</li>
+        <li><strong>Weaknesses and failure.</strong> Delaying the ball observation by 10 ms is enough to break the prediction: in a pilot the teacher caught 19 of 20 balls without error but only 6 of 20 with the delay.</li>
+        <li><strong>Role in the study.</strong> With the strongest classical settings the teacher reaches 0.992 / 1.000 success, so the residual-PPO comparison is a tie at the ceiling. The task adds breadth but no evidence for the main hypothesis.</li>
+      </ul>
+      <p class="try"><a class="btn" href="arena/?task=catch">Try in the arena &rarr;</a></p>
     </article>
-    <article class="card">
-      <h3>6. Whip / rope fling</h3><span class="tag">under-actuated</span>
-      <video src="media/whip_success.mp4" poster="media/whip_success.jpg" muted loop playsinline controls preload="none"></video>
-      <video src="media/whip_failure.mp4" poster="media/whip_failure.jpg" muted loop playsinline controls preload="none"></video>
-      <p class="small">A 13-DoF chain must hit a target with its free end. Second clip: chain 10% shorter than the planner assumes. This is the one task with headroom.</p>
+    <article class="card task" id="task-whip">
+      <header class="task-head"><h3>6. Whip / rope fling</h3><span class="tag">under-actuated</span></header>
+      <div class="vids v2">
+        <figure><video src="media/whip_success.mp4" poster="media/whip_success.jpg" muted loop playsinline controls preload="metadata" aria-label="6. Whip / rope fling: Nominal"></video><figcaption>Nominal</figcaption></figure>
+        <figure><video src="media/whip_failure.mp4" poster="media/whip_failure.jpg" muted loop playsinline controls preload="metadata" aria-label="6. Whip / rope fling: With model error: chain 10% shorter"></video><figcaption>With model error: chain 10% shorter</figcaption></figure>
+      </div>
+      <ul class="notes">
+        <li><strong>Goal.</strong> A 3-link arm flings a free-swinging chain of ten capsules so that the chain tip passes within 0.08 m of a target outside the arm's 1.0 m reach, within 2.5 s. The chain state is not observed.</li>
+        <li><strong>Classical teacher.</strong> A plan from CMA-ES keyframes tracked by computed torque, with online system identification from a short probe (T-adapt).</li>
+        <li><strong>Weaknesses and failure.</strong> The planner assumes a chain length, mass and damping. In a pilot with a chain 10% shorter it succeeded 12 of 20 times. Under realistic conditions the fitted-parameter pipeline scored 65.6% against 89.2% for an oracle.</li>
+        <li><strong>Role in the study.</strong> This is the one task with headroom. On the headroom ladder, getting the true plant parameters is the largest single rung (about +18 percentage points), and learned estimators recover only part of it.</li>
+      </ul>
+      <p class="try"><a class="btn" href="arena/?task=whip">Try in the arena &rarr;</a></p>
     </article>
-    <article class="card">
-      <h3>7. Toss into a basket</h3><span class="tag">ballistic inversion + CTC</span>
-      <video src="media/toss_success.mp4" poster="media/toss_success.jpg" muted loop playsinline controls preload="none"></video>
-      <video src="media/toss_failure.mp4" poster="media/toss_failure.jpg" muted loop playsinline controls preload="none"></video>
-      <p class="small">Release the object so that it lands in the basket. Second clip: release 40 ms late.</p>
+    <article class="card task" id="task-toss">
+      <header class="task-head"><h3>7. Toss into a basket</h3><span class="tag">ballistic inversion + CTC</span></header>
+      <div class="vids v2">
+        <figure><video src="media/toss_success.mp4" poster="media/toss_success.jpg" muted loop playsinline controls preload="metadata" aria-label="7. Toss into a basket: Nominal"></video><figcaption>Nominal</figcaption></figure>
+        <figure><video src="media/toss_failure.mp4" poster="media/toss_failure.jpg" muted loop playsinline controls preload="metadata" aria-label="7. Toss into a basket: With model error: release 40 ms late"></video><figcaption>With model error: release 40 ms late</figcaption></figure>
+      </div>
+      <ul class="notes">
+        <li><strong>Goal.</strong> The arm holds an object and must throw it into a basket placed 0.7&ndash;1.8 m away; some baskets are beyond the arm's 1.0 m reach, so the object has to be thrown.</li>
+        <li><strong>Classical teacher.</strong> It searches release point, launch angle and release orientation, solves the launch speed against a drag-ballistic flight, and tracks the planned trajectory with computed torque.</li>
+        <li><strong>Weaknesses and failure.</strong> The release time is scheduled by the task. If it comes 40 ms late, the object leaves the tip at the wrong place and velocity and misses the basket. Drag and object mass can also be wrong.</li>
+        <li><strong>Role in the study.</strong> Classical success is about 0.68, so there is room, but the sanity gate for residual PPO failed four times (best +1.3 percentage points). The result is therefore reported as no verdict, not as a loss for learning.</li>
+      </ul>
+      <p class="try"><a class="btn" href="arena/?task=toss">Try in the arena &rarr;</a></p>
     </article>
   </div>
 </section>
@@ -139,8 +194,9 @@
 
 <section id="arena-cta">
   <h2>Try it yourself</h2>
-  <p>The <a href="arena/">interactive arena</a> runs MuJoCo in your browser (WebAssembly). Push the arm with your mouse while PID or
-  computed-torque control tries to hold the figure, and switch controllers live. Learned controllers are not in the page yet (planned: ONNX export).</p>
+  <p>The <a href="arena/">interactive arena</a> runs MuJoCo in your browser (WebAssembly). All seven tasks are playable: pick a task,
+  tune the classical teacher, inject a model error or latency, and disturb the arm, the ball or the T block with your mouse. Each task was checked
+  against the Python version on the same seeds (<a href="arena/VALIDATION.md">validation notes</a>). Learned controllers are not in the page yet (planned: ONNX export).</p>
   <div class="cta"><a class="btn primary" href="arena/">Open the arena</a></div>
 </section>
 

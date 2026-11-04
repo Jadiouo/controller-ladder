@@ -1,0 +1,13 @@
+<mujoco model="juggle"><option timestep="0.001" gravity="0 0 -9.81" integrator="implicitfast"/>
+<default><geom contype="0" conaffinity="0"/></default>
+<worldbody>
+ <body name="l1" pos="0 0 0"><joint name="j1" type="hinge" axis="0 -1 0" damping="0.5" armature="0.01"/>
+  <geom type="capsule" fromto="0 0 0 0.5 0 0" size="0.03" mass="@M1@"/>
+  <body name="l2" pos="0.5 0 0"><joint name="j2" type="hinge" axis="0 -1 0" damping="0.3" armature="0.01"/>
+   <geom type="capsule" fromto="0 0 0 0.5 0 0" size="0.025" mass="@M2@"/>
+   <body name="wrist" pos="0.5 0 0"><joint name="j3" type="hinge" axis="0 -1 0" damping="0.1" armature="0.002"/>
+    <geom name="racket" type="box" size="0.12 0.02 0.008" mass="@M3@" contype="1" conaffinity="1" condim="1" solref="0.02 @ZETA@"/>
+    <site name="tip" pos="0 0 0"/></body></body></body>
+<body name="ball" pos="0 0 0"><joint name="bx" type="slide" axis="1 0 0"/><joint name="bz" type="slide" axis="0 0 1"/>
+ <geom name="ballg" type="sphere" size="0.03" mass="0.05" contype="1" conaffinity="1" condim="1" solref="0.02 @ZETA@"/></body></worldbody>
+<actuator><motor joint="j1" ctrllimited="true" ctrlrange="-60.0 60.0"/><motor joint="j2" ctrllimited="true" ctrlrange="-60.0 60.0"/><motor joint="j3" ctrllimited="true" ctrlrange="-60.0 60.0"/></actuator></mujoco>

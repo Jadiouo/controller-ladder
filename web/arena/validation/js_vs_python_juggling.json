@@ -1,0 +1,450 @@
+{
+ "mujoco_wasm": "mujoco@3.1.16",
+ "traj": {
+  "steps": 1500,
+  "first_hit_step": 56,
+  "max_state_err_before_first_hit": 1.1102230246251565e-15,
+  "max_state_err_all": 6.008732087509864,
+  "first_step_err_over_1e_9": 424,
+  "first_step_err_over_1e_6": 663,
+  "first_step_err_over_1e_3": 907,
+  "err_at_steps": {
+   "100": 3.3306690738754696e-16,
+   "200": 8.393286066166183e-14,
+   "400": 3.955724636739433e-12,
+   "600": 1.0900851332706907e-8,
+   "800": 0.00003170730763424334,
+   "1000": 0.0005406190188137483,
+   "1200": 0.11137243576794234,
+   "1499": 0.1928897061779451
+  },
+  "max_tau_err_before_first_hit": 4.973799150320701e-14,
+  "js_hits": 12
+ },
+ "hits": {
+  "nominal": {
+   "python": {
+    "median": 100,
+    "mean": 100,
+    "min": 100,
+    "max": 100
+   },
+   "js_exact_noise": {
+    "median": 100,
+    "mean": 100,
+    "min": 100,
+    "max": 100
+   },
+   "js_own_noise": {
+    "median": 100,
+    "mean": 100,
+    "min": 100,
+    "max": 100
+   },
+   "exact_same_count": 20,
+   "exact_mean_abs_diff": 0,
+   "exact_max_abs_diff": 0,
+   "own_mean_abs_diff": 0,
+   "py_fail": [
+    "cap",
+    "cap",
+    "cap",
+    "cap",
+    "cap",
+    "cap",
+    "cap",
+    "cap",
+    "cap",
+    "cap",
+    "cap",
+    "cap",
+    "cap",
+    "cap",
+    "cap",
+    "cap",
+    "cap",
+    "cap",
+    "cap",
+    "cap"
+   ],
+   "js_exact_fail": [
+    "cap",
+    "cap",
+    "cap",
+    "cap",
+    "cap",
+    "cap",
+    "cap",
+    "cap",
+    "cap",
+    "cap",
+    "cap",
+    "cap",
+    "cap",
+    "cap",
+    "cap",
+    "cap",
+    "cap",
+    "cap",
+    "cap",
+    "cap"
+   ],
+   "js_own_fail": [
+    "cap",
+    "cap",
+    "cap",
+    "cap",
+    "cap",
+    "cap",
+    "cap",
+    "cap",
+    "cap",
+    "cap",
+    "cap",
+    "cap",
+    "cap",
+    "cap",
+    "cap",
+    "cap",
+    "cap",
+    "cap",
+    "cap",
+    "cap"
+   ],
+   "detail": [
+    {
+     "seed": 1000,
+     "py": 100,
+     "js_exact": 100,
+     "js_own": 100
+    },
+    {
+     "seed": 1001,
+     "py": 100,
+     "js_exact": 100,
+     "js_own": 100
+    },
+    {
+     "seed": 1002,
+     "py": 100,
+     "js_exact": 100,
+     "js_own": 100
+    },
+    {
+     "seed": 1003,
+     "py": 100,
+     "js_exact": 100,
+     "js_own": 100
+    },
+    {
+     "seed": 1004,
+     "py": 100,
+     "js_exact": 100,
+     "js_own": 100
+    },
+    {
+     "seed": 1005,
+     "py": 100,
+     "js_exact": 100,
+     "js_own": 100
+    },
+    {
+     "seed": 1006,
+     "py": 100,
+     "js_exact": 100,
+     "js_own": 100
+    },
+    {
+     "seed": 1007,
+     "py": 100,
+     "js_exact": 100,
+     "js_own": 100
+    },
+    {
+     "seed": 1008,
+     "py": 100,
+     "js_exact": 100,
+     "js_own": 100
+    },
+    {
+     "seed": 1009,
+     "py": 100,
+     "js_exact": 100,
+     "js_own": 100
+    },
+    {
+     "seed": 1010,
+     "py": 100,
+     "js_exact": 100,
+     "js_own": 100
+    },
+    {
+     "seed": 1011,
+     "py": 100,
+     "js_exact": 100,
+     "js_own": 100
+    },
+    {
+     "seed": 1012,
+     "py": 100,
+     "js_exact": 100,
+     "js_own": 100
+    },
+    {
+     "seed": 1013,
+     "py": 100,
+     "js_exact": 100,
+     "js_own": 100
+    },
+    {
+     "seed": 1014,
+     "py": 100,
+     "js_exact": 100,
+     "js_own": 100
+    },
+    {
+     "seed": 1015,
+     "py": 100,
+     "js_exact": 100,
+     "js_own": 100
+    },
+    {
+     "seed": 1016,
+     "py": 100,
+     "js_exact": 100,
+     "js_own": 100
+    },
+    {
+     "seed": 1017,
+     "py": 100,
+     "js_exact": 100,
+     "js_own": 100
+    },
+    {
+     "seed": 1018,
+     "py": 100,
+     "js_exact": 100,
+     "js_own": 100
+    },
+    {
+     "seed": 1019,
+     "py": 100,
+     "js_exact": 100,
+     "js_own": 100
+    }
+   ]
+  },
+  "e0.4": {
+   "python": {
+    "median": 27,
+    "mean": 26.85,
+    "min": 20,
+    "max": 33
+   },
+   "js_exact_noise": {
+    "median": 26.5,
+    "mean": 26.85,
+    "min": 22,
+    "max": 32
+   },
+   "js_own_noise": {
+    "median": 25.5,
+    "mean": 25.65,
+    "min": 21,
+    "max": 32
+   },
+   "exact_same_count": 3,
+   "exact_mean_abs_diff": 2,
+   "exact_max_abs_diff": 5,
+   "own_mean_abs_diff": 4,
+   "py_fail": [
+    "dead",
+    "dead",
+    "dead",
+    "dead",
+    "dead",
+    "dead",
+    "dead",
+    "dead",
+    "dead",
+    "dead",
+    "dead",
+    "dead",
+    "dead",
+    "dead",
+    "dead",
+    "dead",
+    "dead",
+    "dead",
+    "dead",
+    "dead"
+   ],
+   "js_exact_fail": [
+    "dead",
+    "dead",
+    "dead",
+    "dead",
+    "dead",
+    "dead",
+    "dead",
+    "dead",
+    "dead",
+    "dead",
+    "dead",
+    "dead",
+    "dead",
+    "dead",
+    "dead",
+    "dead",
+    "dead",
+    "dead",
+    "dead",
+    "dead"
+   ],
+   "js_own_fail": [
+    "dead",
+    "dead",
+    "dead",
+    "dead",
+    "dead",
+    "dead",
+    "dead",
+    "dead",
+    "dead",
+    "dead",
+    "dead",
+    "dead",
+    "dead",
+    "dead",
+    "dead",
+    "dead",
+    "dead",
+    "dead",
+    "dead",
+    "dead"
+   ],
+   "detail": [
+    {
+     "seed": 1000,
+     "py": 27,
+     "js_exact": 23,
+     "js_own": 23
+    },
+    {
+     "seed": 1001,
+     "py": 27,
+     "js_exact": 32,
+     "js_own": 25
+    },
+    {
+     "seed": 1002,
+     "py": 28,
+     "js_exact": 24,
+     "js_own": 23
+    },
+    {
+     "seed": 1003,
+     "py": 28,
+     "js_exact": 29,
+     "js_own": 26
+    },
+    {
+     "seed": 1004,
+     "py": 31,
+     "js_exact": 31,
+     "js_own": 25
+    },
+    {
+     "seed": 1005,
+     "py": 26,
+     "js_exact": 27,
+     "js_own": 22
+    },
+    {
+     "seed": 1006,
+     "py": 24,
+     "js_exact": 25,
+     "js_own": 29
+    },
+    {
+     "seed": 1007,
+     "py": 24,
+     "js_exact": 25,
+     "js_own": 23
+    },
+    {
+     "seed": 1008,
+     "py": 27,
+     "js_exact": 28,
+     "js_own": 32
+    },
+    {
+     "seed": 1009,
+     "py": 29,
+     "js_exact": 27,
+     "js_own": 26
+    },
+    {
+     "seed": 1010,
+     "py": 27,
+     "js_exact": 26,
+     "js_own": 26
+    },
+    {
+     "seed": 1011,
+     "py": 30,
+     "js_exact": 31,
+     "js_own": 21
+    },
+    {
+     "seed": 1012,
+     "py": 30,
+     "js_exact": 26,
+     "js_own": 27
+    },
+    {
+     "seed": 1013,
+     "py": 28,
+     "js_exact": 28,
+     "js_own": 29
+    },
+    {
+     "seed": 1014,
+     "py": 21,
+     "js_exact": 22,
+     "js_own": 23
+    },
+    {
+     "seed": 1015,
+     "py": 33,
+     "js_exact": 28,
+     "js_own": 28
+    },
+    {
+     "seed": 1016,
+     "py": 30,
+     "js_exact": 30,
+     "js_own": 23
+    },
+    {
+     "seed": 1017,
+     "py": 20,
+     "js_exact": 24,
+     "js_own": 32
+    },
+    {
+     "seed": 1018,
+     "py": 23,
+     "js_exact": 26,
+     "js_own": 23
+    },
+    {
+     "seed": 1019,
+     "py": 24,
+     "js_exact": 25,
+     "js_own": 27
+    }
+   ]
+  }
+ }
+}

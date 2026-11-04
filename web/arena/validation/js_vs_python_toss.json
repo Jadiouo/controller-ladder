@@ -1,0 +1,472 @@
+{
+ "mujoco_wasm": "mujoco@3.1.16",
+ "traj": {
+  "clean": {
+   "steps": 246,
+   "js_done_at_step": 246,
+   "max_abs_q_err_rad": 0.00003572482002267563,
+   "max_abs_obj_err_m": 0.0007793607881184661,
+   "max_abs_tau_err_Nm": 0.002453720529864256,
+   "q_range": 2.7456403462515104,
+   "first_step_err_over_1e_6": 14
+  },
+  "release_delay_40ms": {
+   "steps": 270,
+   "js_done_at_step": 270,
+   "max_abs_q_err_rad": 0.00004104073351651749,
+   "max_abs_obj_err_m": 0.0005225432429810106,
+   "max_abs_tau_err_Nm": 0.002453720529864256,
+   "q_range": 2.7456403462515104,
+   "first_step_err_over_1e_6": 14
+  }
+ },
+ "outcomes": {
+  "clean": {
+   "success_py": 20,
+   "success_js": 20,
+   "seeds": 20,
+   "outcome_agree": 20,
+   "max_abs_step_diff": 0,
+   "detail": [
+    {
+     "seed": 1000,
+     "py": "success",
+     "js": "success",
+     "py_steps": 246,
+     "js_steps": 246
+    },
+    {
+     "seed": 1001,
+     "py": "success",
+     "js": "success",
+     "py_steps": 312,
+     "js_steps": 312
+    },
+    {
+     "seed": 1002,
+     "py": "success",
+     "js": "success",
+     "py_steps": 248,
+     "js_steps": 248
+    },
+    {
+     "seed": 1003,
+     "py": "success",
+     "js": "success",
+     "py_steps": 245,
+     "js_steps": 245
+    },
+    {
+     "seed": 1004,
+     "py": "success",
+     "js": "success",
+     "py_steps": 254,
+     "js_steps": 254
+    },
+    {
+     "seed": 1005,
+     "py": "success",
+     "js": "success",
+     "py_steps": 251,
+     "js_steps": 251
+    },
+    {
+     "seed": 1006,
+     "py": "success",
+     "js": "success",
+     "py_steps": 242,
+     "js_steps": 242
+    },
+    {
+     "seed": 1007,
+     "py": "success",
+     "js": "success",
+     "py_steps": 252,
+     "js_steps": 252
+    },
+    {
+     "seed": 1008,
+     "py": "success",
+     "js": "success",
+     "py_steps": 252,
+     "js_steps": 252
+    },
+    {
+     "seed": 1009,
+     "py": "success",
+     "js": "success",
+     "py_steps": 238,
+     "js_steps": 238
+    },
+    {
+     "seed": 1010,
+     "py": "success",
+     "js": "success",
+     "py_steps": 254,
+     "js_steps": 254
+    },
+    {
+     "seed": 1011,
+     "py": "success",
+     "js": "success",
+     "py_steps": 229,
+     "js_steps": 229
+    },
+    {
+     "seed": 1012,
+     "py": "success",
+     "js": "success",
+     "py_steps": 296,
+     "js_steps": 296
+    },
+    {
+     "seed": 1013,
+     "py": "success",
+     "js": "success",
+     "py_steps": 244,
+     "js_steps": 244
+    },
+    {
+     "seed": 1014,
+     "py": "success",
+     "js": "success",
+     "py_steps": 231,
+     "js_steps": 231
+    },
+    {
+     "seed": 1015,
+     "py": "success",
+     "js": "success",
+     "py_steps": 229,
+     "js_steps": 229
+    },
+    {
+     "seed": 1016,
+     "py": "success",
+     "js": "success",
+     "py_steps": 249,
+     "js_steps": 249
+    },
+    {
+     "seed": 1017,
+     "py": "success",
+     "js": "success",
+     "py_steps": 251,
+     "js_steps": 251
+    },
+    {
+     "seed": 1018,
+     "py": "success",
+     "js": "success",
+     "py_steps": 312,
+     "js_steps": 312
+    },
+    {
+     "seed": 1019,
+     "py": "success",
+     "js": "success",
+     "py_steps": 233,
+     "js_steps": 233
+    }
+   ]
+  },
+  "release_delay_40ms": {
+   "success_py": 16,
+   "success_js": 16,
+   "seeds": 20,
+   "outcome_agree": 20,
+   "max_abs_step_diff": 1,
+   "detail": [
+    {
+     "seed": 1000,
+     "py": "success",
+     "js": "success",
+     "py_steps": 270,
+     "js_steps": 270
+    },
+    {
+     "seed": 1001,
+     "py": "failure",
+     "js": "failure",
+     "py_steps": 374,
+     "js_steps": 374
+    },
+    {
+     "seed": 1002,
+     "py": "success",
+     "js": "success",
+     "py_steps": 275,
+     "js_steps": 275
+    },
+    {
+     "seed": 1003,
+     "py": "success",
+     "js": "success",
+     "py_steps": 268,
+     "js_steps": 268
+    },
+    {
+     "seed": 1004,
+     "py": "success",
+     "js": "success",
+     "py_steps": 285,
+     "js_steps": 285
+    },
+    {
+     "seed": 1005,
+     "py": "success",
+     "js": "success",
+     "py_steps": 273,
+     "js_steps": 273
+    },
+    {
+     "seed": 1006,
+     "py": "success",
+     "js": "success",
+     "py_steps": 271,
+     "js_steps": 271
+    },
+    {
+     "seed": 1007,
+     "py": "success",
+     "js": "success",
+     "py_steps": 279,
+     "js_steps": 279
+    },
+    {
+     "seed": 1008,
+     "py": "success",
+     "js": "success",
+     "py_steps": 282,
+     "js_steps": 281
+    },
+    {
+     "seed": 1009,
+     "py": "success",
+     "js": "success",
+     "py_steps": 269,
+     "js_steps": 269
+    },
+    {
+     "seed": 1010,
+     "py": "success",
+     "js": "success",
+     "py_steps": 279,
+     "js_steps": 279
+    },
+    {
+     "seed": 1011,
+     "py": "success",
+     "js": "success",
+     "py_steps": 261,
+     "js_steps": 261
+    },
+    {
+     "seed": 1012,
+     "py": "failure",
+     "js": "failure",
+     "py_steps": 365,
+     "js_steps": 365
+    },
+    {
+     "seed": 1013,
+     "py": "success",
+     "js": "success",
+     "py_steps": 275,
+     "js_steps": 275
+    },
+    {
+     "seed": 1014,
+     "py": "failure",
+     "js": "failure",
+     "py_steps": 325,
+     "js_steps": 325
+    },
+    {
+     "seed": 1015,
+     "py": "success",
+     "js": "success",
+     "py_steps": 250,
+     "js_steps": 250
+    },
+    {
+     "seed": 1016,
+     "py": "success",
+     "js": "success",
+     "py_steps": 277,
+     "js_steps": 277
+    },
+    {
+     "seed": 1017,
+     "py": "success",
+     "js": "success",
+     "py_steps": 282,
+     "js_steps": 282
+    },
+    {
+     "seed": 1018,
+     "py": "failure",
+     "js": "failure",
+     "py_steps": 373,
+     "js_steps": 374
+    },
+    {
+     "seed": 1019,
+     "py": "success",
+     "js": "success",
+     "py_steps": 257,
+     "js_steps": 257
+    }
+   ]
+  },
+  "ball_mass_p30": {
+   "success_py": 18,
+   "success_js": 18,
+   "seeds": 20,
+   "outcome_agree": 20,
+   "max_abs_step_diff": 0,
+   "detail": [
+    {
+     "seed": 1000,
+     "py": "success",
+     "js": "success",
+     "py_steps": 246,
+     "js_steps": 246
+    },
+    {
+     "seed": 1001,
+     "py": "failure",
+     "js": "failure",
+     "py_steps": 351,
+     "js_steps": 351
+    },
+    {
+     "seed": 1002,
+     "py": "success",
+     "js": "success",
+     "py_steps": 249,
+     "js_steps": 249
+    },
+    {
+     "seed": 1003,
+     "py": "success",
+     "js": "success",
+     "py_steps": 245,
+     "js_steps": 245
+    },
+    {
+     "seed": 1004,
+     "py": "success",
+     "js": "success",
+     "py_steps": 254,
+     "js_steps": 254
+    },
+    {
+     "seed": 1005,
+     "py": "success",
+     "js": "success",
+     "py_steps": 251,
+     "js_steps": 251
+    },
+    {
+     "seed": 1006,
+     "py": "success",
+     "js": "success",
+     "py_steps": 242,
+     "js_steps": 242
+    },
+    {
+     "seed": 1007,
+     "py": "success",
+     "js": "success",
+     "py_steps": 252,
+     "js_steps": 252
+    },
+    {
+     "seed": 1008,
+     "py": "success",
+     "js": "success",
+     "py_steps": 252,
+     "js_steps": 252
+    },
+    {
+     "seed": 1009,
+     "py": "success",
+     "js": "success",
+     "py_steps": 238,
+     "js_steps": 238
+    },
+    {
+     "seed": 1010,
+     "py": "success",
+     "js": "success",
+     "py_steps": 254,
+     "js_steps": 254
+    },
+    {
+     "seed": 1011,
+     "py": "success",
+     "js": "success",
+     "py_steps": 230,
+     "js_steps": 230
+    },
+    {
+     "seed": 1012,
+     "py": "success",
+     "js": "success",
+     "py_steps": 298,
+     "js_steps": 298
+    },
+    {
+     "seed": 1013,
+     "py": "success",
+     "js": "success",
+     "py_steps": 244,
+     "js_steps": 244
+    },
+    {
+     "seed": 1014,
+     "py": "success",
+     "js": "success",
+     "py_steps": 231,
+     "js_steps": 231
+    },
+    {
+     "seed": 1015,
+     "py": "success",
+     "js": "success",
+     "py_steps": 229,
+     "js_steps": 229
+    },
+    {
+     "seed": 1016,
+     "py": "success",
+     "js": "success",
+     "py_steps": 250,
+     "js_steps": 250
+    },
+    {
+     "seed": 1017,
+     "py": "success",
+     "js": "success",
+     "py_steps": 251,
+     "js_steps": 251
+    },
+    {
+     "seed": 1018,
+     "py": "failure",
+     "js": "failure",
+     "py_steps": 351,
+     "js_steps": 351
+    },
+    {
+     "seed": 1019,
+     "py": "success",
+     "js": "success",
+     "py_steps": 233,
+     "js_steps": 233
+    }
+   ]
+  }
+ }
+}

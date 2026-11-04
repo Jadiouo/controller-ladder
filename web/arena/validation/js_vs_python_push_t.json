@@ -1,0 +1,515 @@
+{
+ "mujoco_wasm": "mujoco@3.1.16",
+ "geom": {
+  "rho2_diff": 0,
+  "area_diff": 0,
+  "coverage_goal_vs_goal": 1.0000000000000004,
+  "n_primitives": 168
+ },
+ "traj": {
+  "steps": 2230,
+  "max_abs_q_err": 0.0010814283521503043,
+  "first_step_q_err_over_1e_6": 160,
+  "first_step_tau_err_over_1e_3": 161,
+  "running_max_q_err_at_step": {
+   "250": 0.0005460781167556661,
+   "500": 0.0006452884370962142,
+   "750": 0.0006452884370962142,
+   "1000": 0.0007567611117116346,
+   "1250": 0.000950808513593776,
+   "1500": 0.000950808513593776,
+   "1750": 0.000950808513593776,
+   "2000": 0.000950808513593776
+  },
+  "plans_py": 6,
+  "plans_js": 6,
+  "plan_log_identical": true,
+  "js_outcome": null,
+  "py_outcome": "success",
+  "js_steps": 2230,
+  "py_steps": 2230,
+  "js_seconds": 0.302333624
+ },
+ "outcomes": {
+  "nominal": {
+   "success_py": 20,
+   "success_js": 20,
+   "seeds": 20,
+   "outcome_agree": 20,
+   "success_both_same_step_count": 3,
+   "success_both_max_step_diff": 667,
+   "detail": [
+    {
+     "seed": 1000,
+     "py": "success",
+     "js": "success",
+     "py_steps": 2230,
+     "js_steps": 2231,
+     "py_cov": 0.9024497361821319,
+     "js_cov": 0.9032287531027029,
+     "plans_py": 6,
+     "plans_js": 6
+    },
+    {
+     "seed": 1001,
+     "py": "success",
+     "js": "success",
+     "py_steps": 2709,
+     "js_steps": 3003,
+     "py_cov": 0.9032201963040272,
+     "js_cov": 0.9018081582966591,
+     "plans_py": 6,
+     "plans_js": 7
+    },
+    {
+     "seed": 1002,
+     "py": "success",
+     "js": "success",
+     "py_steps": 2663,
+     "js_steps": 2588,
+     "py_cov": 0.9023343418590072,
+     "js_cov": 0.9024423899591061,
+     "plans_py": 7,
+     "plans_js": 7
+    },
+    {
+     "seed": 1003,
+     "py": "success",
+     "js": "success",
+     "py_steps": 3020,
+     "js_steps": 3259,
+     "py_cov": 0.9026753140961126,
+     "js_cov": 0.9016621090759322,
+     "plans_py": 8,
+     "plans_js": 9
+    },
+    {
+     "seed": 1004,
+     "py": "success",
+     "js": "success",
+     "py_steps": 2702,
+     "js_steps": 2703,
+     "py_cov": 0.9022755114292191,
+     "js_cov": 0.9019972511717081,
+     "plans_py": 7,
+     "plans_js": 7
+    },
+    {
+     "seed": 1005,
+     "py": "success",
+     "js": "success",
+     "py_steps": 1602,
+     "js_steps": 1722,
+     "py_cov": 0.9018558216500343,
+     "js_cov": 0.900636157249359,
+     "plans_py": 4,
+     "plans_js": 5
+    },
+    {
+     "seed": 1006,
+     "py": "success",
+     "js": "success",
+     "py_steps": 1502,
+     "js_steps": 1502,
+     "py_cov": 0.9049982272763022,
+     "js_cov": 0.9033694809644066,
+     "plans_py": 4,
+     "plans_js": 4
+    },
+    {
+     "seed": 1007,
+     "py": "success",
+     "js": "success",
+     "py_steps": 2726,
+     "js_steps": 2727,
+     "py_cov": 0.9002544868919585,
+     "js_cov": 0.9006636424937323,
+     "plans_py": 6,
+     "plans_js": 6
+    },
+    {
+     "seed": 1008,
+     "py": "success",
+     "js": "success",
+     "py_steps": 3169,
+     "js_steps": 2916,
+     "py_cov": 0.9015241390250939,
+     "js_cov": 0.9018719326053941,
+     "plans_py": 7,
+     "plans_js": 6
+    },
+    {
+     "seed": 1009,
+     "py": "success",
+     "js": "success",
+     "py_steps": 2192,
+     "js_steps": 2192,
+     "py_cov": 0.90292129709544,
+     "js_cov": 0.9014467372044567,
+     "plans_py": 5,
+     "plans_js": 5
+    },
+    {
+     "seed": 1010,
+     "py": "success",
+     "js": "success",
+     "py_steps": 4370,
+     "js_steps": 3960,
+     "py_cov": 0.902798165456419,
+     "js_cov": 0.9056700106338468,
+     "plans_py": 11,
+     "plans_js": 9
+    },
+    {
+     "seed": 1011,
+     "py": "success",
+     "js": "success",
+     "py_steps": 2902,
+     "js_steps": 2905,
+     "py_cov": 0.9044549637260181,
+     "js_cov": 0.9015682824541078,
+     "plans_py": 7,
+     "plans_js": 7
+    },
+    {
+     "seed": 1012,
+     "py": "success",
+     "js": "success",
+     "py_steps": 2460,
+     "js_steps": 2650,
+     "py_cov": 0.9030618566359271,
+     "js_cov": 0.9005357718958903,
+     "plans_py": 6,
+     "plans_js": 6
+    },
+    {
+     "seed": 1013,
+     "py": "success",
+     "js": "success",
+     "py_steps": 1536,
+     "js_steps": 1537,
+     "py_cov": 0.9007679336726172,
+     "js_cov": 0.903244122972009,
+     "plans_py": 4,
+     "plans_js": 4
+    },
+    {
+     "seed": 1014,
+     "py": "success",
+     "js": "success",
+     "py_steps": 2736,
+     "js_steps": 2417,
+     "py_cov": 0.900841049412562,
+     "js_cov": 0.9051844697703076,
+     "plans_py": 7,
+     "plans_js": 5
+    },
+    {
+     "seed": 1015,
+     "py": "success",
+     "js": "success",
+     "py_steps": 3375,
+     "js_steps": 4042,
+     "py_cov": 0.9002821818197515,
+     "js_cov": 0.9029640381218381,
+     "plans_py": 8,
+     "plans_js": 9
+    },
+    {
+     "seed": 1016,
+     "py": "success",
+     "js": "success",
+     "py_steps": 3466,
+     "js_steps": 3083,
+     "py_cov": 0.9003460533445555,
+     "js_cov": 0.900262196033683,
+     "plans_py": 9,
+     "plans_js": 8
+    },
+    {
+     "seed": 1017,
+     "py": "success",
+     "js": "success",
+     "py_steps": 2033,
+     "js_steps": 2033,
+     "py_cov": 0.9032400773721505,
+     "js_cov": 0.9001804105490806,
+     "plans_py": 5,
+     "plans_js": 5
+    },
+    {
+     "seed": 1018,
+     "py": "success",
+     "js": "success",
+     "py_steps": 1485,
+     "js_steps": 1710,
+     "py_cov": 0.90089840825953,
+     "js_cov": 0.9008545240159692,
+     "plans_py": 4,
+     "plans_js": 5
+    },
+    {
+     "seed": 1019,
+     "py": "success",
+     "js": "success",
+     "py_steps": 1127,
+     "js_steps": 1249,
+     "py_cov": 0.9015358595323755,
+     "js_cov": 0.9010492632265028,
+     "plans_py": 3,
+     "plans_js": 4
+    }
+   ]
+  },
+  "obs_delay_30ms": {
+   "success_py": 0,
+   "success_js": 0,
+   "seeds": 20,
+   "outcome_agree": 20,
+   "success_both_same_step_count": 0,
+   "success_both_max_step_diff": 0,
+   "detail": [
+    {
+     "seed": 1000,
+     "py": "failure",
+     "js": "failure",
+     "py_steps": 632,
+     "js_steps": 3990,
+     "py_cov": 0,
+     "js_cov": 0,
+     "plans_py": 1,
+     "plans_js": 2
+    },
+    {
+     "seed": 1001,
+     "py": "failure",
+     "js": "failure",
+     "py_steps": 4097,
+     "js_steps": 4553,
+     "py_cov": 0,
+     "js_cov": 0,
+     "plans_py": 2,
+     "plans_js": 2
+    },
+    {
+     "seed": 1002,
+     "py": "failure",
+     "js": "failure",
+     "py_steps": 3317,
+     "js_steps": 5821,
+     "py_cov": 0,
+     "js_cov": 0,
+     "plans_py": 1,
+     "plans_js": 1
+    },
+    {
+     "seed": 1003,
+     "py": "timeout",
+     "js": "failure",
+     "py_steps": 6000,
+     "js_steps": 5043,
+     "py_cov": 0,
+     "js_cov": 0,
+     "plans_py": 1,
+     "plans_js": 3
+    },
+    {
+     "seed": 1004,
+     "py": "failure",
+     "js": "failure",
+     "py_steps": 252,
+     "js_steps": 252,
+     "py_cov": 0,
+     "js_cov": 0,
+     "plans_py": 1,
+     "plans_js": 1
+    },
+    {
+     "seed": 1005,
+     "py": "failure",
+     "js": "failure",
+     "py_steps": 2660,
+     "js_steps": 503,
+     "py_cov": 0,
+     "js_cov": 0,
+     "plans_py": 1,
+     "plans_js": 1
+    },
+    {
+     "seed": 1006,
+     "py": "failure",
+     "js": "failure",
+     "py_steps": 2035,
+     "js_steps": 6000,
+     "py_cov": 0,
+     "js_cov": 0,
+     "plans_py": 2,
+     "plans_js": 3
+    },
+    {
+     "seed": 1007,
+     "py": "timeout",
+     "js": "failure",
+     "py_steps": 6000,
+     "js_steps": 6000,
+     "py_cov": 0,
+     "js_cov": 0,
+     "plans_py": 3,
+     "plans_js": 3
+    },
+    {
+     "seed": 1008,
+     "py": "failure",
+     "js": "failure",
+     "py_steps": 2773,
+     "js_steps": 2893,
+     "py_cov": 0,
+     "js_cov": 0,
+     "plans_py": 2,
+     "plans_js": 2
+    },
+    {
+     "seed": 1009,
+     "py": "timeout",
+     "js": "failure",
+     "py_steps": 6000,
+     "js_steps": 5082,
+     "py_cov": 0,
+     "js_cov": 0,
+     "plans_py": 2,
+     "plans_js": 2
+    },
+    {
+     "seed": 1010,
+     "py": "failure",
+     "js": "failure",
+     "py_steps": 2946,
+     "js_steps": 2279,
+     "py_cov": 0,
+     "js_cov": 0,
+     "plans_py": 1,
+     "plans_js": 1
+    },
+    {
+     "seed": 1011,
+     "py": "failure",
+     "js": "failure",
+     "py_steps": 523,
+     "js_steps": 3082,
+     "py_cov": 0,
+     "js_cov": 0,
+     "plans_py": 1,
+     "plans_js": 1
+    },
+    {
+     "seed": 1012,
+     "py": "failure",
+     "js": "failure",
+     "py_steps": 3908,
+     "js_steps": 6000,
+     "py_cov": 0,
+     "js_cov": 0,
+     "plans_py": 1,
+     "plans_js": 3
+    },
+    {
+     "seed": 1013,
+     "py": "timeout",
+     "js": "failure",
+     "py_steps": 6000,
+     "js_steps": 4577,
+     "py_cov": 0,
+     "js_cov": 0,
+     "plans_py": 1,
+     "plans_js": 1
+    },
+    {
+     "seed": 1014,
+     "py": "failure",
+     "js": "failure",
+     "py_steps": 5526,
+     "js_steps": 6000,
+     "py_cov": 0,
+     "js_cov": 0,
+     "plans_py": 3,
+     "plans_js": 3
+    },
+    {
+     "seed": 1015,
+     "py": "timeout",
+     "js": "failure",
+     "py_steps": 6000,
+     "js_steps": 1919,
+     "py_cov": 0,
+     "js_cov": 0,
+     "plans_py": 1,
+     "plans_js": 1
+    },
+    {
+     "seed": 1016,
+     "py": "timeout",
+     "js": "failure",
+     "py_steps": 6000,
+     "js_steps": 6000,
+     "py_cov": 0.09661405880875173,
+     "js_cov": 0,
+     "plans_py": 3,
+     "plans_js": 2
+    },
+    {
+     "seed": 1017,
+     "py": "failure",
+     "js": "failure",
+     "py_steps": 2413,
+     "js_steps": 2601,
+     "py_cov": 0,
+     "js_cov": 0,
+     "plans_py": 1,
+     "plans_js": 2
+    },
+    {
+     "seed": 1018,
+     "py": "failure",
+     "js": "failure",
+     "py_steps": 1028,
+     "js_steps": 3041,
+     "py_cov": 0,
+     "js_cov": 0,
+     "plans_py": 1,
+     "plans_js": 1
+    },
+    {
+     "seed": 1019,
+     "py": "failure",
+     "js": "failure",
+     "py_steps": 2032,
+     "js_steps": 1052,
+     "py_cov": 0,
+     "js_cov": 0,
+     "plans_py": 1,
+     "plans_js": 1
+    }
+   ]
+  },
+  "friction+50%": {
+   "success_py": 20,
+   "success_js": 20,
+   "seeds": 20
+  },
+  "mass+100%": {
+   "success_py": 20,
+   "success_js": 20,
+   "seeds": 20
+  },
+  "com(20,0)mm": {
+   "success_py": 20,
+   "success_js": 19,
+   "seeds": 20
+  },
+  "noise 5mm": {
+   "success_py": 20,
+   "success_js": 20,
+   "seeds": 20
+  }
+ }
+}
