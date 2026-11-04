@@ -2,7 +2,7 @@
 
 A MuJoCo benchmark and shared skeleton for asking one question under a fair, pre-specified protocol: **what extra ingredient does a learned controller need before it beats its classical teacher?** Robots, tasks, perturbations ("weaknesses"), controllers (PID, computed-torque + LQR, iLQR, iLQR-MPC, MPPI, residual RL, imitation students such as BC, MIP, diffusion and flow matching) and the evaluation protocol plug into the same interface, so every comparison is recorded and tabulated the same way.
 
-Paper: `docs/paper/arxiv/main.pdf` (LaTeX sources and figure script in `docs/paper/arxiv/`; arXiv link to be added). Portfolio site and in-browser MuJoCo controller arena: `web/` (serve with `python -m http.server -d web`). Status: research code accompanying a paper; numbers in the paper are indexed in `docs/canonical_numbers.md`.
+Paper: `docs/paper/arxiv/main.pdf` (LaTeX sources and figure script in `docs/paper/arxiv/`; arXiv link to be added). Portfolio site and in-browser MuJoCo controller arena: live at https://jadiouo.github.io/controller-ladder/ (source `web/`; serve locally with `python -m http.server -d web`). Status: research code accompanying a paper; numbers in the paper are indexed in `docs/canonical_numbers.md`.
 
 ## Install
 
