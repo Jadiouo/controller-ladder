@@ -65,7 +65,7 @@ Recovered fraction & $(\text{X}-\text{R0})/(\text{R1}-\text{R0})$: the share of 
 Headroom & Room above the strongest classical pipeline, measured by an oracle. \\
 TOST, Holm & TOST: two one-sided tests for equivalence within a margin, read from the 90\% CI. Holm: step-down correction for multiple tests. \\
 PRE-git, PRE-README, POST & Rule committed before the result in git; rule only in the experiment's README; post hoc. \\
-Robust plan selection & Scoring each candidate swing under several plausible parameter sets and choosing by an aggregate score instead of trusting one parameter estimate. B uses the worst-case aggregate; C-ens uses the hit-fraction aggregate (the share of parameter sets in which the predicted miss is below 0.06\,m). \\
+Robust plan selection & Scoring each candidate swing under several plausible parameter sets and choosing by an aggregate score instead of trusting one parameter estimate. B uses the worst-case aggregate; C-ens uses the hit-fraction aggregate (the share of parameter sets in which the predicted miss is below 0.06\,m, a margin inside the 0.08\,m success radius). \\
 D-canon, D-multi & Student training data from the canonical teacher (one consistent plan per situation) and from the multimodal teacher. \\
 CAL, HOLD, TEST & Calibration seeds (tuning and selection); holdout seeds (reused); older test seeds (reused). \\
 TEST-B, -C, -D, NEW & Locked test sets, each evaluated once (realistic whip, headroom ladder, plan selection); fresh confirmation seeds. \\
