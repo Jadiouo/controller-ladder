@@ -5,6 +5,8 @@ def ld(p): return pickle.load(open(p, 'rb')) if os.path.exists(p) else None
 def ci(x): return np.percentile(x, [2.5, 97.5])
 def pooled(res_list, key):   # (n_seeds, 50)
     return np.array([r[key] for r in res_list])
+import glob
+if not glob.glob('results/spike03b/raw_*.pkl'): sys.exit('results/spike03b/raw_*.pkl not found (per-episode data is not in the public release); table.md left unchanged')
 conds = load_conds(); L = ['# spike03b table: mirror-law teacher vs students on ball juggling (locked test set, 50 episodes, hits capped at 100)\n']
 verdict = []; rows = []
 for c in conds:

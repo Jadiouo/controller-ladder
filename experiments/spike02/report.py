@@ -3,6 +3,7 @@ import pickle, os, glob, numpy as np
 from scipy import stats
 import matplotlib; matplotlib.use('Agg'); import matplotlib.pyplot as plt
 R = 'results/spike02/'; WS = ['W0', 'W1', 'W2', 'W3', 'W4']; METH = ['dart', 'dagger', 'rl']; NAME = dict(teacher='Teacher', dart='BC+DART', dagger='DAgger', rl='ResidualPPO')
+if not glob.glob(R + 'raw_*.pkl'): raise SystemExit('results/spike02/raw_*.pkl not found (per-episode data is not in the public release); table.md left unchanged')
 raw = {}
 for W in WS:
     d = {}

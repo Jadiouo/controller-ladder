@@ -77,7 +77,7 @@ python -m http.server -d web                     # 在本機架起作品集網�
 
 - 每個實驗是一個 `experiments/spikeNN/` 資料夾（程式；索引見 `experiments/README.md`），輸出在 `results/spikeNN/`（含預先規格與偏離說明的 `README.md`、`table.md`、JSON 摘要，以及體積小的逐回合 `.npy`）。
 - `docs/experiments.tsv` 逐次列出假設編號、種子、指令與結果檔。`docs/canonical_numbers.md` 把論文用到的每個數字對應到一次執行與指令。`paper/support/claims_evidence.md`（第 5 節）給出每個結果的「重新產生表格」指令。
-- 便宜的路徑（不用模擬）：從存下來的逐回合資料重建表格，例如 `python experiments/spike15e/stats15e.py testd`、`python experiments/spike10b/report10b.py`、`python experiments/spike13a/report13.py`、`python experiments/spike15b/report15.py`、`python paper/support/stats/equivalence.py`。
+- 便宜的路徑（不用模擬）：下列腳本用本 repo 附的資料重建表格，輸出和已 commit 的 `table.md` 逐字相同（已在全新 clone 上確認）：`python experiments/spike15a/stats15.py`（TEST-C 階梯）、`python experiments/spike15b/report15.py`、`python experiments/spike13b/report13.py`、`python experiments/spike11a/report11.py`、`python experiments/spike12a/report12.py`、`python experiments/spike16a/report16.py`。其他表格腳本（例如 `spike15e/stats15e.py testd`、`spike10b/report10b.py`、`spike13a/report13.py`、`paper/support/stats/equivalence.py`）需要的逐回合資料太大，沒有放進公開版；執行時會因找不到檔案而停止，不會改動已 commit 的表格。
 - 完整重跑列在各 `results/spikeNN/README.md`（「Re-run」）。有些很久（好幾個小時；RL 訓練），少數用到鎖定測試種子，這些只能評估**一次**：不要重跑 TEST-B、TEST-C、TEST-D。
 - TEST-D 用到的凍結甩鞭估計器權重已附上（`results/spike15c/models/`，15 MB）。其他權重、訓練資料分片與大型陣列因為體積沒有附上，清單見 `RELEASE_NOTES.md`。由它們導出的表格有附上。
 
