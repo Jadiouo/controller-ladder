@@ -1,7 +1,7 @@
 # 這個專案的尺
 
 > 補件（2026-11-03）：本檔彙整既有結果檔裡已量到的東西，沒有新實驗。「未量」表示專案裡沒有人量過；「衍生」表示數字是我從結果檔的逐 seed 值算的，原檔沒有寫。出處一律用 `results/…` 或 `docs/…` 路徑。
-> 尺在事後才整理成檔，不是閘門前事前宣告；事前宣告的部分是 docs/03_hypotheses.md 的各版本卡（commit 順序見 docs/paper/prespec_audit.md）。
+> 尺在事後才整理成檔，不是閘門前事前宣告；事前宣告的部分是 docs/03_hypotheses.md 的各版本卡（commit 順序見 paper/support/prespec_audit.md）。
 
 專案型態：research＋rl（見 docs/project_type.md）
 
@@ -12,7 +12,7 @@
 | 集合 | seed | n | 用途 | 狀態 | 出處 |
 |---|---|---|---|---|---|
 | CAL | 1000-1049（官方）；whip／spike13a 起加 2000-2149 | 50；200 | 調參、挑 checkpoint、挑變體 | 反覆使用 | docs/03_hypotheses.md；results/spike13a/README.md:9 |
-| HOLD（holdout） | 1100-1599（spike10b 只用 1100-1399） | 500（300） | 次要評估，也是 best-classical 的選擇集 | 反覆使用，非封存 | docs/paper/claims_evidence.md 開頭 seed 說明 |
+| HOLD（holdout） | 1100-1599（spike10b 只用 1100-1399） | 500（300） | 次要評估，也是 best-classical 的選擇集 | 反覆使用，非封存 | paper/support/claims_evidence.md 開頭 seed 說明 |
 | TEST | 0-49 | 50 | 早期 spike（01-07、09b）的鎖定測試 | spike05/06/07 對同一個任務共用同一組 | results/.test_access.log；claims_evidence C-B5 |
 | TEST-B | 20000-20499 | 500 | spike10b 主端點 | 封存，只用一次 | results/spike10b/table.md |
 | TEST-C | 30000-30499 | 500 | spike15a（卡 v8／v8.1） | 封存，只用一次（log 2026-11-02T13:04:07） | results/spike15a/README.md:56 |
@@ -31,7 +31,7 @@ test 是否封存：TEST-B/C/D 是封存後只跑一次；TEST（0-49）沒有�
 - **決策尺 = 成功率差（pp），配對（同 seed）percentile bootstrap 95% CI**，在鎖定集上判定。追蹤任務用 RMSE 相對差（%）。出處：docs/03_hypotheses.md 各 H 的判定句；results/spike15e/table.md:7-14。
 - 判定規則（事前寫在假設卡）：「贏」＝比 best-classical 高 ≥ 10 pp 且 CI 不含 0；追蹤任務為 RMSE 改善 ≥ 10% 且 CI 不含 0（docs/03_hypotheses.md:6-8）。
 - **10 pp 門檻是專案自訂的**，不是由雜訊量出來的 2×sd。claims_evidence C-B10 弱點欄也寫「The 10 pp threshold was chosen by us」。與下面量到的雜訊比較：HOLD n=500 的單一模型重算差最大 3.6 pp，CAL n=200 的標準誤約 3.2 pp，所以 10 pp 大於這些已量到的雜訊（約 2.8 倍於 3.6），但沒有以 2×sd 推導（見「門檻」）。
-- 等效（TOST）：邊界 ±10 pp（追蹤任務 ±10% RMSE），另列 ±5 pp；以 90% 配對 bootstrap CI 完全落在邊界內為「等效」。這是事後算的（沒有新模擬），跨 spike 未校正。出處：docs/paper/stats/equivalence.md:26。鎖定集上事先寫在卡裡的 TOST 只有 H14（v8，±10）。
+- 等效（TOST）：邊界 ±10 pp（追蹤任務 ±10% RMSE），另列 ±5 pp；以 90% 配對 bootstrap CI 完全落在邊界內為「等效」。這是事後算的（沒有新模擬），跨 spike 未校正。出處：paper/support/stats/equivalence.md:26。鎖定集上事先寫在卡裡的 TOST 只有 H14（v8，±10）。
 - 多重比較：每張卡自己的判定用 Holm（v8：H13、H13b、H14；v9：H15、H15b、H16a、H16b，單邊 bootstrap p）。跨 spike 沒有校正。出處：docs/03_hypotheses.md:194, 220。
 - 已知的卡內不一致：v9 H16b 的規則用雙邊 95% CI 上界，Holm 步驟用對應 90% CI 的單邊 p；以規則文字為準，H16b 不成立（claims_evidence I-17）。
 
@@ -109,4 +109,4 @@ test 是否封存：TEST-B/C/D 是封存後只跑一次；TEST（0-49）沒有�
 - 候選要：所有已宣告的門皆不退、至少一門過（早期 spike 為單一門）。
 - 差距小於門檻不補 seed；本專案以「CI 含 0」或「TOST 不在邊界內」描述，措辭用「本尺無法分辨」，不寫「無效」。
 - 最終 seed：鎖定集一次性使用，不重跑（spike15a、spike15e 的 README 都寫了 do NOT rerun）。
-- **決策尺**：上面「決策尺」一節（配對 bootstrap，鎖定集上的 pp 差）。事前宣告日期：各卡的 commit 日期（v8 d167ed6 2026-11-02 10:58；v9 800de6e 2026-11-02 20:32；其餘見 docs/paper/prespec_audit.md）。
+- **決策尺**：上面「決策尺」一節（配對 bootstrap，鎖定集上的 pp 差）。事前宣告日期：各卡的 commit 日期（v8 d167ed6 2026-11-02 10:58；v9 800de6e 2026-11-02 20:32；其餘見 paper/support/prespec_audit.md）。

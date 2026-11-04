@@ -4,12 +4,12 @@ Full numbers and the H6 verdict: `table.md`. Clip: `juggle_restitution.mp4` / `.
 
 ## Re-run (repo root, existing .venv, CPU only, 2 torch threads)
 ```
-.venv/bin/python spike03b/sanity.py --write       # contact sanity check + zeta_map.json  (log: sanity.log; plain run does not overwrite the map)
-.venv/bin/python spike03b/tune_teacher.py         # one-off teacher tuning on nominal (tune_teacher.log)
-.venv/bin/python spike03b/calib.py                # round 1 (calib_round1.log); run again = round 2 for families with no hit (calib_round2.log) -> calib.json
-spike03b/run_all.sh                               # BC+DART x10 seeds, residual PPO x3 seeds per condition, teacher-retune control, report (each heavy job wrapped in flock + systemd-run MemoryMax=6G)
-.venv/bin/python spike03b/video.py restitution 0  # clip
-.venv/bin/python spike03b/check_tilt.py           # racket tilt / offset at ball contact, teacher vs student (check_tilt.log)
+.venv/bin/python experiments/spike03b/sanity.py --write       # contact sanity check + zeta_map.json  (log: sanity.log; plain run does not overwrite the map)
+.venv/bin/python experiments/spike03b/tune_teacher.py         # one-off teacher tuning on nominal (tune_teacher.log)
+.venv/bin/python experiments/spike03b/calib.py                # round 1 (calib_round1.log); run again = round 2 for families with no hit (calib_round2.log) -> calib.json
+experiments/spike03b/run_all.sh                               # BC+DART x10 seeds, residual PPO x3 seeds per condition, teacher-retune control, report (each heavy job wrapped in flock + systemd-run MemoryMax=6G)
+.venv/bin/python experiments/spike03b/video.py restitution 0  # clip
+.venv/bin/python experiments/spike03b/check_tilt.py           # racket tilt / offset at ball contact, teacher vs student (check_tilt.log)
 ```
 Code: `env.py` (plant, teacher, metrics), `stu.py`, `run_bc.py`, `run_rl.py`, `ctrl_teacher.py`, `report.py`.
 

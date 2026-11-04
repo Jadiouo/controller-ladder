@@ -84,7 +84,7 @@ paired difference per seed (seeds must be identical), "WIN" = CI entirely on the
 
 ## Design decisions 
 
-1. **Single environment, not batched.** spike/ stepped N plants in a Python loop anyway; one plant per `ArenaEnv` keeps the
+1. **Single environment, not batched.** experiments/spike/ stepped N plants in a Python loop anyway; one plant per `ArenaEnv` keeps the
    interface and the tests simple. A batched/vectorised wrapper for RL training is future work. Cost: ~1-3 s per 50-seed cell.
    `ArenaGymEnv` wraps one env (gymnasium API; gymnasium itself is not a dependency and is not installed in `.venv`: a stand-in
    with the same signatures is used so the tests run, install gymnasium before training with SB3).

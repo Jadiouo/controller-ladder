@@ -4,13 +4,13 @@
 
 **在 8 個追蹤、雜耍與甩鞭設定中，沒有任何學習式方法在對上最強古典基準時，達到事前訂下的 +10 個百分點門檻。**
 
-[English](README.md) | [論文（PDF，英文）](docs/paper/arxiv/main.pdf) | **[互動網站](https://jadiouo.github.io/controller-ladder/)** | **[在瀏覽器裡玩擂台](https://jadiouo.github.io/controller-ladder/arena/)**
+[English](README.md) | [論文（PDF，英文）](paper/arxiv/main.pdf) | **[互動網站](https://jadiouo.github.io/controller-ladder/)** | **[在瀏覽器裡玩擂台](https://jadiouo.github.io/controller-ladder/arena/)**
 
 學習式與古典控制的比較，常常沒有給古典這一方同等的調參、沒有公開預算，也沒有在測試前固定規則。這個 repo 是論文背後的 MuJoCo 基準與評估協定。機器人、任務、擾動（「弱點」）、控制器（PID、computed-torque + LQR、iLQR、iLQR-MPC、MPPI、residual RL，以及 BC、MIP、diffusion、flow matching 等模仿學生）和評估協定都接在同一個介面上，所以每一次比較都用同樣方式記錄和製表。協定包含：調好參數的古典基準、三個面向（回合數、實際時間、標籤來源）的預算公開、測試前就有時間戳的規則、一道健全性檢查（學習者要先能學會一個已知學得會的修正），以及測試評估紀錄。核心問題是：*學習式控制器還需要什麼額外的東西，才能贏過它的古典老師？*
 
 七個任務都能在瀏覽器裡玩：七個都跑在 MuJoCo WASM 擂台上，而且每一個都對照 Python 實作驗證過（見 [`web/arena/VALIDATION.md`](web/arena/VALIDATION.md)）。
 
-![七個任務](docs/paper/arxiv/figures/fig_tasks.png)
+![七個任務](paper/arxiv/figures/fig_tasks.png)
 
 *七個任務：(a) 甩鞭（主要測試場景）、(b) 追蹤、(c) 平衡桿、(d) 接球、(e) 投籃、(f) Push-T、(g) 雜耍。每個畫面都是標稱參數下的 MuJoCo 渲染，取自古典老師在校準種子上的一次執行。*
 
@@ -26,11 +26,11 @@
 
 完整方法、統計與限制都在論文裡。
 
-![各設定的學習式減古典](docs/paper/arxiv/figures/fig_forest.png)
+![各設定的學習式減古典](paper/arxiv/figures/fig_forest.png)
 
 *各設定的學習式減最強古典。左：成功率設定，灰色帶為 +-10 pp，虛線為 +10 pp 門檻。右：追蹤設定，以相對 RMSE 變化表示（正值代表學習式較好）。誤差條是 95% bootstrap CI。唯一的空心點有過門檻，但只是對上較弱的基準 R0（甩鞭上用擬合參數的古典流程）。各列使用的證據集不同。*
 
-![TEST-D 上的穩健計畫選擇](docs/paper/arxiv/figures/fig_testd.png)
+![TEST-D 上的穩健計畫選擇](paper/arxiv/figures/fig_testd.png)
 
 *穩健計畫選擇在鎖定測試集 TEST-D 上補回約 60% 的參數差距：古典 ensemble C-ens 補回 R1-R0 差距的 0.59，學習式 ensemble B 補回 0.90。長條：成功率與 95% CI；長條上方的數字：補回的差距比例。R0 用擬合參數，R1 用真實參數。y 軸從 50% 開始。*
 
@@ -66,7 +66,7 @@ Python >= 3.10（`pyproject.toml`）。相依套件：numpy、scipy、mujoco、p
 python -m venv .venv && . .venv/bin/activate
 pip install -e . pytest
 python -m pytest -q                              # 全部測試，序列執行
-python -m pytest -q tests/test_spike_repro.py    # spike01/02 的數值重現（spike/ 與 spike02/ 必須沒被改過）
+python -m pytest -q tests/test_spike_repro.py    # spike01/02 的數值重現（experiments/spike/ 與 experiments/spike02/ 必須沒被改過）
 python scripts/demo_ladder.py                    # 約一分鐘；把表格與 mp4 寫到 results/arena_demo/
 python -m http.server -d web                     # 在本機架起作品集網站與瀏覽器擂台
 ```
@@ -75,9 +75,9 @@ python -m http.server -d web                     # 在本機架起作品集網�
 
 ### 重現論文的表格
 
-- 每個實驗是一個 `spikeNN/` 資料夾（程式），輸出在 `results/spikeNN/`（含預先規格與偏離說明的 `README.md`、`table.md`、JSON 摘要，以及體積小的逐回合 `.npy`）。
-- `docs/experiments.tsv` 逐次列出假設編號、種子、指令與結果檔。`docs/canonical_numbers.md` 把論文用到的每個數字對應到一次執行與指令。`docs/paper/claims_evidence.md`（第 5 節）給出每個結果的「重新產生表格」指令。
-- 便宜的路徑（不用模擬）：從存下來的逐回合資料重建表格，例如 `python spike15e/stats15e.py testd`、`python spike10b/report10b.py`、`python spike13a/report13.py`、`python spike15b/report15.py`、`python docs/paper/stats/equivalence.py`。
+- 每個實驗是一個 `experiments/spikeNN/` 資料夾（程式；索引見 `experiments/README.md`），輸出在 `results/spikeNN/`（含預先規格與偏離說明的 `README.md`、`table.md`、JSON 摘要，以及體積小的逐回合 `.npy`）。
+- `docs/experiments.tsv` 逐次列出假設編號、種子、指令與結果檔。`docs/canonical_numbers.md` 把論文用到的每個數字對應到一次執行與指令。`paper/support/claims_evidence.md`（第 5 節）給出每個結果的「重新產生表格」指令。
+- 便宜的路徑（不用模擬）：從存下來的逐回合資料重建表格，例如 `python experiments/spike15e/stats15e.py testd`、`python experiments/spike10b/report10b.py`、`python experiments/spike13a/report13.py`、`python experiments/spike15b/report15.py`、`python paper/support/stats/equivalence.py`。
 - 完整重跑列在各 `results/spikeNN/README.md`（「Re-run」）。有些很久（好幾個小時；RL 訓練），少數用到鎖定測試種子，這些只能評估**一次**：不要重跑 TEST-B、TEST-C、TEST-D。
 - TEST-D 用到的凍結甩鞭估計器權重已附上（`results/spike15c/models/`，15 MB）。其他權重、訓練資料分片與大型陣列因為體積沒有附上，清單見 `RELEASE_NOTES.md`。由它們導出的表格有附上。
 
@@ -91,12 +91,12 @@ python -m http.server -d web                     # 在本機架起作品集網�
 |---|---|
 | `arena/` | 機器人、任務、擾動、控制器、評估、視覺化、學習（BC/MIP/diffusion/flow） |
 | `arena_mjx/` | JAX/MJX 向量化環境與 PPO（GPU） |
-| `spike*/` | 實驗程式，一個研究一個資料夾（見 `docs/experiments.tsv`） |
+| `experiments/` | 實驗程式，一個研究一個 `spikeNN/` 資料夾（索引：`experiments/README.md`；指令：`docs/experiments.tsv`） |
 | `scripts/` | 展示與 MJX 效能測試 |
 | `tests/` | 單元測試與數值重現測試 |
 | `web/` | 作品集網站、任務影片（`web/media/`）與瀏覽器內的 MuJoCo 擂台（`web/arena/`，對 Python 的驗證見 `web/arena/VALIDATION.md`） |
-| `docs/` | 假設、評估尺、實驗表、canonical numbers、provenance、論文輔助檔、`ARCHITECTURE.md` |
-| `docs/paper/arxiv/` | LaTeX 原始檔、圖（與繪圖腳本）、編譯好的 `main.pdf` |
+| `docs/` | 假設、評估尺、實驗表、canonical numbers、provenance、`ARCHITECTURE.md` |
+| `paper/` | `arxiv/`：LaTeX 原始檔、圖（與繪圖腳本）、編譯好的 `main.pdf`；`support/`：主張與證據對照、預先規格稽核、等價性統計 |
 | `docs/media/` | 這份 README 用的 GIF（由 `web/media/*.mp4` 轉出） |
 | `results/` | 體積小的結果檔（表格、JSON、log） |
 

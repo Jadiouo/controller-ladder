@@ -70,7 +70,7 @@ class Tracking(Task):
         n, dt = self.robot.n, self.robot.dt
         r = np.random.default_rng(int(seed))
         c, a, w, ph = np.zeros(n), np.zeros((n, 2)), np.zeros((n, 2)), np.zeros((n, 2))
-        for j in range(n):                                     # same draw order as spike/sim.py
+        for j in range(n):                                     # same draw order as experiments/spike/sim.py
             A, frac = r.uniform(0.2, 0.6), r.uniform(0.3, 0.7)
             lo, hi = _JR[j] if j < 2 else (-0.8, 0.8)
             a[j] = [A * frac, A * (1 - frac)]

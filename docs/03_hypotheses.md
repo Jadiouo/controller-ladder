@@ -195,7 +195,7 @@ R-PPO-hist 的 TEST 成功率比 best-classical 高 ≥10 pp，而且 CI 不含 
 - 階梯的歸因順序：另外報告反向順序（先換鏈狀態，再換參數），只描述。
 
 ### v8.1 修訂（2026-11-02，TEST-C 開跑前寫死）
-- spike14a 沒有存 L-dec4 的權重，所以 v8「不重新訓練」做不到。處理方式：用完全相同的配方和 seed 0/1/2 重訓，並存下權重（spike15a/retrain_dec4.py）。
+- spike14a 沒有存 L-dec4 的權重，所以 v8「不重新訓練」做不到。處理方式：用完全相同的配方和 seed 0/1/2 重訓，並存下權重（experiments/spike15a/retrain_dec4.py）。
 - 接受條件（只用 holdout 1100–1599 比對重訓模型和 spike14a 儲存的預測，不看 TEST-C）：3 seed 合併的 holdout 成功率差在 ±2 pp 內，而且逐 episode 成功與否一致率 ≥90%。達到就視為同一個凍結模型。
 - 沒達到時，L-dec4 仍然用重訓版本跑 TEST-C，但 H14 標示為「重訓模型」，並在論文寫明。不可以為了達標反覆重訓。
 - Holm 校正用單邊 bootstrap p 值，主要門檻 α=0.05（family-wise）。

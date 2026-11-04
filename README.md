@@ -2,13 +2,13 @@
 
 **No learned method cleared a pre-specified +10 percentage-point bar over its strongest classical baseline in 8 tracking, juggling and whip settings.**
 
-[中文版](README.zh-TW.md) | [Paper (PDF)](docs/paper/arxiv/main.pdf) | **[Interactive site](https://jadiouo.github.io/controller-ladder/)** | **[Play the arena in your browser](https://jadiouo.github.io/controller-ladder/arena/)**
+[中文版](README.zh-TW.md) | [Paper (PDF)](paper/arxiv/main.pdf) | **[Interactive site](https://jadiouo.github.io/controller-ladder/)** | **[Play the arena in your browser](https://jadiouo.github.io/controller-ladder/arena/)**
 
 Learned-versus-classical comparisons rarely give the classical side comparable tuning, a disclosed budget, and rules fixed before testing. This repository is the MuJoCo benchmark and the evaluation protocol behind the paper. Robots, tasks, perturbations ("weaknesses"), controllers (PID, computed-torque + LQR, iLQR, iLQR-MPC, MPPI, residual RL, and imitation students such as BC, MIP, diffusion and flow matching) and the protocol plug into one interface, so every comparison is recorded and tabulated the same way. The protocol has tuned classical baselines, budgets disclosed on three axes (episodes, wall-clock, label source), rules time-stamped before testing, a sanity gate (a learner must first learn a known-learnable correction) and a test-evaluation log. The guiding question is: *what extra ingredient does a learned controller need before it beats its classical teacher?*
 
 The seven tasks are playable in the browser: all seven run in a MuJoCo WASM arena, and each was validated against the Python implementation (see [`web/arena/VALIDATION.md`](web/arena/VALIDATION.md)).
 
-![The seven tasks](docs/paper/arxiv/figures/fig_tasks.png)
+![The seven tasks](paper/arxiv/figures/fig_tasks.png)
 
 *The seven tasks: (a) whip, the main test bed, (b) tracking, (c) pole balance, (d) catch, (e) toss, (f) Push-T, (g) juggling. Each panel is a MuJoCo render under nominal parameters from a classical teacher's rollout on a calibration seed.*
 
@@ -24,11 +24,11 @@ The seven tasks are playable in the browser: all seven run in a MuJoCo WASM aren
 
 The full method, the statistics and the limitations are in the paper.
 
-![Learned minus classical across settings](docs/paper/arxiv/figures/fig_forest.png)
+![Learned minus classical across settings](paper/arxiv/figures/fig_forest.png)
 
 *Learned minus strongest classical, per setting. Left: success-rate settings, grey band +-10 pp, dashed line at the +10 pp bar. Right: tracking settings in relative RMSE change (positive = learned better). Bars are 95% bootstrap CIs. The single hollow point clears the bar, but only against the weaker baseline R0 (the fitted-parameter classical pipeline on whip). Evidence sets differ across rows.*
 
-![Robust plan selection on TEST-D](docs/paper/arxiv/figures/fig_testd.png)
+![Robust plan selection on TEST-D](paper/arxiv/figures/fig_testd.png)
 
 *Robust plan selection recovers about 60% of the parameter gap on the locked set TEST-D: 0.59 of the R1-R0 gap with the classical ensemble C-ens and 0.90 with the learned ensemble B. Bars: success with 95% CI; numbers above the bars: recovered fraction of the gap. R0 uses fitted parameters and R1 the true parameters. The y axis starts at 50%.*
 
@@ -64,7 +64,7 @@ Python >= 3.10 (`pyproject.toml`). Dependencies: numpy, scipy, mujoco, pillow (a
 python -m venv .venv && . .venv/bin/activate
 pip install -e . pytest
 python -m pytest -q                              # all tests, serial
-python -m pytest -q tests/test_spike_repro.py    # numerical reproduction of spike01/02 (needs spike/ and spike02/ unchanged)
+python -m pytest -q tests/test_spike_repro.py    # numerical reproduction of spike01/02 (needs experiments/spike/ and experiments/spike02/ unchanged)
 python scripts/demo_ladder.py                    # about a minute; writes tables and mp4 to results/arena_demo/
 python -m http.server -d web                     # serve the portfolio site and the browser arena locally
 ```
@@ -73,9 +73,9 @@ Unit tests never write `results/.test_access.log`; real evaluations on the locke
 
 ### Reproduce the paper tables
 
-- Every experiment is one directory `spikeNN/` (code) with outputs in `results/spikeNN/` (`README.md` with the pre-specification and deviations, `table.md`, JSON summaries, per-episode `.npy` arrays where small).
-- `docs/experiments.tsv` lists, per run, the hypothesis ids, seeds, command and result file. `docs/canonical_numbers.md` maps every number used in the paper to a run and command. `docs/paper/claims_evidence.md` (section 5) gives the "regenerate table" command per result.
-- Cheap path (no simulation): rebuild a table from the stored per-episode data, e.g. `python spike15e/stats15e.py testd`, `python spike10b/report10b.py`, `python spike13a/report13.py`, `python spike15b/report15.py`, `python docs/paper/stats/equivalence.py`.
+- Every experiment is one directory `experiments/spikeNN/` (code; index in `experiments/README.md`) with outputs in `results/spikeNN/` (`README.md` with the pre-specification and deviations, `table.md`, JSON summaries, per-episode `.npy` arrays where small).
+- `docs/experiments.tsv` lists, per run, the hypothesis ids, seeds, command and result file. `docs/canonical_numbers.md` maps every number used in the paper to a run and command. `paper/support/claims_evidence.md` (section 5) gives the "regenerate table" command per result.
+- Cheap path (no simulation): rebuild a table from the stored per-episode data, e.g. `python experiments/spike15e/stats15e.py testd`, `python experiments/spike10b/report10b.py`, `python experiments/spike13a/report13.py`, `python experiments/spike15b/report15.py`, `python paper/support/stats/equivalence.py`.
 - Full re-runs are listed in each `results/spikeNN/README.md` ("Re-run"). Some are long (hours; RL training), and a few use locked test seeds that must be evaluated **once**: do not repeat TEST-B, TEST-C or TEST-D runs.
 - The frozen whip estimator weights used on TEST-D are included (`results/spike15c/models/`, 15 MB). Other weights, training-data shards and large arrays are not included (size); see `RELEASE_NOTES.md` for the list. Tables derived from them are included.
 
@@ -89,12 +89,12 @@ Seeds are split into disjoint sets: CAL (tuning), HOLD / NEW (model selection an
 |---|---|
 | `arena/` | Robots, tasks, perturbations, controllers, evaluation, viz, learning (BC/MIP/diffusion/flow) |
 | `arena_mjx/` | JAX/MJX vectorised environment and PPO (GPU) |
-| `spike*/` | Experiment code, one folder per study (see `docs/experiments.tsv`) |
+| `experiments/` | Experiment code, one `spikeNN/` folder per study (index: `experiments/README.md`; commands: `docs/experiments.tsv`) |
 | `scripts/` | Demos and MJX benchmarks |
 | `tests/` | Unit tests and numerical-reproduction tests |
 | `web/` | Portfolio site, task videos (`web/media/`) and the in-browser MuJoCo arena (`web/arena/`, validated against Python in `web/arena/VALIDATION.md`) |
-| `docs/` | Hypotheses, rulers, experiments table, canonical numbers, provenance, paper support files, `ARCHITECTURE.md` |
-| `docs/paper/arxiv/` | LaTeX source, figures (and the figure script), compiled `main.pdf` |
+| `docs/` | Hypotheses, rulers, experiments table, canonical numbers, provenance, `ARCHITECTURE.md` |
+| `paper/` | `arxiv/`: LaTeX source, figures (and the figure script), compiled `main.pdf`; `support/`: claims-evidence map, pre-specification audit, equivalence statistics |
 | `docs/media/` | GIFs used in this README (converted from `web/media/*.mp4`) |
 | `results/` | Small result files (tables, JSON, logs) |
 

@@ -1,19 +1,19 @@
 # spike03a: tuned classical opponents (C0/C1/C2) vs residual PPO on the 2-DoF tracking task (H5), plus H2 re-judged under v2
 
-Verdicts and all numbers: `table.md`. Hypothesis card (v2) untouched; spike01/spike02 code and results untouched; code in `spike03a/`, outputs here.
+Verdicts and all numbers: `table.md`. Hypothesis card (v2) untouched; spike01/spike02 code and results untouched; code in `experiments/spike03a/`, outputs here.
 
 ## Re-run (repo root; each heavy step wrapped as below, CPU only, 2 torch threads)
 ```
 H="flock .scratch/heavy.lock systemd-run --user --scope -q -p MemoryMax=6G -p MemorySwapMax=0"
-$H .venv/bin/python spike03a/calib03.py          # step 1: W1 cap / W2 delay on calibration seeds 1000-1049 -> calib_W.json
-$H .venv/bin/python spike03a/tune.py W0 W3       # steps 2-3: CMA-ES for C1, C2 on calibration seeds -> tuned_W0_W3.json, tune.log
-$H .venv/bin/python spike03a/evaluate.py         # step 4: test seeds 0-49 -> eval.pkl (RL re-evaluated from spike02's saved actor weights; matches spike02 stored RMSE bit-for-bit, max diff 0.0)
-.venv/bin/python spike03a/report.py              # -> table.md
+$H .venv/bin/python experiments/spike03a/calib03.py          # step 1: W1 cap / W2 delay on calibration seeds 1000-1049 -> calib_W.json
+$H .venv/bin/python experiments/spike03a/tune.py W0 W3       # steps 2-3: CMA-ES for C1, C2 on calibration seeds -> tuned_W0_W3.json, tune.log
+$H .venv/bin/python experiments/spike03a/evaluate.py         # step 4: test seeds 0-49 -> eval.pkl (RL re-evaluated from spike02's saved actor weights; matches spike02 stored RMSE bit-for-bit, max diff 0.0)
+.venv/bin/python experiments/spike03a/report.py              # -> table.md
 ```
-Files: `spike03a/{lib,calib03,tune,evaluate,report}.py`; results `calib_W.{json,log}`, `tune.log`, `tune_run1_bounds10x_aborted.log`, `tuned_W0_W3.json`, `eval.{pkl,log}`, `table.md`.
+Files: `experiments/spike03a/{lib,calib03,tune,evaluate,report}.py`; results `calib_W.{json,log}`, `tune.log`, `tune_run1_bounds10x_aborted.log`, `tuned_W0_W3.json`, `eval.{pkl,log}`, `table.md`.
 
 ## What was done
-- Plant, references, init errors, pulses, test set, residual bound 16 Nm, teacher model: exactly spike02 (imports `spike/sim.py`, `spike02/sim2.py`).
+- Plant, references, init errors, pulses, test set, residual bound 16 Nm, teacher model: exactly spike02 (imports `experiments/spike/sim.py`, `experiments/spike02/sim2.py`).
 - C0 = spike02 teacher (CTC with exact nominal model + LQR Kp=400, Kd from `lqr_gain()`), untouched.
 - C1 = same CTC, Kp and Kd scaled (2 free params), tuned per W (W0 and W3 separately, like the RL which was trained per W) on calibration seeds 1000-1049 only. Objective = 0.5 * mean RMSE (clean) + 0.5 * mean RMSE (3 pulses), transient included (same as the main metric).
 - C2 = C1-structure plus integral of tracking error (conditional-integration anti-windup); the extra torque (integral contribution) is clamped to +-16 Nm (= RL residual bound); 3 free params (Kp scale, Kd scale, Ki) re-tuned jointly, starting from the C1 optimum. Disturbance observer NOT done (integral only, the card allows either).

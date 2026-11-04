@@ -1,15 +1,15 @@
 # spike02: does residual RL on a classical teacher with un-modelled weaknesses beat the teacher?
 
-## Re-run (from repo root; spike01 code in spike/ untouched, spike02 imports spike/sim.py)
+## Re-run (from repo root; spike01 code in experiments/spike/ untouched, spike02 imports experiments/spike/sim.py)
 ```
-.venv/bin/python spike02/calib.py                  # weakness calibration, teacher only
-.venv/bin/python spike02/teacher_table.py          # -> teacher_check.md (teacher vs W0 on test set)
-spike02/run_all.sh                                 # BC+DART/DAgger (10 seeds) then residual PPO (5 seeds) for W0..W4, one process at a time, systemd-run MemoryMax=6G, 2 torch threads, CPU only
-.venv/bin/python spike02/report.py                 # -> table.md, rmse_by_W.png
+.venv/bin/python experiments/spike02/calib.py                  # weakness calibration, teacher only
+.venv/bin/python experiments/spike02/teacher_table.py          # -> teacher_check.md (teacher vs W0 on test set)
+experiments/spike02/run_all.sh                                 # BC+DART/DAgger (10 seeds) then residual PPO (5 seeds) for W0..W4, one process at a time, systemd-run MemoryMax=6G, 2 torch threads, CPU only
+.venv/bin/python experiments/spike02/report.py                 # -> table.md, rmse_by_W.png
 # ablation (no torque pulses in RL training, + fresh eval seeds 2000-2049), 3 seeds:
-.venv/bin/python spike02/run_rl.py --w W0 --seeds 0,1,2 --steps 2000000 --no_pulses --fresh_eval --out results/spike02/abl_nopulse_W0.pkl   (same for W1)
+.venv/bin/python experiments/spike02/run_rl.py --w W0 --seeds 0,1,2 --steps 2000000 --no_pulses --fresh_eval --out results/spike02/abl_nopulse_W0.pkl   (same for W1)
 ```
-Files: spike02/{sim2,bc_lib,run_bc,run_rl,report,calib,teacher_table}.py, run_all.sh; results: table.md (all numbers + H1-H4 verdicts), rmse_by_W.png, teacher_check.md, calib.log, raw_*.pkl, run_*.log.
+Files: experiments/spike02/{sim2,bc_lib,run_bc,run_rl,report,calib,teacher_table}.py, run_all.sh; results: table.md (all numbers + H1-H4 verdicts), rmse_by_W.png, teacher_check.md, calib.log, raw_*.pkl, run_*.log.
 Sanity: W0 teacher results are bit-identical to spike01 e=0 (checked, max abs diff 0.0 for RMSE and energy).
 
 ## Setup

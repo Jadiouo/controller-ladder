@@ -1,6 +1,6 @@
 # spike09b: H9w / H10w on the whip task (TEST seeds 0-49, run once)
 
-Code: `spike09b/` (c9b.py shared; step1a_probe_select, step1b_holdout, step3_lest, step4a_pool, train9, freeze9b, eval9b, report9b, video9b, verify_repro). Numbers: `table.md`. Video: `whip_test_episode.mp4` (T-nom | T-adapt = best-classical | R-PPO-hist#0, TEST seed 12; episode rule in video9b.py, fixed before TEST: among seeds where T-nom fails and best-classical succeeds, the one whose min-distance gap is closest to the median).
+Code: `experiments/spike09b/` (c9b.py shared; step1a_probe_select, step1b_holdout, step3_lest, step4a_pool, train9, freeze9b, eval9b, report9b, video9b, verify_repro). Numbers: `table.md`. Video: `whip_test_episode.mp4` (T-nom | T-adapt = best-classical | R-PPO-hist#0, TEST seed 12; episode rule in video9b.py, fixed before TEST: among seeds where T-nom fails and best-classical succeeds, the one whose min-distance gap is closest to the median).
 
 ## Result
 - best-classical = **T-adapt** (holdout 1100-1599, n=500: 96.8% vs T-nom 56.8%, T-robust 56.6%; T-oracle 98.8%).

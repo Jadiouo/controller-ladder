@@ -6,7 +6,7 @@ Statements marked **(inference)** are interpretation, not measurement. Section 0
 
 **Claim under test.** "With the same tools and budget, a classical controller ties or beats a learned one; learning has no >= 10 pp win." This spike can support it (ties / classical better on all three) or refute it (a pre-registered WIN on any task). The fairness of the protocol is fixed first; the outcome is not used to change it.
 
-**Where it runs.** All simulation and training on the second machine (`ssh machine-B`, `~/robot_arm_control`, CPU workers <= 6, GPU unused; the PPO nets are 2x256 and run on CPU, so the one-GPU-program rule is not touched). New code lives in `spike16a/` (uncommitted, copied with scp). Nothing is run locally except the 10-episode local-vs-machine-B comparison of section 0.9 (wrapped in `flock .scratch/heavy.lock systemd-run --user --scope -p MemoryMax=4G -p MemorySwapMax=0`).
+**Where it runs.** All simulation and training on the second machine (`ssh machine-B`, `~/robot_arm_control`, CPU workers <= 6, GPU unused; the PPO nets are 2x256 and run on CPU, so the one-GPU-program rule is not touched). New code lives in `experiments/spike16a/` (uncommitted, copied with scp). Nothing is run locally except the 10-episode local-vs-machine-B comparison of section 0.9 (wrapped in `flock .scratch/heavy.lock systemd-run --user --scope -p MemoryMax=4G -p MemorySwapMax=0`).
 
 ### 0.1 Seeds and guard
 * CAL = 1000-1049 + 2000-2149 (n=200). CAL-A = 1000-1049 (n=50). CAL-S = 1000-1049 + 2000-2049 (n=100).
@@ -25,7 +25,7 @@ Each episode draws its true parameters from `rng([seed, 16016])` (so the same se
 Grid s in {0.25, 0.5, 0.75, 1.0, 1.5, 2.0}. Step 1: evaluate the DEFAULT classical teacher on CAL-A at ascending s; s0 = the first grid value at which its success is < 55 % (if none, 2.0). Step 2: tune the classical (0.4) at s0 on CAL. Accept s0 if the tuned classical's CAL success is in [60 %, 85 %]. If > 85 %: re-do step 2 once at the next larger grid value (ceiling 2.0); if < 60 %: once at the next smaller value (floor 0.25). The result of the (at most one) re-tune is final even if it is outside the band, and is reported as such. The tuned-on-CAL success is optimistic (selection on the same seeds); the HOLD number is the honest one and is reported next to it.
 
 ### 0.4 Strongest classical under an equal tuning budget
-* catch: `catch_teacher` extended (subclass in `spike16a/h16.py`, arena code untouched) with two robustness parameters, `delay_hat` (timestamp shift of the measured ball position) and `k_scale` (scale of the assumed drag rate). Tuned vector (12): fit_window, t_first, replan_dt, tmin, tau_s, d_pre, brake_T, torque_frac, log10 qp, log10 qv, delay_hat, k_scale (ranges in `h16.py`, written before any run).
+* catch: `catch_teacher` extended (subclass in `experiments/spike16a/h16.py`, arena code untouched) with two robustness parameters, `delay_hat` (timestamp shift of the measured ball position) and `k_scale` (scale of the assumed drag rate). Tuned vector (12): fit_window, t_first, replan_dt, tmin, tau_s, d_pre, brake_T, torque_frac, log10 qp, log10 qv, delay_hat, k_scale (ranges in `h16.py`, written before any run).
 * toss: `toss_teacher` extended with `k_scale`, `t_shift` (the planned release time is t_r + t_shift: delay compensation), `v_scale` (gain on the planned launch speed: compensates friction / mass losses), brake_T, torque_frac, log10 qp, log10 qv.
 * push_t: `push_t_teacher` extended with `mu_scale` (assumed friction coefficient of the planner), tuned with v_push, v_approach, kp, kd, hold_s, travel_w.
 * Both "robust fixed parameters" and an online-adaptive element exist only where the controller has a signal to adapt on; none of the three teachers gets an online identifier (a limitation, declared; the earlier spikes' T-adapt do not exist for these tasks).
@@ -66,7 +66,7 @@ Added after the calibration stage had finished (so after seeing that the tuned c
 
 # Results (written after the runs)
 
-## 1. Summary (the three appendix tables; generated numbers are in `table.md`, produced by `spike16a/report16.py`)
+## 1. Summary (the three appendix tables; generated numbers are in `table.md`, produced by `experiments/spike16a/report16.py`)
 
 Common: "classical" = the strongest classical of section 0.4 (always the ES-tuned one; the default teacher was worse on CAL in all three tasks), "learned" = residual PPO (12 Nm bound) on top of it, deterministic, CAL-S-selected checkpoint, paired per episode with the classical (same seed = same hidden parameters). Success rate, paired bootstrap CI (10 000 resamples), difference in percentage points (pp). WIN rule = >= +10 pp with 95 % CI > 0 on HOLD and NEW; TIE = 90 % CI inside +-10 pp on both.
 
@@ -141,10 +141,10 @@ Strongest classical, real condition, CAL seeds 1000-1009 (10 episodes per task, 
 6. Episode budgets are overshot by at most one PPO iteration (e.g. catch 16 227-16 266 vs 16 200).
 7. The 10-episode machine-B run of `local_cmp.py` ran as a single extra process next to the 6 training workers (7-8 busy CPUs on the second machine, transient).
 8. The optional BC / flow student (0.8) was **not done**.
-9. Held-out data: HOLD and NEW were each used once per final comparison for the classical and the learned policies. The test-log of the main repo was not touched; the locked seed sets were never used (the guard in `spike16a/h16.py` raises on them).
+9. Held-out data: HOLD and NEW were each used once per final comparison for the classical and the learned policies. The test-log of the main repo was not touched; the locked seed sets were never used (the guard in `experiments/spike16a/h16.py` raises on them).
 10. Push-T tuning: the "tuned" CAL-S success of 100 % is selection-biased (n=100, 21 candidates); HOLD 99.0 % shows the shortfall is small.
 
 ## 6. Reproduce
 
-`spike16a/`: `h16.py` (conditions, teachers, wrapper), `s16.py {cal,gate,real} TASK`, `run_queue.sh`, `report16.py`, `local_cmp.py`, `cmp_report.py`. Machine B: `ssh machine-B 'cd ~/robot_arm_control && tmux new -d -s s16a "bash spike16a/run_queue.sh 2>&1 | tee -a ~/logs/s16a.log"'`. Result JSONs in `results/spike16a/<task>/`; the PPO pickles (selected policy weights) stayed on the second machine (`~/robot_arm_control/results/spike16a/<task>/ppo_*.pkl`).
+`experiments/spike16a/`: `h16.py` (conditions, teachers, wrapper), `s16.py {cal,gate,real} TASK`, `run_queue.sh`, `report16.py`, `local_cmp.py`, `cmp_report.py`. Machine B: `ssh machine-B 'cd ~/robot_arm_control && tmux new -d -s s16a "bash experiments/spike16a/run_queue.sh 2>&1 | tee -a ~/logs/s16a.log"'`. Result JSONs in `results/spike16a/<task>/`; the PPO pickles (selected policy weights) stayed on the second machine (`~/robot_arm_control/results/spike16a/<task>/ppo_*.pkl`).
 

@@ -1,7 +1,7 @@
 """Reproduction check: arena's CTC+LQR / perturbations must match the spike code (read-only imports) numerically.
 
-spike01 : sample_refs / sample_init_err / sample_dist / Teacher(e) / rollout   (spike/sim.py)
-spike02 : WeakEnv weaknesses (cap, delay, Coulomb+viscous friction)            (spike02/sim2.py)
+spike01 : sample_refs / sample_init_err / sample_dist / Teacher(e) / rollout   (experiments/spike/sim.py)
+spike02 : WeakEnv weaknesses (cap, delay, Coulomb+viscous friction)            (experiments/spike02/sim2.py)
 Tolerance 1e-6 (observed differences are ~1e-12: same MuJoCo calls in the same order).
 Seeds are calibration seeds (1000-1007): the test set is not touched.
 """
@@ -19,7 +19,7 @@ from arena.robots import RobotSpec
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 for sub in ("spike", "spike02"):
-    sys.path.insert(0, os.path.join(ROOT, sub))
+    sys.path.insert(0, os.path.join(ROOT, "experiments", sub))
 sim = pytest.importorskip("sim")
 sim2 = pytest.importorskip("sim2")
 

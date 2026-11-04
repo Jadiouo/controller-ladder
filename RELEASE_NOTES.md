@@ -49,3 +49,12 @@ See the verification section appended at the end of this file (scan results and 
 * Added `web/` (portfolio page, 11 task videos, MuJoCo WASM arena with vendored mujoco@3.1.16 and three r160; upstream build paths inside the vendored binaries are not ours), `docs/paper/arxiv/` (LaTeX sources, figures script, compiled PDF; build artefacts excluded), and the frozen whip estimator weights `results/spike15c/models/*.pt` (15 MB).
 * Removed the internal AI-simulated review records (`review_r1.md`, `review_r2.md`, `r2_fixlog.md`, `review_a1.md`); some documents still mention them by name. The paper's acknowledgement discloses that reviews were simulated with AI agents.
 * License: MIT (author confirmed); copyright holder and author names remain placeholders.
+
+## Layout change (branch `reorg`)
+
+Pure move plus path fixes; no experiment logic or number was changed.
+
+* `spike*/` -> `experiments/spike*/` (folder names unchanged; index in `experiments/README.md`).
+* `docs/paper/arxiv/` -> `paper/arxiv/`; the other files of `docs/paper/` (claims_evidence, prespec_audit, stats/, ...) -> `paper/support/`.
+* Path strings inside code, shell scripts, docs, READMEs, `docs/experiments.tsv` and the generated `table.md` headers were updated. Historical records that quote old paths (for example the md5 keys in `results/spike09b/final_methods.json`, `results/spike10b/final_methods.json`, `results/.test_access.log`, run logs) are left as they were written.
+* The entries above this section describe the layout at the time of the snapshot (old paths).

@@ -1,4 +1,4 @@
-"""Residual PPO on MJX: same algorithm / hyper-parameters as spike02/run_rl.py (reimplemented in JAX).
+"""Residual PPO on MJX: same algorithm / hyper-parameters as experiments/spike02/run_rl.py (reimplemented in JAX).
 
 action = clip(tau_ctc + bound * clip(a, -1, 1), +-tau_max); obs = spike02 `feats` (16-d); reward =
 -tracking_w * sum_j (q-qref)^2 (after the step) - res_pen * |bound*clip(a)|^2; horizon 200 of an 800-step episode;

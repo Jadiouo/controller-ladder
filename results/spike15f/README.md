@@ -1,6 +1,6 @@
 # spike15f: source of the MuJoCo "Nan, Inf or huge value in QACC" warnings and divergence of actually executed whip episodes
 
-Code: spike15f/instab.py (instrumentation, no existing file modified), spike15f/report.py. Data: holdout seeds 1100-1199 (n=100) only; test access log still 111 lines. Plan/estimator caches were redirected to a fresh dir so the planner really re-ran. Raw: .scratch/s15f/{R0,B,LAP}.pkl, numbers: summary.json.
+Code: experiments/spike15f/instab.py (instrumentation, no existing file modified), experiments/spike15f/report.py. Data: holdout seeds 1100-1199 (n=100) only; test access log still 111 lines. Plan/estimator caches were redirected to a fresh dir so the planner really re-ran. Raw: .scratch/s15f/{R0,B,LAP}.pkl, numbers: summary.json.
 Method: mujoco user-warning callback counts "Nan, Inf or huge value" warnings by phase: plan (CMA-ES stage-1 and member plans, Tuned3S.plan/get_picked), model-other (replay, closed-loop candidate scoring, R0 estimator fit), plant (inside arena.env mj_step). The plant shim also counts MuJoCo auto-resets (time jumps back) and non-finite qpos/qvel; run_episode is wrapped for per-execution counters. B / C-ens executed episode = the candidate actually selected (c11/M3c/max; LAP/c11/M3c/hit06).
 
 | method | plan-phase warn (a) | other model warn (a) | plant warn (b) | executed episodes with reset/NaN/diverged | % | <0.5% | success % |

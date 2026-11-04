@@ -1,6 +1,6 @@
 # Racket juggling: JS vs the Python spike03b env
 
-Question: does the browser port (`js/tasks/juggling.js`, MuJoCo WASM 3.1.16) reproduce the Python mirror-law teacher on the Python plant (`spike03b/env.py`, `mujoco` Python wheel)?
+Question: does the browser port (`js/tasks/juggling.js`, MuJoCo WASM 3.1.16) reproduce the Python mirror-law teacher on the Python plant (`experiments/spike03b/env.py`, `mujoco` Python wheel)?
 Calibration seeds only (1000-1019); no TEST seeds. Re-run: `python validation/tools/export_juggling.py` (heavy: use the flock/systemd-run wrapper), then `node validate_juggling.mjs` (raw numbers: `validation/js_vs_python_juggling.json`).
 
 ## Setup

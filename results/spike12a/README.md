@@ -1,6 +1,6 @@
 # spike12a: do generative policies beat MLP regression on a multimodal teacher? (feasibility, no TEST seed)
 
-Numbers: `table.md` (from `spike12a/report12.py`). Code: `spike12a/` (c12 rollout, run12 driver, train12 trainer, disp12 dispersion/latency, sel12 selection). Seeds used: training >= 500000, CAL 1000-1099 (selection), final 700200-700399 (n=200). `results/.test_access.log` untouched.
+Numbers: `table.md` (from `experiments/spike12a/report12.py`). Code: `experiments/spike12a/` (c12 rollout, run12 driver, train12 trainer, disp12 dispersion/latency, sel12 selection). Seeds used: training >= 500000, CAL 1000-1099 (selection), final 700200-700399 (n=200). `results/.test_access.log` untouched.
 
 Setup: whip, abc x1, SUBF=4; student obs/output as spike11a "canon_dagger3" (prior-residual on the canonical grid plan, CTC inner loop) but outputs a 16-step chunk, executes 8 (action chunking, fresh noise per chunk; fixed-noise-per-episode tried on CAL: worse, not used). BC only (no DAgger).
 Data (equal size): D-multi = 400 scenarios x 4 CMA-ES streams (standard teacher), 1600 episodes, 432,608 samples; D-canon = same 400 scenarios x 4 canonical-teacher plans, 1600 episodes, 470,650 samples. All ~0.62 M params (BC 621,039; others 622,480). 3 training seeds per cell, checkpoint (10k/20k/40k steps) chosen on CAL per seed.

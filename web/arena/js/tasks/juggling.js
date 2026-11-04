@@ -1,5 +1,5 @@
 // Task plugin: racket juggling (3-link arm + flat racket keeps one ball bouncing).
-// JS port of spike03b/env.py: plant MJCF (exported to assets/juggling.xml), alpha-beta ball estimator, mirror-law teacher (Buhler/Koditschek style) + nominal computed torque.
+// JS port of experiments/spike03b/env.py: plant MJCF (exported to assets/juggling.xml), alpha-beta ball estimator, mirror-law teacher (Buhler/Koditschek style) + nominal computed torque.
 import { ArmModel } from "../sim.js";
 import { clip, rng, loadXml } from "./common.js";
 

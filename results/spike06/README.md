@@ -6,7 +6,7 @@ Numbers: `table.md`. Clip: `juggle_h8b.mp4` (best-classical T-robust left, R-on-
 **H8b not supported (refuted).** Test success (reached 300 hits), 50 locked episodes: best-classical T-robust 82% [70,92]; R-on-best-hist 79% [67,90] (per-seed 78/80/78); R-on-best (no history) 81% [71,91] (84/80/80); T-adapt 70% [58,82]; T-nom 0%. Rule: R-on-best-hist >= best-classical + 10 pp with paired-bootstrap CI excluding 0. Observed -3.3 pp [-8.7,+0.0]. The conclusion that H8b allows ("under equal tuning budget, classical robust/adaptive control does not lose to residual RL on juggling") holds. Inference, not measured: the RL here mostly learned nothing useful on top of T-robust (see below), so this says "this PPO residual recipe adds nothing", not "no learner could".
 
 ## Pipeline and what was done
-1. Distribution sweep (CAL seeds 1000-1049, spike05 params, no retuning; `sweep_dist.jsonl`; e range lower bound 0.32 needs an extended zeta map, `spike06/zeta_map6.py`, e down to ~0.31):
+1. Distribution sweep (CAL seeds 1000-1049, spike05 params, no retuning; `sweep_dist.jsonl`; e range lower bound 0.32 needs an extended zeta map, `experiments/spike06/zeta_map6.py`, e down to ~0.31):
 
 | cand. | e | ball mass x | delay ms | T-robust(s05) CAL success | T-adapt(s05) |
 |---|---|---|---|---|---|
@@ -49,18 +49,18 @@ Plant errors identical across all methods (asserted on test_raw); residual cap r
 
 ## Re-run (repo root, existing .venv; every heavy job wrapped with flock + systemd-run MemoryMax=6G)
 ```
-.venv/bin/python spike06/zeta_map6.py                       # (already folded into spike06/zeta_map6.json)
-spike06/run_sweep.sh A 0.32 0.85 1 8 0 200                  # also B 1 12 0 300 / C 1 16 0 400 / D 1 20 0 500 ; then write results/spike06/dist.json (C)
-spike06/run_calib6.sh                                       # CMA T-robust + T-adapt -> robust.json adapt.json
-flock .scratch/heavy.lock systemd-run --user --scope -q -p MemoryMax=6G -p MemorySwapMax=0 .venv/bin/python spike06/select_best.py   # best.json, calib_final.json
+.venv/bin/python experiments/spike06/zeta_map6.py                       # (already folded into experiments/spike06/zeta_map6.json)
+experiments/spike06/run_sweep.sh A 0.32 0.85 1 8 0 200                  # also B 1 12 0 300 / C 1 16 0 400 / D 1 20 0 500 ; then write results/spike06/dist.json (C)
+experiments/spike06/run_calib6.sh                                       # CMA T-robust + T-adapt -> robust.json adapt.json
+flock .scratch/heavy.lock systemd-run --user --scope -q -p MemoryMax=6G -p MemorySwapMax=0 .venv/bin/python experiments/spike06/select_best.py   # best.json, calib_final.json
 # init check: rl6.py --variant dr|hist --classical results/spike06/best.json --check 1 --out results/spike06/init_check_<v>.json
-spike06/run_sweep_rl.sh                                     # round 2 sweep (round 1 = same without the ckpt rule, kept in sweep_rl_round1/)
-spike06/run_final_rl.sh                                     # final 3 seeds x 2 variants
-(flock ... ) .venv/bin/python spike06/eval6.py              # LOCKED test set -> test_raw.pkl
-.venv/bin/python spike06/report6.py                         # table.md
-(flock ... ) .venv/bin/python spike06/video6.py 0           # juggle_h8b.mp4
+experiments/spike06/run_sweep_rl.sh                                     # round 2 sweep (round 1 = same without the ckpt rule, kept in sweep_rl_round1/)
+experiments/spike06/run_final_rl.sh                                     # final 3 seeds x 2 variants
+(flock ... ) .venv/bin/python experiments/spike06/eval6.py              # LOCKED test set -> test_raw.pkl
+.venv/bin/python experiments/spike06/report6.py                         # table.md
+(flock ... ) .venv/bin/python experiments/spike06/video6.py 0           # juggle_h8b.mp4
 ```
-Code: `env6.py` (reuses spike05/env5.py with overridable distribution and extended zeta map), `sweep_dist.py`, `calib6.py` (reuses spike05/cma.py and calib_classical.py spaces), `rl6.py`, `select_best.py`, `eval6.py`, `report6.py`, `video6.py`.
+Code: `env6.py` (reuses experiments/spike05/env5.py with overridable distribution and extended zeta map), `sweep_dist.py`, `calib6.py` (reuses experiments/spike05/cma.py and calib_classical.py spaces), `rl6.py`, `select_best.py`, `eval6.py`, `report6.py`, `video6.py`.
 
 ## Deviations, assumptions, limitations
 1. Checkpoint selection on CAL added after round 1 (all last-iterate RL policies were far below the classical). Not in the pre-registered recipe; it makes RL look better than a plain last-iterate, so the refutation is not caused by it. Without it RL would be much worse (CAL 18-58% vs 76%).
